@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # Load CSV file into a pandas DataFrame
-df = pd.read_csv('./template/table_correspondance_cj_libelle.csv', encoding='ISO-8859-1')
+df = pd.read_csv('./var_index_mapping/table_correspondance_cj_libelle.csv', encoding='ISO-8859-1')
 
 # Convert DataFrame to a dictionary with 'code' as keys and 'libelle' as values
 data = df.set_index('code')['libelle'].to_dict()

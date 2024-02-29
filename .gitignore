@@ -1,0 +1,13 @@
+*.xls
+*.json
+*.parquet
+*.gzip
+*.ods
+*.csv
+
+archive/batch-1/
+archive/batch-2/
+
+!correspondance_intitule_nature_activite.json
+!correspondance_intitule_cj.json
+!table_correspondance_cj_libelle.csv

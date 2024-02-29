@@ -25,8 +25,6 @@ To create a UI template for your specific classification problem:
 
 **Powered by S3**: This project is empowered by S3 for efficient storage and retrieval of labeled data.
 
-**Enhance Data Quality**: FastAPE streamlines the annotation process, improving data quality and accelerating model training.
-
 **Compatible Open Source Project**: Label Studio for NACE Classification is compatible with other open-source projects, fostering collaboration and interoperability within the community.
 
 ## License

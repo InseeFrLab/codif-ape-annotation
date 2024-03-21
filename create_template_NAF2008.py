@@ -36,13 +36,17 @@ first_view = etree.SubElement(root, "View", style="box-shadow: 2px 2px 5px #999;
 header_element = etree.SubElement(first_view, "Header", value="Déclaration")
 # Choose auxiliary variables to display for annotation
 text_element = etree.SubElement(first_view, "Text", name="text", value="Activité la plus importante dans l'établissement --> $activ_pr_lib_et", highlightColor="#ff0000")
-text_element = etree.SubElement(first_view, "Text", name="act_exec", value="Activité exercée dans l'établissement --> $activ_ex_lib_et", highlightColor="#ff0000")
+text_element = etree.SubElement(first_view, "Text", name="act_exec", value="Activité(s) exercée(s) dans l'établissement --> $activ_ex_lib_et", highlightColor="#ff0000")
 text_element = etree.SubElement(first_view, "Text", name="act_ent", value="Activité(s) de l'entreprise --> $activ_pr_lib", highlightColor="#ff0000")
 text_element = etree.SubElement(first_view, "Text", name="c05", value="Type de liasse --> $liasse_type", highlightColor="#ff9900")
-text_element = etree.SubElement(first_view, "Text", name="nat", value="Nature d'activité --> $activ_nat_et_intitule", highlightColor="#0000ff")
-text_element = etree.SubElement(first_view, "Text", name="surf", value="Surface --> $activ_surf_et", highlightColor="#ffcc00")
 text_element = etree.SubElement(first_view, "Text", name="evt", value="Type d'évènement --> $evenement_type", highlightColor="#00ff00")
+text_element = etree.SubElement(first_view, "Text", name="nat", value="Nature d'activité --> $activ_nat_et_intitule", highlightColor="#0000ff")
+text_element = etree.SubElement(first_view, "Text", name="nat_autre", value="Autre nature d'activité --> $activ_nat_lib_et", highlightColor="#0000ff")
+text_element = etree.SubElement(first_view, "Text", name="surf", value="Surface --> $activ_surf_et", highlightColor="#ffcc00")
 text_element = etree.SubElement(first_view, "Text", name="cj", value="Catégorie juridique --> $cj_intitule", highlightColor="#00ff00")
+text_element = etree.SubElement(first_view, "Text", name="nom_comm_et", value="Nom commercial de l'établissement --> $nom_comm_et", highlightColor="#00ff00")
+text_element = etree.SubElement(first_view, "Text", name="enseigne_et1", value="Enseigne n°1 de l'établissement --> $enseigne_et1", highlightColor="#00ff00")
+text_element = etree.SubElement(first_view, "Text", name="saisonnalite", value="Caractère permanent(P)/saisonnier(S) de l'activité générale --> $activ_perm_et", highlightColor="#00ff00")
 
 """ Choice section to display NACE taxonomy """
 # Create the second View element

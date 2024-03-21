@@ -1,9 +1,12 @@
 *.xls
+*.xlsx
 *.json
 *.parquet
 *.gzip
 *.ods
 *.csv
+
+*taxonomy_NAF2025.xml
 
 archive/batch-1/
 archive/batch-2/

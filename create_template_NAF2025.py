@@ -50,23 +50,7 @@ question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque",
-    value="$NAF2025_1 - $NAF2025_intitule_1 || $NAF2025_2 - $NAF2025_intitule_2 || $NAF2025_3 - $NAF2025_intitule_3 || "
-          "$NAF2025_4 - $NAF2025_intitule_4 || $NAF2025_5 - $NAF2025_intitule_5 ||\n"
-          "$NAF2025_6 - $NAF2025_intitule_6 || $NAF2025_4 - $NAF2025_intitule_4 || $NAF2025_5 - $NAF2025_intitule_5 || "
-          "$NAF2025_6 - $NAF2025_intitule_6 || $NAF2025_7 - $NAF2025_intitule_7 ||\n"
-          "$NAF2025_8 - $NAF2025_intitule_8 || $NAF2025_9 - $NAF2025_intitule_9 || $NAF2025_10 - $NAF2025_intitule_10 || "
-          "$NAF2025_11 - $NAF2025_intitule_11 || $NAF2025_12 - $NAF2025_intitule_12 ||\n"
-          "$NAF2025_13 - $NAF2025_intitule_13 || $NAF2025_14 - $NAF2025_intitule_14 || $NAF2025_15 - $NAF2025_intitule_15 || "
-          "$NAF2025_16 - $NAF2025_intitule_16 || $NAF2025_17 - $NAF2025_intitule_17 ||\n"
-          "$NAF2025_18 - $NAF2025_intitule_18 || $NAF2025_19 - $NAF2025_intitule_19 || $NAF2025_20 - $NAF2025_intitule_20 || "
-          "$NAF2025_21 - $NAF2025_intitule_21 || $NAF2025_22 - $NAF2025_intitule_22 ||\n"
-          "$NAF2025_23 - $NAF2025_intitule_23 || $NAF2025_24 - $NAF2025_intitule_24 || $NAF2025_25 - $NAF2025_intitule_25 || "
-          "$NAF2025_26 - $NAF2025_intitule_26 || $NAF2025_27 - $NAF2025_intitule_27 ||\n"
-          "$NAF2025_28 - $NAF2025_intitule_28 || $NAF2025_29 - $NAF2025_intitule_29 || $NAF2025_30 - $NAF2025_intitule_30 || "
-          "$NAF2025_31 - $NAF2025_intitule_31 || $NAF2025_32 - $NAF2025_intitule_32 ||\n"
-          "$NAF2025_33 - $NAF2025_intitule_33 || $NAF2025_34 - $NAF2025_intitule_34 || $NAF2025_35 - $NAF2025_intitule_35 || "
-          "$NAF2025_36 - $NAF2025_intitule_36 || $NAF2025_37 - $NAF2025_intitule_37 ||\n"
-          "$NAF2025_38 - $NAF2025_intitule_38 || $NAF2025_39 - $NAF2025_intitule_39",
+    value="$NAF2025_1 - $NAF2025_intitule_1 || $NAF2025_2 - $NAF2025_intitule_2 || $NAF2025_3 - $NAF2025_intitule_3 || $NAF2025_4 - $NAF2025_intitule_4 || $NAF2025_5 - $NAF2025_intitule_5 ||\n $NAF2025_6 - $NAF2025_intitule_6 || $NAF2025_7 - $NAF2025_intitule_7 || $NAF2025_8 - $NAF2025_intitule_8 || $NAF2025_9 - $NAF2025_intitule_9 || $NAF2025_10 - $NAF2025_intitule_10 ||\n $NAF2025_11 - $NAF2025_intitule_11 || $NAF2025_12 - $NAF2025_intitule_12 || $NAF2025_13 - $NAF2025_intitule_13 || $NAF2025_14 - $NAF2025_intitule_14 || $NAF2025_15 - $NAF2025_intitule_15 ||\n $NAF2025_16 - $NAF2025_intitule_16 || $NAF2025_17 - $NAF2025_intitule_17 ||$NAF2025_18 - $NAF2025_intitule_18 || $NAF2025_19 - $NAF2025_intitule_19 || $NAF2025_20 - $NAF2025_intitule_20 ||\n $NAF2025_21 - $NAF2025_intitule_21 || $NAF2025_22 - $NAF2025_intitule_22 || $NAF2025_23 - $NAF2025_intitule_23 || $NAF2025_24 - $NAF2025_intitule_24 || $NAF2025_25 - $NAF2025_intitule_25 ||\n $NAF2025_26 - $NAF2025_intitule_26 || $NAF2025_27 - $NAF2025_intitule_27 ||\n $NAF2025_28 - $NAF2025_intitule_28 || $NAF2025_29 - $NAF2025_intitule_29 || $NAF2025_30 - $NAF2025_intitule_30 ||\n $NAF2025_31 - $NAF2025_intitule_31 || $NAF2025_32 - $NAF2025_intitule_32 || $NAF2025_33 - $NAF2025_intitule_33 || $NAF2025_34 - $NAF2025_intitule_34 || $NAF2025_35 - $NAF2025_intitule_35 ||\n $NAF2025_36 - $NAF2025_intitule_36 || $NAF2025_37 - $NAF2025_intitule_37 || $NAF2025_38 - $NAF2025_intitule_38 || $NAF2025_39 - $NAF2025_intitule_39",
     highlightColor="#ff0000"
 )
 
@@ -131,19 +115,18 @@ question_choice_37 = etree.SubElement(choices, "Choice", value="$NAF2025_37")
 question_choice_38 = etree.SubElement(choices, "Choice", value="$NAF2025_38")
 question_choice_39 = etree.SubElement(choices, "Choice", value="$NAF2025_39")
 
+# Create the third View element
+third_view = etree.SubElement(root, "View", visibleWhen="choice-selected", whenTagName="NAF2008_OK", whenChoiceValue="Non")
 # Create the Header element within the second View
 taxonomy_element = etree.SubElement(
-    second_view,
+    third_view,
     "Taxonomy",
     name="taxonomy",
     toName="text",
     minWidth="1200px",
     placeholder="Cliquez et tapez le code APE retenu",
     leafsOnly="true",
-    maxUsages="1",
-    visibleWhen="choice-selected",
-    whenTagName="NAF2008_OK",
-    whenChoiceValue="Non"
+    maxUsages="1"
 )
 
 section_choice = etree.SubElement(taxonomy_element, "Choice", value="Inclassable", alias="XXXXX")

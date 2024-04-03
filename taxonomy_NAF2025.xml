@@ -1,0 +1,1044 @@
+<View>
+  <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
+    <Header value="D&#233;claration"/>
+    <Text name="text" value="Activit&#233; la plus importante dans l'&#233;tablissement --&gt; $activ_pr_lib_et" highlightColor="#ff0000"/>
+    <Text name="act_exec" value="Activit&#233;(s) exerc&#233;e(s) dans l'&#233;tablissement --&gt; $activ_ex_lib_et" highlightColor="#ff0000"/>
+    <Text name="act_ent" value="Activit&#233;(s) de l'entreprise --&gt; $activ_pr_lib" highlightColor="#ff0000"/>
+    <Text name="c05" value="Type de liasse --&gt; $liasse_type" highlightColor="#ff9900"/>
+    <Text name="evt" value="Type d'&#233;v&#232;nement --&gt; $evenement_type" highlightColor="#00ff00"/>
+    <Text name="nat" value="Nature d'activit&#233; --&gt; $activ_nat_et_intitule" highlightColor="#0000ff"/>
+    <Text name="nat_autre" value="Autre nature d'activit&#233; --&gt; $activ_nat_lib_et" highlightColor="#0000ff"/>
+    <Text name="surf" value="Surface --&gt; $activ_surf_et" highlightColor="#ffcc00"/>
+    <Text name="cj" value="Cat&#233;gorie juridique --&gt; $cj_intitule" highlightColor="#00ff00"/>
+    <Text name="nom_comm_et" value="Nom commercial de l'&#233;tablissement --&gt; $nom_comm_et" highlightColor="#00ff00"/>
+    <Text name="enseigne_et1" value="Enseigne n&#176;1 de l'&#233;tablissement --&gt; $enseigne_et1" highlightColor="#00ff00"/>
+    <Text name="saisonnalite" value="Caract&#232;re permanent(P)/saisonnier(S) de l'activit&#233; g&#233;n&#233;rale --&gt; $activ_perm_et" highlightColor="#00ff00"/>
+  </View>
+  <View>
+    <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
+      <Header value="Code NAF 2025 dans la liste ci-dessous ?"/>
+      <Text name="liste_multivoque" value="$NAF2025_1 - $NAF2025_intitule_1 || $NAF2025_2 - $NAF2025_intitule_2 || $NAF2025_3 - $NAF2025_intitule_3 || $NAF2025_4 - $NAF2025_intitule_4 || $NAF2025_5 - $NAF2025_intitule_5 ||&#10; $NAF2025_6 - $NAF2025_intitule_6 || $NAF2025_7 - $NAF2025_intitule_7 || $NAF2025_8 - $NAF2025_intitule_8 || $NAF2025_9 - $NAF2025_intitule_9 || $NAF2025_10 - $NAF2025_intitule_10 ||&#10; $NAF2025_11 - $NAF2025_intitule_11 || $NAF2025_12 - $NAF2025_intitule_12 || $NAF2025_13 - $NAF2025_intitule_13 || $NAF2025_14 - $NAF2025_intitule_14 || $NAF2025_15 - $NAF2025_intitule_15 ||&#10; $NAF2025_16 - $NAF2025_intitule_16 || $NAF2025_17 - $NAF2025_intitule_17 ||$NAF2025_18 - $NAF2025_intitule_18 || $NAF2025_19 - $NAF2025_intitule_19 || $NAF2025_20 - $NAF2025_intitule_20 ||&#10; $NAF2025_21 - $NAF2025_intitule_21 || $NAF2025_22 - $NAF2025_intitule_22 || $NAF2025_23 - $NAF2025_intitule_23 || $NAF2025_24 - $NAF2025_intitule_24 || $NAF2025_25 - $NAF2025_intitule_25 ||&#10; $NAF2025_26 - $NAF2025_intitule_26 || $NAF2025_27 - $NAF2025_intitule_27 ||&#10; $NAF2025_28 - $NAF2025_intitule_28 || $NAF2025_29 - $NAF2025_intitule_29 || $NAF2025_30 - $NAF2025_intitule_30 ||&#10; $NAF2025_31 - $NAF2025_intitule_31 || $NAF2025_32 - $NAF2025_intitule_32 || $NAF2025_33 - $NAF2025_intitule_33 || $NAF2025_34 - $NAF2025_intitule_34 || $NAF2025_35 - $NAF2025_intitule_35 ||&#10; $NAF2025_36 - $NAF2025_intitule_36 || $NAF2025_37 - $NAF2025_intitule_37 || $NAF2025_38 - $NAF2025_intitule_38 || $NAF2025_39 - $NAF2025_intitule_39" highlightColor="#ff0000"/>
+      <View visibleWhen="choice-selected" whenTagName="NAF2008_OK"/>
+    </View>
+    <Choices name="NAF2008_OK" toName="text" choice="single" showInLine="true">
+      <Choice value="Oui" selected="true"/>
+      <Choice value="Non"/>
+    </Choices>
+    <Header value="Choix du bon code NAF 2025"/>
+    <Choices name="Choisissez dans la liste" toName="text" choice="single" showInLine="true" visibleWhen="choice-selected" whenTagName="NAF2008_OK" whenChoiceValue="Oui">
+      <Choice value="$NAF2025_1"/>
+      <Choice value="$NAF2025_2"/>
+      <Choice value="$NAF2025_3"/>
+      <Choice value="$NAF2025_4"/>
+      <Choice value="$NAF2025_5"/>
+      <Choice value="$NAF2025_6"/>
+      <Choice value="$NAF2025_7"/>
+      <Choice value="$NAF2025_8"/>
+      <Choice value="$NAF2025_9"/>
+      <Choice value="$NAF2025_10"/>
+      <Choice value="$NAF2025_11"/>
+      <Choice value="$NAF2025_12"/>
+      <Choice value="$NAF2025_13"/>
+      <Choice value="$NAF2025_14"/>
+      <Choice value="$NAF2025_15"/>
+      <Choice value="$NAF2025_16"/>
+      <Choice value="$NAF2025_17"/>
+      <Choice value="$NAF2025_18"/>
+      <Choice value="$NAF2025_19"/>
+      <Choice value="$NAF2025_20"/>
+      <Choice value="$NAF2025_21"/>
+      <Choice value="$NAF2025_22"/>
+      <Choice value="$NAF2025_23"/>
+      <Choice value="$NAF2025_24"/>
+      <Choice value="$NAF2025_25"/>
+      <Choice value="$NAF2025_26"/>
+      <Choice value="$NAF2025_27"/>
+      <Choice value="$NAF2025_28"/>
+      <Choice value="$NAF2025_29"/>
+      <Choice value="$NAF2025_30"/>
+      <Choice value="$NAF2025_31"/>
+      <Choice value="$NAF2025_32"/>
+      <Choice value="$NAF2025_33"/>
+      <Choice value="$NAF2025_34"/>
+      <Choice value="$NAF2025_35"/>
+      <Choice value="$NAF2025_36"/>
+      <Choice value="$NAF2025_37"/>
+      <Choice value="$NAF2025_38"/>
+      <Choice value="$NAF2025_39"/>
+    </Choices>
+  </View>
+  <View visibleWhen="choice-selected" whenTagName="NAF2008_OK" whenChoiceValue="Non">
+    <Taxonomy name="taxonomy" toName="text" minWidth="1200px" placeholder="Cliquez et tapez le code APE retenu" leafsOnly="true" maxUsages="1">
+      <Choice value="Inclassable" alias="XXXXX"/>
+      <Choice value="A - AGRICULTURE, SYLVICULTURE ET P&#202;CHE" alias="A">
+        <Choice value="01 - Culture et production animale, chasse et services annexes" alias="01">
+          <Choice value="01.11Y // 0111Y - Culture de c&#233;r&#233;ales, &#224; l&#8217;exception du riz, de l&#233;gumineuses et de graines ol&#233;agineuses" alias="01.11Y"/>
+          <Choice value="01.12Y // 0112Y - Culture du riz" alias="01.12Y"/>
+          <Choice value="01.13Y // 0113Y - Culture de l&#233;gumes, de melons, de racines et de tubercules" alias="01.13Y"/>
+          <Choice value="01.14Y // 0114Y - Culture de la canne &#224; sucre" alias="01.14Y"/>
+          <Choice value="01.15Y // 0115Y - Culture du tabac" alias="01.15Y"/>
+          <Choice value="01.16Y // 0116Y - Culture de plantes &#224; fibres" alias="01.16Y"/>
+          <Choice value="01.19Y // 0119Y - Autres cultures non permanentes" alias="01.19Y"/>
+          <Choice value="01.21Y // 0121Y - Culture de la vigne" alias="01.21Y"/>
+          <Choice value="01.22Y // 0122Y - Culture de fruits tropicaux et subtropicaux" alias="01.22Y"/>
+          <Choice value="01.23Y // 0123Y - Culture d&#8217;agrumes" alias="01.23Y"/>
+          <Choice value="01.24Y // 0124Y - Culture de fruits &#224; p&#233;pins et &#224; noyau" alias="01.24Y"/>
+          <Choice value="01.25Y // 0125Y - Culture d&#8217;autres fruits d&#8217;arbres ou d&#8217;arbustes et de fruits &#224; coque" alias="01.25Y"/>
+          <Choice value="01.26Y // 0126Y - Culture de fruits ol&#233;agineux" alias="01.26Y"/>
+          <Choice value="01.27Y // 0127Y - Culture de plantes &#224; boissons" alias="01.27Y"/>
+          <Choice value="01.28Y // 0128Y - Culture de plantes &#224; &#233;pices, aromatiques, m&#233;dicinales et pharmaceutiques" alias="01.28Y"/>
+          <Choice value="01.29Y // 0129Y - Autres cultures permanentes" alias="01.29Y"/>
+          <Choice value="01.30Y // 0130Y - Reproduction de plantes" alias="01.30Y"/>
+          <Choice value="01.41Y // 0141Y - &#201;levage de vaches laiti&#232;res" alias="01.41Y"/>
+          <Choice value="01.42Y // 0142Y - &#201;levage d&#8217;autres bovins et de buffles" alias="01.42Y"/>
+          <Choice value="01.43Y // 0143Y - &#201;levage de chevaux et d&#8217;autres &#233;quid&#233;s" alias="01.43Y"/>
+          <Choice value="01.44Y // 0144Y - &#201;levage de chameaux et d&#8217;autres cam&#233;lid&#233;s" alias="01.44Y"/>
+          <Choice value="01.45Y // 0145Y - &#201;levage d&#8217;ovins et de caprins" alias="01.45Y"/>
+          <Choice value="01.46Y // 0146Y - &#201;levage de porcins" alias="01.46Y"/>
+          <Choice value="01.47Y // 0147Y - &#201;levage de volailles" alias="01.47Y"/>
+          <Choice value="01.48G // 0148G - Apiculture" alias="01.48G"/>
+          <Choice value="01.48H // 0148H - &#201;levage d'autres animaux destin&#233;s &#224; la consommation" alias="01.48H"/>
+          <Choice value="01.48J // 0148J - &#201;levage d'animaux de compagnie et d'autres animaux n.c.a." alias="01.48J"/>
+          <Choice value="01.50Y // 0150Y - Culture et &#233;levage associ&#233;s" alias="01.50Y"/>
+          <Choice value="01.61Y // 0161Y - Activit&#233;s de soutien aux cultures" alias="01.61Y"/>
+          <Choice value="01.62Y // 0162Y - Activit&#233;s de soutien &#224; la production animale" alias="01.62Y"/>
+          <Choice value="01.63Y // 0163Y - Traitement primaire des r&#233;coltes et traitement des semences" alias="01.63Y"/>
+          <Choice value="01.70Y // 0170Y - Chasse, pi&#233;geage et activit&#233;s de service connexes" alias="01.70Y"/>
+        </Choice>
+        <Choice value="02 - Sylviculture et exploitation foresti&#232;re" alias="02">
+          <Choice value="02.10Y // 0210Y - Sylviculture et autres activit&#233;s foresti&#232;res" alias="02.10Y"/>
+          <Choice value="02.20Y // 0220Y - Exploitation foresti&#232;re" alias="02.20Y"/>
+          <Choice value="02.30Y // 0230Y - R&#233;colte de produits forestiers non ligneux poussant &#224; l&#8217;&#233;tat sauvage" alias="02.30Y"/>
+          <Choice value="02.40Y // 0240Y - Activit&#233;s de soutien &#224; l&#8217;exploitation foresti&#232;re" alias="02.40Y"/>
+        </Choice>
+        <Choice value="03 - P&#234;che et aquaculture" alias="03">
+          <Choice value="03.11Y // 0311Y - P&#234;che en mer" alias="03.11Y"/>
+          <Choice value="03.12Y // 0312Y - P&#234;che en eau douce" alias="03.12Y"/>
+          <Choice value="03.21Y // 0321Y - Aquaculture en mer" alias="03.21Y"/>
+          <Choice value="03.22Y // 0322Y - Aquaculture en eau douce" alias="03.22Y"/>
+          <Choice value="03.30Y // 0330Y - Activit&#233;s de soutien &#224; la p&#234;che et l&#8217;aquaculture" alias="03.30Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="B - INDUSTRIES EXTRACTIVES" alias="B">
+        <Choice value="05 - Extraction de houille et de lignite" alias="05">
+          <Choice value="05.10Y // 0510Y - Extraction de houille" alias="05.10Y"/>
+          <Choice value="05.20Y // 0520Y - Extraction de lignite" alias="05.20Y"/>
+        </Choice>
+        <Choice value="06 - Extraction d&#8217;hydrocarbures" alias="06">
+          <Choice value="06.10Y // 0610Y - Extraction de p&#233;trole brut" alias="06.10Y"/>
+          <Choice value="06.20Y // 0620Y - Extraction de gaz naturel" alias="06.20Y"/>
+        </Choice>
+        <Choice value="07 - Extraction de minerais m&#233;talliques" alias="07">
+          <Choice value="07.10Y // 0710Y - Extraction de minerais de fer" alias="07.10Y"/>
+          <Choice value="07.21Y // 0721Y - Extraction de minerais d&#8217;uranium et de thorium" alias="07.21Y"/>
+          <Choice value="07.29Y // 0729Y - Extraction d&#8217;autres minerais de m&#233;taux non ferreux" alias="07.29Y"/>
+        </Choice>
+        <Choice value="08 - Autres industries extractives" alias="08">
+          <Choice value="08.11Y // 0811Y - Extraction de pierres ornementales, de calcaire industriel, de gypse, d&#8217;ardoise et d&#8217;autres pierres" alias="08.11Y"/>
+          <Choice value="08.12Y // 0812Y - Exploitation de gravi&#232;res et sabli&#232;res, extraction d&#8217;argiles et de kaolin" alias="08.12Y"/>
+          <Choice value="08.91Y // 0891Y - Extraction de min&#233;raux chimiques et d&#8217;engrais min&#233;raux" alias="08.91Y"/>
+          <Choice value="08.92Y // 0892Y - Extraction de tourbe" alias="08.92Y"/>
+          <Choice value="08.93Y // 0893Y - Production de sel" alias="08.93Y"/>
+          <Choice value="08.99Y // 0899Y - Autres activit&#233;s extractives n.c.a." alias="08.99Y"/>
+        </Choice>
+        <Choice value="09 - Activit&#233;s de soutien aux industries extractives" alias="09">
+          <Choice value="09.10Y // 0910Y - Activit&#233;s de soutien &#224; l&#8217;extraction d&#8217;hydrocarbures" alias="09.10Y"/>
+          <Choice value="09.90Y // 0990Y - Activit&#233;s de soutien aux autres industries extractives" alias="09.90Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="C - INDUSTRIE MANUFACTURI&#200;RE" alias="C">
+        <Choice value="10 - Industries alimentaires" alias="10">
+          <Choice value="10.11Y // 1011Y - Transformation et conservation de la viande, &#224; l&#8217;exception de la viande de volaille" alias="10.11Y"/>
+          <Choice value="10.12Y // 1012Y - Transformation et conservation de la viande de volaille" alias="10.12Y"/>
+          <Choice value="10.13G // 1013G - Pr&#233;paration industrielle de produits &#224; base de viande" alias="10.13G"/>
+          <Choice value="10.13H // 1013H - Pr&#233;paration de produits &#224; base de viande associ&#233;e &#224; leur vente au d&#233;tail" alias="10.13H"/>
+          <Choice value="10.20Y // 1020Y - Transformation et conservation de poisson, de crustac&#233;s et de mollusques" alias="10.20Y"/>
+          <Choice value="10.31Y // 1031Y - Transformation et conservation de pommes de terre" alias="10.31Y"/>
+          <Choice value="10.32Y // 1032Y - Pr&#233;paration de jus de fruits et l&#233;gumes" alias="10.32Y"/>
+          <Choice value="10.39G // 1039G - Autre transformation et conservation de l&#233;gumes" alias="10.39G"/>
+          <Choice value="10.39H // 1039H - Autre transformation et conservation de fruits" alias="10.39H"/>
+          <Choice value="10.41Y // 1041Y - Fabrication d&#8217;huiles et graisses" alias="10.41Y"/>
+          <Choice value="10.42Y // 1042Y - Fabrication de margarine et graisses comestibles similaires" alias="10.42Y"/>
+          <Choice value="10.51G // 1051G - Fabrication de lait liquide, cr&#232;mes de lait et laits ferment&#233;s" alias="10.51G"/>
+          <Choice value="10.51H // 1051H - Fabrication de fromage" alias="10.51H"/>
+          <Choice value="10.51J // 1051J - Fabrication de beurre et d'autres produits laitiers" alias="10.51J"/>
+          <Choice value="10.52Y // 1052Y - Fabrication de cr&#232;mes glac&#233;es et autres glaces alimentaires" alias="10.52Y"/>
+          <Choice value="10.61G // 1061G - Meunerie" alias="10.61G"/>
+          <Choice value="10.61H // 1061H - Autres activit&#233;s du travail des grains" alias="10.61H"/>
+          <Choice value="10.62Y // 1062Y - Fabrication de produits amylac&#233;s" alias="10.62Y"/>
+          <Choice value="10.71G // 1071G - Fabrication industrielle de pain et de p&#226;tisserie fra&#238;che" alias="10.71G"/>
+          <Choice value="10.71H // 1071H - Fabrication de pain et d'autres produits de boulangerie-p&#226;tisserie associ&#233;e &#224; leur vente au d&#233;tail" alias="10.71H"/>
+          <Choice value="10.71J // 1071J - Fabrication de p&#226;tisserie fra&#238;che associ&#233;e &#224; sa vente au d&#233;tail" alias="10.71J"/>
+          <Choice value="10.72Y // 1072Y - Fabrication de biscuits, biscottes et p&#226;tisseries de conservation" alias="10.72Y"/>
+          <Choice value="10.73Y // 1073Y - Fabrication de p&#226;tes alimentaires" alias="10.73Y"/>
+          <Choice value="10.81Y // 1081Y - Fabrication de sucre" alias="10.81Y"/>
+          <Choice value="10.82Y // 1082Y - Fabrication de cacao, de chocolat et de produits de confiserie" alias="10.82Y"/>
+          <Choice value="10.83Y // 1083Y - Transformation du th&#233; et du caf&#233;" alias="10.83Y"/>
+          <Choice value="10.84Y // 1084Y - Fabrication de condiments et assaisonnements" alias="10.84Y"/>
+          <Choice value="10.85Y // 1085Y - Fabrication de plats pr&#233;par&#233;s" alias="10.85Y"/>
+          <Choice value="10.86Y // 1086Y - Fabrication d&#8217;aliments homog&#233;n&#233;is&#233;s et di&#233;t&#233;tiques" alias="10.86Y"/>
+          <Choice value="10.89Y // 1089Y - Fabrication d&#8217;autres produits alimentaires n.c.a." alias="10.89Y"/>
+          <Choice value="10.91Y // 1091Y - Fabrication d&#8217;aliments pour animaux de ferme" alias="10.91Y"/>
+          <Choice value="10.92Y // 1092Y - Fabrication d&#8217;aliments pour animaux de compagnie" alias="10.92Y"/>
+        </Choice>
+        <Choice value="11 - Fabrication de boissons" alias="11">
+          <Choice value="11.01Y // 1101Y - Production de boissons alcooliques distill&#233;es" alias="11.01Y"/>
+          <Choice value="11.02G // 1102G - Fabrication de vins effervescents" alias="11.02G"/>
+          <Choice value="11.02H // 1102H - Fabrication de vins non effervescents" alias="11.02H"/>
+          <Choice value="11.03Y // 1103Y - Fabrication de cidre et autres boissons ferment&#233;es &#224; base de fruits" alias="11.03Y"/>
+          <Choice value="11.04Y // 1104Y - Production d&#8217;autres boissons ferment&#233;es non distill&#233;es" alias="11.04Y"/>
+          <Choice value="11.05Y // 1105Y - Fabrication de bi&#232;re" alias="11.05Y"/>
+          <Choice value="11.06Y // 1106Y - Fabrication de malt" alias="11.06Y"/>
+          <Choice value="11.07G // 1107G - Industrie des eaux de table" alias="11.07G"/>
+          <Choice value="11.07H // 1107H - Production d'autres boissons non alcoolis&#233;es" alias="11.07H"/>
+        </Choice>
+        <Choice value="12 - Fabrication de produits &#224; base de tabac" alias="12">
+          <Choice value="12.00Y // 1200Y - Fabrication de produits &#224; base de tabac" alias="12.00Y"/>
+        </Choice>
+        <Choice value="13 - Fabrication de textiles" alias="13">
+          <Choice value="13.10Y // 1310Y - Pr&#233;paration de fibres textiles et filature" alias="13.10Y"/>
+          <Choice value="13.20Y // 1320Y - Tissage" alias="13.20Y"/>
+          <Choice value="13.30Y // 1330Y - Ennoblissement textile" alias="13.30Y"/>
+          <Choice value="13.91Y // 1391Y - Fabrication d&#8217;&#233;toffes &#224; mailles" alias="13.91Y"/>
+          <Choice value="13.92Y // 1392Y - Fabrication de textiles m&#233;nagers et d&#8217;articles d&#8217;ameublement confectionn&#233;s" alias="13.92Y"/>
+          <Choice value="13.93Y // 1393Y - Fabrication de tapis et moquettes" alias="13.93Y"/>
+          <Choice value="13.94Y // 1394Y - Fabrication de ficelles, cordes et filets" alias="13.94Y"/>
+          <Choice value="13.95Y // 1395Y - Fabrication de textiles non-tiss&#233;s et articles non-tiss&#233;s" alias="13.95Y"/>
+          <Choice value="13.96Y // 1396Y - Fabrication d&#8217;autres textiles techniques et industriels" alias="13.96Y"/>
+          <Choice value="13.99Y // 1399Y - Fabrication d&#8217;autres textiles n.c.a." alias="13.99Y"/>
+        </Choice>
+        <Choice value="14 - Industrie de l&#8217;habillement" alias="14">
+          <Choice value="14.10Y // 1410Y - Fabrication d&#8217;articles &#224; mailles" alias="14.10Y"/>
+          <Choice value="14.21Y // 1421Y - Fabrication de v&#234;tements de dessus" alias="14.21Y"/>
+          <Choice value="14.22Y // 1422Y - Fabrication de v&#234;tements de dessous" alias="14.22Y"/>
+          <Choice value="14.23Y // 1423Y - Fabrication de v&#234;tements de travail" alias="14.23Y"/>
+          <Choice value="14.24Y // 1424Y - Fabrication de v&#234;tements en cuir et en fourrure" alias="14.24Y"/>
+          <Choice value="14.29Y // 1429Y - Fabrication d&#8217;autres articles d&#8217;habillement et accessoires n.c.a." alias="14.29Y"/>
+        </Choice>
+        <Choice value="15 - Fabrication de cuir, d&#8217;articles en cuir et de produits similaires dans d&#8217;autres mati&#232;res" alias="15">
+          <Choice value="15.11Y // 1511Y - Tannage, appr&#234;t et teinture des cuirs et des fourrures" alias="15.11Y"/>
+          <Choice value="15.12Y // 1512Y - Fabrication de bagages, de maroquinerie, sellerie et bourrellerie, en toutes mati&#232;res" alias="15.12Y"/>
+          <Choice value="15.20Y // 1520Y - Fabrication de chaussures" alias="15.20Y"/>
+        </Choice>
+        <Choice value="16 - Travail du bois et fabrication d&#8217;articles en bois et en li&#232;ge, &#224; l&#8217;exception des meubles ; fabrication d&#8217;articles en vannerie et sparterie" alias="16">
+          <Choice value="16.11Y // 1611Y - Sciage et rabotage du bois" alias="16.11Y"/>
+          <Choice value="16.12Y // 1612Y - Fa&#231;onnage et finition du bois" alias="16.12Y"/>
+          <Choice value="16.21Y // 1621Y - Fabrication de placage et de panneaux de bois" alias="16.21Y"/>
+          <Choice value="16.22Y // 1622Y - Fabrication de parquets assembl&#233;s" alias="16.22Y"/>
+          <Choice value="16.23Y // 1623Y - Fabrication de charpentes et d&#8217;autres menuiseries" alias="16.23Y"/>
+          <Choice value="16.24Y // 1624Y - Fabrication d&#8217;emballages en bois" alias="16.24Y"/>
+          <Choice value="16.25Y // 1625Y - Fabrication de portes et fen&#234;tres en bois" alias="16.25Y"/>
+          <Choice value="16.26Y // 1626Y - Fabrication de combustibles solides &#224; partir de biomasse v&#233;g&#233;tale" alias="16.26Y"/>
+          <Choice value="16.27Y // 1627Y - Finition de produits en bois" alias="16.27Y"/>
+          <Choice value="16.28Y // 1628Y - Fabrication d&#8217;objets divers en bois, d&#8217;objets en li&#232;ge, vannerie et sparterie" alias="16.28Y"/>
+        </Choice>
+        <Choice value="17 - Industrie du papier et du carton" alias="17">
+          <Choice value="17.11Y // 1711Y - Fabrication de p&#226;te &#224; papier" alias="17.11Y"/>
+          <Choice value="17.12Y // 1712Y - Fabrication de papier et de carton" alias="17.12Y"/>
+          <Choice value="17.21Y // 1721Y - Fabrication de papier et carton ondul&#233;s et d&#8217;emballages en papier ou en carton" alias="17.21Y"/>
+          <Choice value="17.22Y // 1722Y - Fabrication d&#8217;articles en papier &#224; usage sanitaire ou domestique" alias="17.22Y"/>
+          <Choice value="17.23Y // 1723Y - Fabrication d&#8217;articles de papeterie" alias="17.23Y"/>
+          <Choice value="17.24Y // 1724Y - Fabrication de papiers peints" alias="17.24Y"/>
+          <Choice value="17.25Y // 1725Y - Fabrication d&#8217;autres articles en papier ou en carton" alias="17.25Y"/>
+        </Choice>
+        <Choice value="18 - Imprimerie et reproduction d&#8217;enregistrements" alias="18">
+          <Choice value="18.11Y // 1811Y - Imprimerie de journaux" alias="18.11Y"/>
+          <Choice value="18.12Y // 1812Y - Autres activit&#233;s d&#8217;imprimerie" alias="18.12Y"/>
+          <Choice value="18.13Y // 1813Y - Activit&#233;s de pr&#233;-presse" alias="18.13Y"/>
+          <Choice value="18.14Y // 1814Y - Reliure et activit&#233;s connexes" alias="18.14Y"/>
+          <Choice value="18.20Y // 1820Y - Reproduction d&#8217;enregistrements" alias="18.20Y"/>
+        </Choice>
+        <Choice value="19 - Cok&#233;faction et raffinage" alias="19">
+          <Choice value="19.10Y // 1910Y - Cok&#233;faction" alias="19.10Y"/>
+          <Choice value="19.20Y // 1920Y - Raffinage du p&#233;trole et fabrication de produits &#224; base de combustibles fossiles" alias="19.20Y"/>
+        </Choice>
+        <Choice value="20 - Industrie chimique" alias="20">
+          <Choice value="20.11Y // 2011Y - Fabrication de gaz industriels" alias="20.11Y"/>
+          <Choice value="20.12Y // 2012Y - Fabrication de colorants et de pigments" alias="20.12Y"/>
+          <Choice value="20.13Y // 2013Y - Fabrication d&#8217;autres produits chimiques inorganiques de base" alias="20.13Y"/>
+          <Choice value="20.14Y // 2014Y - Fabrication d&#8217;autres produits chimiques organiques de base" alias="20.14Y"/>
+          <Choice value="20.15Y // 2015Y - Fabrication de produits azot&#233;s et d&#8217;engrais" alias="20.15Y"/>
+          <Choice value="20.16Y // 2016Y - Fabrication de mati&#232;res plastiques de base" alias="20.16Y"/>
+          <Choice value="20.17Y // 2017Y - Fabrication de caoutchouc synth&#233;tique" alias="20.17Y"/>
+          <Choice value="20.20Y // 2020Y - Fabrication de pesticides, de d&#233;sinfectants et d&#8217;autres produits agrochimiques" alias="20.20Y"/>
+          <Choice value="20.30Y // 2030Y - Fabrication de peintures, vernis, encres et mastics" alias="20.30Y"/>
+          <Choice value="20.41Y // 2041Y - Fabrication de savons, d&#233;tergents et produits d&#8217;entretien" alias="20.41Y"/>
+          <Choice value="20.42Y // 2042Y - Fabrication de parfums et de produits pour la toilette" alias="20.42Y"/>
+          <Choice value="20.51Y // 2051Y - Fabrication de biocarburants liquides" alias="20.51Y"/>
+          <Choice value="20.59Y // 2059Y - Fabrication d&#8217;autres produits chimiques n.c.a." alias="20.59Y"/>
+          <Choice value="20.60Y // 2060Y - Fabrication de fibres artificielles ou synth&#233;tiques" alias="20.60Y"/>
+        </Choice>
+        <Choice value="21 - Industrie pharmaceutique" alias="21">
+          <Choice value="21.10Y // 2110Y - Fabrication de produits pharmaceutiques de base" alias="21.10Y"/>
+          <Choice value="21.20Y // 2120Y - Fabrication de pr&#233;parations pharmaceutiques" alias="21.20Y"/>
+        </Choice>
+        <Choice value="22 - Fabrication de produits en caoutchouc et en plastique" alias="22">
+          <Choice value="22.11Y // 2211Y - Fabrication et rechapage de pneus en caoutchouc et fabrication de chambres &#224; air" alias="22.11Y"/>
+          <Choice value="22.12Y // 2212Y - Fabrication d&#8217;autres articles en caoutchouc" alias="22.12Y"/>
+          <Choice value="22.21Y // 2221Y - Fabrication de plaques, feuilles, tubes et profil&#233;s en mati&#232;res plastiques" alias="22.21Y"/>
+          <Choice value="22.22Y // 2222Y - Fabrication d&#8217;emballages en mati&#232;res plastiques" alias="22.22Y"/>
+          <Choice value="22.23Y // 2223Y - Fabrication de portes et fen&#234;tres en mati&#232;res plastiques" alias="22.23Y"/>
+          <Choice value="22.24Y // 2224Y - Fabrication d&#8217;&#233;l&#233;ments en mati&#232;res plastiques pour la construction" alias="22.24Y"/>
+          <Choice value="22.25Y // 2225Y - Fa&#231;onnage et finition de produits en mati&#232;res plastiques" alias="22.25Y"/>
+          <Choice value="22.26Y // 2226Y - Fabrication d&#8217;autres articles en mati&#232;res plastiques" alias="22.26Y"/>
+        </Choice>
+        <Choice value="23 - Fabrication d&#8217;autres produits min&#233;raux non m&#233;talliques" alias="23">
+          <Choice value="23.11Y // 2311Y - Fabrication de verre plat" alias="23.11Y"/>
+          <Choice value="23.12Y // 2312Y - Fa&#231;onnage et transformation du verre plat" alias="23.12Y"/>
+          <Choice value="23.13Y // 2313Y - Fabrication de verre creux" alias="23.13Y"/>
+          <Choice value="23.14Y // 2314Y - Fabrication de fibres de verre" alias="23.14Y"/>
+          <Choice value="23.15Y // 2315Y - Fabrication et fa&#231;onnage d&#8217;autres articles en verre, y compris verre technique" alias="23.15Y"/>
+          <Choice value="23.20Y // 2320Y - Fabrication de produits r&#233;fractaires" alias="23.20Y"/>
+          <Choice value="23.31Y // 2331Y - Fabrication de carreaux en c&#233;ramique" alias="23.31Y"/>
+          <Choice value="23.32Y // 2332Y - Fabrication de briques, tuiles et produits de construction, en terre cuite" alias="23.32Y"/>
+          <Choice value="23.41Y // 2341Y - Fabrication d&#8217;articles c&#233;ramiques &#224; usage domestique ou ornemental" alias="23.41Y"/>
+          <Choice value="23.42Y // 2342Y - Fabrication d&#8217;appareils sanitaires en c&#233;ramique" alias="23.42Y"/>
+          <Choice value="23.43Y // 2343Y - Fabrication d&#8217;isolateurs et pi&#232;ces isolantes en c&#233;ramique" alias="23.43Y"/>
+          <Choice value="23.44Y // 2344Y - Fabrication d&#8217;autres produits c&#233;ramiques &#224; usage technique" alias="23.44Y"/>
+          <Choice value="23.45Y // 2345Y - Fabrication d&#8217;autres produits c&#233;ramiques" alias="23.45Y"/>
+          <Choice value="23.51Y // 2351Y - Fabrication de ciment" alias="23.51Y"/>
+          <Choice value="23.52Y // 2352Y - Fabrication de chaux et pl&#226;tre" alias="23.52Y"/>
+          <Choice value="23.61Y // 2361Y - Fabrication d&#8217;&#233;l&#233;ments en b&#233;ton pour la construction" alias="23.61Y"/>
+          <Choice value="23.62Y // 2362Y - Fabrication d&#8217;&#233;l&#233;ments en pl&#226;tre pour la construction" alias="23.62Y"/>
+          <Choice value="23.63Y // 2363Y - Fabrication de b&#233;ton pr&#234;t &#224; l&#8217;emploi" alias="23.63Y"/>
+          <Choice value="23.64Y // 2364Y - Fabrication de mortiers et de b&#233;tons secs" alias="23.64Y"/>
+          <Choice value="23.65Y // 2365Y - Fabrication d&#8217;ouvrages en fibre-ciment" alias="23.65Y"/>
+          <Choice value="23.66Y // 2366Y - Fabrication d&#8217;autres ouvrages en b&#233;ton, en ciment ou en pl&#226;tre" alias="23.66Y"/>
+          <Choice value="23.70Y // 2370Y - Taille, fa&#231;onnage et finissage de pierres" alias="23.70Y"/>
+          <Choice value="23.91Y // 2391Y - Fabrication de produits abrasifs" alias="23.91Y"/>
+          <Choice value="23.99Y // 2399Y - Fabrication d&#8217;autres produits min&#233;raux non m&#233;talliques n.c.a." alias="23.99Y"/>
+        </Choice>
+        <Choice value="24 - M&#233;tallurgie" alias="24">
+          <Choice value="24.10Y // 2410Y - Sid&#233;rurgie" alias="24.10Y"/>
+          <Choice value="24.20Y // 2420Y - Fabrication de tubes, tuyaux, profil&#233;s creux et accessoires correspondants en acier" alias="24.20Y"/>
+          <Choice value="24.31Y // 2431Y - &#201;tirage &#224; froid de barres" alias="24.31Y"/>
+          <Choice value="24.32Y // 2432Y - Laminage &#224; froid de feuillards" alias="24.32Y"/>
+          <Choice value="24.33Y // 2433Y - Profilage &#224; froid par formage ou pliage" alias="24.33Y"/>
+          <Choice value="24.34Y // 2434Y - Tr&#233;filage &#224; froid" alias="24.34Y"/>
+          <Choice value="24.41Y // 2441Y - Production de m&#233;taux pr&#233;cieux" alias="24.41Y"/>
+          <Choice value="24.42Y // 2442Y - M&#233;tallurgie de l&#8217;aluminium" alias="24.42Y"/>
+          <Choice value="24.43Y // 2443Y - M&#233;tallurgie du plomb, du zinc ou de l&#8217;&#233;tain" alias="24.43Y"/>
+          <Choice value="24.44Y // 2444Y - M&#233;tallurgie du cuivre" alias="24.44Y"/>
+          <Choice value="24.45Y // 2445Y - M&#233;tallurgie des autres m&#233;taux non ferreux" alias="24.45Y"/>
+          <Choice value="24.46Y // 2446Y - &#201;laboration et transformation de mati&#232;res nucl&#233;aires" alias="24.46Y"/>
+          <Choice value="24.51Y // 2451Y - Fonderie de fonte" alias="24.51Y"/>
+          <Choice value="24.52Y // 2452Y - Fonderie d&#8217;acier" alias="24.52Y"/>
+          <Choice value="24.53Y // 2453Y - Fonderie de m&#233;taux l&#233;gers" alias="24.53Y"/>
+          <Choice value="24.54Y // 2454Y - Fonderie d&#8217;autres m&#233;taux non ferreux" alias="24.54Y"/>
+        </Choice>
+        <Choice value="25 - Fabrication de produits m&#233;talliques, &#224; l&#8217;exception des machines et des &#233;quipements" alias="25">
+          <Choice value="25.11Y // 2511Y - Fabrication de structures m&#233;talliques et de parties de structures" alias="25.11Y"/>
+          <Choice value="25.12Y // 2512Y - Fabrication de portes et fen&#234;tres en m&#233;tal" alias="25.12Y"/>
+          <Choice value="25.21Y // 2521Y - Fabrication de radiateurs et de chaudi&#232;res pour le chauffage central" alias="25.21Y"/>
+          <Choice value="25.22Y // 2522Y - Fabrication d&#8217;autres r&#233;servoirs, citernes et conteneurs m&#233;talliques" alias="25.22Y"/>
+          <Choice value="25.30Y // 2530Y - Fabrication d&#8217;armes et de munitions" alias="25.30Y"/>
+          <Choice value="25.40Y // 2540Y - Forgeage et fa&#231;onnage de m&#233;tal ; m&#233;tallurgie des poudres" alias="25.40Y"/>
+          <Choice value="25.51Y // 2551Y - Rev&#234;tement des m&#233;taux" alias="25.51Y"/>
+          <Choice value="25.52Y // 2552Y - Traitement thermique des m&#233;taux" alias="25.52Y"/>
+          <Choice value="25.53Y // 2553Y - Usinage des m&#233;taux" alias="25.53Y"/>
+          <Choice value="25.61Y // 2561Y - Fabrication de coutellerie" alias="25.61Y"/>
+          <Choice value="25.62Y // 2562Y - Fabrication de serrures et de ferrures" alias="25.62Y"/>
+          <Choice value="25.63Y // 2563Y - Fabrication d&#8217;outillage" alias="25.63Y"/>
+          <Choice value="25.91Y // 2591Y - Fabrication de f&#251;ts et emballages m&#233;talliques similaires" alias="25.91Y"/>
+          <Choice value="25.92Y // 2592Y - Fabrication d&#8217;emballages m&#233;talliques l&#233;gers" alias="25.92Y"/>
+          <Choice value="25.93Y // 2593Y - Fabrication d&#8217;articles en fils m&#233;talliques, de cha&#238;nes et de ressorts" alias="25.93Y"/>
+          <Choice value="25.94Y // 2594Y - Fabrication de fixations et de visserie" alias="25.94Y"/>
+          <Choice value="25.99Y // 2599Y - Fabrication d&#8217;autres produits m&#233;talliques n.c.a." alias="25.99Y"/>
+        </Choice>
+        <Choice value="26 - Fabrication de produits informatiques, &#233;lectroniques et optiques" alias="26">
+          <Choice value="26.11Y // 2611Y - Fabrication de composants &#233;lectroniques" alias="26.11Y"/>
+          <Choice value="26.12Y // 2612Y - Fabrication de cartes &#233;lectroniques assembl&#233;es" alias="26.12Y"/>
+          <Choice value="26.20Y // 2620Y - Fabrication d&#8217;ordinateurs et d&#8217;&#233;quipements p&#233;riph&#233;riques" alias="26.20Y"/>
+          <Choice value="26.30Y // 2630Y - Fabrication d&#8217;&#233;quipements de communication" alias="26.30Y"/>
+          <Choice value="26.40Y // 2640Y - Fabrication de produits &#233;lectroniques grand public" alias="26.40Y"/>
+          <Choice value="26.51Y // 2651Y - Fabrication d&#8217;instruments et d&#8217;appareils de mesure, d&#8217;essai et de navigation" alias="26.51Y"/>
+          <Choice value="26.52Y // 2652Y - Horlogerie" alias="26.52Y"/>
+          <Choice value="26.60Y // 2660Y - Fabrication d&#8217;&#233;quipements d&#8217;irradiation m&#233;dicale, d&#8217;&#233;quipements &#233;lectrom&#233;dicaux et &#233;lectroth&#233;rapeutiques" alias="26.60Y"/>
+          <Choice value="26.70Y // 2670Y - Fabrication de mat&#233;riels optique et photographique et de supports magn&#233;tiques et optiques" alias="26.70Y"/>
+        </Choice>
+        <Choice value="27 - Fabrication d&#8217;&#233;quipements &#233;lectriques" alias="27">
+          <Choice value="27.11Y // 2711Y - Fabrication de moteurs, g&#233;n&#233;ratrices et transformateurs &#233;lectriques" alias="27.11Y"/>
+          <Choice value="27.12Y // 2712Y - Fabrication de mat&#233;riel de distribution et de commande &#233;lectrique" alias="27.12Y"/>
+          <Choice value="27.20Y // 2720Y - Fabrication de piles et d&#8217;accumulateurs &#233;lectriques" alias="27.20Y"/>
+          <Choice value="27.31Y // 2731Y - Fabrication de c&#226;bles de fibres optiques" alias="27.31Y"/>
+          <Choice value="27.32Y // 2732Y - Fabrication d&#8217;autres fils et c&#226;bles &#233;lectroniques ou &#233;lectriques" alias="27.32Y"/>
+          <Choice value="27.33Y // 2733Y - Fabrication de mat&#233;riel d&#8217;installation &#233;lectrique" alias="27.33Y"/>
+          <Choice value="27.40Y // 2740Y - Fabrication d&#8217;appareils d&#8217;&#233;clairage" alias="27.40Y"/>
+          <Choice value="27.51Y // 2751Y - Fabrication d&#8217;appareils &#233;lectrom&#233;nagers" alias="27.51Y"/>
+          <Choice value="27.52Y // 2752Y - Fabrication d&#8217;appareils m&#233;nagers non &#233;lectriques" alias="27.52Y"/>
+          <Choice value="27.90Y // 2790Y - Fabrication d&#8217;autres mat&#233;riels &#233;lectriques" alias="27.90Y"/>
+        </Choice>
+        <Choice value="28 - Fabrication de machines et &#233;quipements n.c.a." alias="28">
+          <Choice value="28.11Y // 2811Y - Fabrication de moteurs et turbines, &#224; l&#8217;exception des moteurs d&#8217;avions et de v&#233;hicules" alias="28.11Y"/>
+          <Choice value="28.12Y // 2812Y - Fabrication d&#8217;&#233;quipements de transmission de puissance hydrauliques et pneumatiques" alias="28.12Y"/>
+          <Choice value="28.13G // 2813G - Fabrication d'autres pompes" alias="28.13G"/>
+          <Choice value="28.13H // 2813H - Fabrication d'autres compresseurs" alias="28.13H"/>
+          <Choice value="28.14Y // 2814Y - Fabrication d&#8217;autres articles de robinetterie" alias="28.14Y"/>
+          <Choice value="28.15Y // 2815Y - Fabrication de roulements et de transmissions m&#233;caniques" alias="28.15Y"/>
+          <Choice value="28.21Y // 2821Y - Fabrication de fours et br&#251;leurs et d&#8217;&#233;quipements fixes de chauffage domestique" alias="28.21Y"/>
+          <Choice value="28.22Y // 2822Y - Fabrication de mat&#233;riel de levage et de manutention" alias="28.22Y"/>
+          <Choice value="28.23Y // 2823Y - Fabrication de machines et d&#8217;&#233;quipements de bureau (&#224; l&#8217;exception des ordinateurs et &#233;quipements p&#233;riph&#233;riques)" alias="28.23Y"/>
+          <Choice value="28.24Y // 2824Y - Fabrication d&#8217;outillage portatif &#224; moteur incorpor&#233;" alias="28.24Y"/>
+          <Choice value="28.25Y // 2825Y - Fabrication d&#8217;&#233;quipements a&#233;rauliques et frigorifiques industriels" alias="28.25Y"/>
+          <Choice value="28.29Y // 2829Y - Fabrication de machines diverses d&#8217;usage g&#233;n&#233;ral" alias="28.29Y"/>
+          <Choice value="28.30Y // 2830Y - Fabrication de machines agricoles et foresti&#232;res" alias="28.30Y"/>
+          <Choice value="28.41Y // 2841Y - Fabrication de machines-outils pour le formage et le travail des m&#233;taux" alias="28.41Y"/>
+          <Choice value="28.42Y // 2842Y - Fabrication d&#8217;autres machines-outils" alias="28.42Y"/>
+          <Choice value="28.91Y // 2891Y - Fabrication de machines pour la m&#233;tallurgie" alias="28.91Y"/>
+          <Choice value="28.92Y // 2892Y - Fabrication de machines pour l&#8217;extraction ou la construction" alias="28.92Y"/>
+          <Choice value="28.93Y // 2893Y - Fabrication de machines pour l&#8217;industrie agroalimentaire" alias="28.93Y"/>
+          <Choice value="28.94Y // 2894Y - Fabrication de machines pour les industries textiles et du cuir" alias="28.94Y"/>
+          <Choice value="28.95Y // 2895Y - Fabrication de machines pour les industries du papier et du carton" alias="28.95Y"/>
+          <Choice value="28.96Y // 2896Y - Fabrication de machines pour le travail du caoutchouc ou des plastiques" alias="28.96Y"/>
+          <Choice value="28.97Y // 2897Y - Fabrication de machines de fabrication additive" alias="28.97Y"/>
+          <Choice value="28.99Y // 2899Y - Fabrication d&#8217;autres machines d&#8217;usage sp&#233;cifique n.c.a." alias="28.99Y"/>
+        </Choice>
+        <Choice value="29 - Industrie automobile" alias="29">
+          <Choice value="29.10Y // 2910Y - Construction de v&#233;hicules automobiles" alias="29.10Y"/>
+          <Choice value="29.20Y // 2920Y - Fabrication de carrosseries de v&#233;hicules automobiles ; fabrication de remorques et de semi-remorques" alias="29.20Y"/>
+          <Choice value="29.31Y // 2931Y - Fabrication d&#8217;&#233;quipements &#233;lectriques et &#233;lectroniques automobiles" alias="29.31Y"/>
+          <Choice value="29.32Y // 2932Y - Fabrication d&#8217;autres &#233;quipements automobiles" alias="29.32Y"/>
+        </Choice>
+        <Choice value="30 - Fabrication d&#8217;autres mat&#233;riels de transport" alias="30">
+          <Choice value="30.11Y // 3011Y - Construction de navires et de structures flottantes civiles" alias="30.11Y"/>
+          <Choice value="30.12Y // 3012Y - Construction de bateaux de plaisance" alias="30.12Y"/>
+          <Choice value="30.13Y // 3013Y - Construction de bateaux et navires militaires" alias="30.13Y"/>
+          <Choice value="30.20Y // 3020Y - Construction de locomotives et d&#8217;autre mat&#233;riel ferroviaire roulant" alias="30.20Y"/>
+          <Choice value="30.31Y // 3031Y - Construction a&#233;ronautique et spatiale civile" alias="30.31Y"/>
+          <Choice value="30.32Y // 3032Y - Construction a&#233;ronautique et spatiale militaire" alias="30.32Y"/>
+          <Choice value="30.40Y // 3040Y - Construction de v&#233;hicules militaires de combat" alias="30.40Y"/>
+          <Choice value="30.91Y // 3091Y - Fabrication de motocycles" alias="30.91Y"/>
+          <Choice value="30.92Y // 3092Y - Fabrication de bicyclettes et de v&#233;hicules pour invalides" alias="30.92Y"/>
+          <Choice value="30.99Y // 3099Y - Fabrication d&#8217;autres &#233;quipements de transport n.c.a." alias="30.99Y"/>
+        </Choice>
+        <Choice value="31 - Fabrication de meubles" alias="31">
+          <Choice value="31.00G // 3100G - Fabrication de meubles &#224; destination de professionnels" alias="31.00G"/>
+          <Choice value="31.00H // 3100H - Fabrication de meubles de cuisine et salle de bain" alias="31.00H"/>
+          <Choice value="31.00J // 3100J - Fabrication d'autres meubles domestiques, de sommiers et de matelas" alias="31.00J"/>
+        </Choice>
+        <Choice value="32 - Autres industries manufacturi&#232;res" alias="32">
+          <Choice value="32.11Y // 3211Y - Frappe de monnaie" alias="32.11Y"/>
+          <Choice value="32.12Y // 3212Y - Fabrication d&#8217;articles de joaillerie et bijouterie" alias="32.12Y"/>
+          <Choice value="32.13Y // 3213Y - Fabrication d&#8217;articles de bijouterie fantaisie et articles similaires" alias="32.13Y"/>
+          <Choice value="32.20Y // 3220Y - Fabrication d&#8217;instruments de musique" alias="32.20Y"/>
+          <Choice value="32.30Y // 3230Y - Fabrication d&#8217;articles de sport" alias="32.30Y"/>
+          <Choice value="32.40Y // 3240Y - Fabrication de jeux et jouets" alias="32.40Y"/>
+          <Choice value="32.50Y // 3250Y - Fabrication d&#8217;instruments et de fournitures &#224; usage m&#233;dical et dentaire" alias="32.50Y"/>
+          <Choice value="32.91Y // 3291Y - Fabrication d&#8217;articles de brosserie" alias="32.91Y"/>
+          <Choice value="32.99Y // 3299Y - Autres activit&#233;s manufacturi&#232;res n.c.a." alias="32.99Y"/>
+        </Choice>
+        <Choice value="33 - R&#233;paration, entretien et installation de machines et d&#8217;&#233;quipements" alias="33">
+          <Choice value="33.11Y // 3311Y - R&#233;paration et entretien d&#8217;ouvrages en m&#233;taux" alias="33.11Y"/>
+          <Choice value="33.12Y // 3312Y - R&#233;paration et entretien de machines" alias="33.12Y"/>
+          <Choice value="33.13Y // 3313Y - R&#233;paration et entretien de mat&#233;riels &#233;lectroniques et optiques" alias="33.13Y"/>
+          <Choice value="33.14Y // 3314Y - R&#233;paration et entretien d&#8217;&#233;quipements &#233;lectriques" alias="33.14Y"/>
+          <Choice value="33.15Y // 3315Y - R&#233;paration et entretien de bateaux et navires civils" alias="33.15Y"/>
+          <Choice value="33.16Y // 3316Y - R&#233;paration et entretien d&#8217;a&#233;ronefs et d&#8217;engins spatiaux civils" alias="33.16Y"/>
+          <Choice value="33.17Y // 3317Y - R&#233;paration et entretien d&#8217;autres &#233;quipements de transport civils" alias="33.17Y"/>
+          <Choice value="33.18G // 3318G - R&#233;paration et entretien d&#8217;a&#233;ronefs et d&#8217;engins spatiaux militaires" alias="33.18G"/>
+          <Choice value="33.18H // 3318H - R&#233;paration et entretien de v&#233;hicules militaires de combat, de navires et de bateaux" alias="33.18H"/>
+          <Choice value="33.19Y // 3319Y - R&#233;paration et entretien d&#8217;autres &#233;quipements" alias="33.19Y"/>
+          <Choice value="33.20Y // 3320Y - Installation de machines et d&#8217;&#233;quipements industriels" alias="33.20Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="D - PRODUCTION ET DISTRIBUTION D&#8217;&#201;LECTRICIT&#201;, DE GAZ, DE VAPEUR ET D&#8217;AIR CONDITIONN&#201; " alias="D">
+        <Choice value="35 - Production et distribution d&#8217;&#233;lectricit&#233;, de gaz, de vapeur et d&#8217;air conditionn&#233;" alias="35">
+          <Choice value="35.11Y // 3511Y - Production d&#8217;&#233;lectricit&#233; &#224; partir de sources non renouvelables" alias="35.11Y"/>
+          <Choice value="35.12Y // 3512Y - Production d&#8217;&#233;lectricit&#233; &#224; partir de sources renouvelables" alias="35.12Y"/>
+          <Choice value="35.13Y // 3513Y - Transport d&#8217;&#233;lectricit&#233;" alias="35.13Y"/>
+          <Choice value="35.14Y // 3514Y - Distribution d&#8217;&#233;lectricit&#233;" alias="35.14Y"/>
+          <Choice value="35.15G // 3515G - Exploitation d'installations de recharge pour v&#233;hicules &#233;lectriques" alias="35.15G"/>
+          <Choice value="35.15H // 3515H - Autre commerce d&#8217;&#233;lectricit&#233;" alias="35.15H"/>
+          <Choice value="35.16Y // 3516Y - Stockage de l&#8217;&#233;lectricit&#233;" alias="35.16Y"/>
+          <Choice value="35.21Y // 3521Y - Production de gaz" alias="35.21Y"/>
+          <Choice value="35.22Y // 3522Y - Distribution de combustibles gazeux par conduites" alias="35.22Y"/>
+          <Choice value="35.23Y // 3523Y - Commerce de combustibles gazeux par conduites" alias="35.23Y"/>
+          <Choice value="35.24Y // 3524Y - Stockage de gaz dans le cadre de services d&#8217;approvisionnement en r&#233;seau" alias="35.24Y"/>
+          <Choice value="35.30Y // 3530Y - Production et distribution de vapeur et d&#8217;air conditionn&#233;" alias="35.30Y"/>
+          <Choice value="35.40Y // 3540Y - Activit&#233;s des courtiers et agents pour l&#8217;&#233;lectricit&#233; et le gaz naturel" alias="35.40Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="E - PRODUCTION ET DISTRIBUTION D&#8217;EAU ; ASSAINISSEMENT, GESTION DES D&#201;CHETS ET D&#201;POLLUTION" alias="E">
+        <Choice value="36 - Captage, traitement et distribution d&#8217;eau" alias="36">
+          <Choice value="36.00Y // 3600Y - Captage, traitement et distribution d&#8217;eau" alias="36.00Y"/>
+        </Choice>
+        <Choice value="37 - Collecte et traitement des eaux us&#233;es" alias="37">
+          <Choice value="37.00Y // 3700Y - Collecte et traitement des eaux us&#233;es" alias="37.00Y"/>
+        </Choice>
+        <Choice value="38 - Collecte, traitement et &#233;limination des d&#233;chets" alias="38">
+          <Choice value="38.11Y // 3811Y - Collecte des d&#233;chets non dangereux" alias="38.11Y"/>
+          <Choice value="38.12Y // 3812Y - Collecte des d&#233;chets dangereux" alias="38.12Y"/>
+          <Choice value="38.21Y // 3821Y - R&#233;cup&#233;ration de mat&#233;riaux" alias="38.21Y"/>
+          <Choice value="38.22Y // 3822Y - Valorisation &#233;nerg&#233;tique" alias="38.22Y"/>
+          <Choice value="38.23Y // 3823Y - Autre valorisation de d&#233;chets" alias="38.23Y"/>
+          <Choice value="38.31Y // 3831Y - Incin&#233;ration sans r&#233;cup&#233;ration d&#8217;&#233;nergie" alias="38.31Y"/>
+          <Choice value="38.32Y // 3832Y - Mise en d&#233;charge ou stockage permanent" alias="38.32Y"/>
+          <Choice value="38.33Y // 3833Y - Autre &#233;limination de d&#233;chets" alias="38.33Y"/>
+        </Choice>
+        <Choice value="39 - Activit&#233;s d'assainissement et autres activit&#233;s de service de gestion des d&#233;chets" alias="39">
+          <Choice value="39.00Y // 3900Y - Activit&#233;s d'assainissement et autres activit&#233;s de service de gestion de d&#233;chets" alias="39.00Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="F - CONSTRUCTION " alias="F">
+        <Choice value="41 - Construction de b&#226;timents r&#233;sidentiels et non r&#233;sidentiels" alias="41">
+          <Choice value="41.00G // 4100G - Construction de maisons individuelles" alias="41.00G"/>
+          <Choice value="41.00H // 4100H - Construction d'autres b&#226;timents" alias="41.00H"/>
+        </Choice>
+        <Choice value="42 - G&#233;nie civil" alias="42">
+          <Choice value="42.11Y // 4211Y - Construction de routes et autoroutes" alias="42.11Y"/>
+          <Choice value="42.12Y // 4212Y - Construction de voies ferr&#233;es de surface et souterraines" alias="42.12Y"/>
+          <Choice value="42.13G // 4213G - Construction de ponts et de viaducs" alias="42.13G"/>
+          <Choice value="42.13H // 4213H - Construction de tunnels" alias="42.13H"/>
+          <Choice value="42.21Y // 4221Y - Construction de r&#233;seaux pour fluides" alias="42.21Y"/>
+          <Choice value="42.22Y // 4222Y - Construction de r&#233;seaux &#233;lectriques et de t&#233;l&#233;communications" alias="42.22Y"/>
+          <Choice value="42.91Y // 4291Y - Construction d&#8217;ouvrages maritimes et fluviaux" alias="42.91Y"/>
+          <Choice value="42.99Y // 4299Y - Construction d&#8217;autres ouvrages de g&#233;nie civil n.c.a." alias="42.99Y"/>
+        </Choice>
+        <Choice value="43 - Travaux de construction sp&#233;cialis&#233;s" alias="43">
+          <Choice value="43.11Y // 4311Y - D&#233;molition" alias="43.11Y"/>
+          <Choice value="43.12G // 4312G - Travaux de terrassement courants et travaux pr&#233;paratoires" alias="43.12G"/>
+          <Choice value="43.12H // 4312H - Travaux de terrassement sp&#233;cialis&#233;s ou de grande masse" alias="43.12H"/>
+          <Choice value="43.13Y // 4313Y - Forages et sondages" alias="43.13Y"/>
+          <Choice value="43.21G // 4321G - Travaux d'installation &#233;lectrique dans tous locaux" alias="43.21G"/>
+          <Choice value="43.21H // 4321H - Travaux d'installation &#233;lectrique sur la voie" alias="43.21H"/>
+          <Choice value="43.22G // 4322G - Travaux d'installation d'eau et de gaz en tous locaux" alias="43.22G"/>
+          <Choice value="43.22H // 4322H - Travaux d'installation d'&#233;quipements thermiques et de climatisation" alias="43.22H"/>
+          <Choice value="43.23Y // 4323Y - Mise en place de l&#8217;isolation" alias="43.23Y"/>
+          <Choice value="43.24Y // 4324Y - Autres travaux d&#8217;installation" alias="43.24Y"/>
+          <Choice value="43.31Y // 4331Y - Travaux de pl&#226;trerie" alias="43.31Y"/>
+          <Choice value="43.32G // 4332G - Travaux de menuiserie bois et PVC" alias="43.32G"/>
+          <Choice value="43.32H // 4332H - Travaux de menuiserie m&#233;tallique" alias="43.32H"/>
+          <Choice value="43.33Y // 4333Y - Travaux de rev&#234;tement des sols et des murs" alias="43.33Y"/>
+          <Choice value="43.34G // 4334G - Travaux de peinture" alias="43.34G"/>
+          <Choice value="43.34H // 4334H - Travaux de vitrerie" alias="43.34H"/>
+          <Choice value="43.35Y // 4335Y - Autres travaux de finition" alias="43.35Y"/>
+          <Choice value="43.41G // 4341G - Travaux de charpente" alias="43.41G"/>
+          <Choice value="43.41H // 4341H - Travaux de couverture par &#233;l&#233;ments" alias="43.41H"/>
+          <Choice value="43.41J // 4341J - Travaux d'&#233;tanch&#233;ification pour la toiture" alias="43.41J"/>
+          <Choice value="43.42G // 4342G - Travaux de montage d&#8217;&#233;l&#233;ments de construction pr&#233;fabriqu&#233;s pour b&#226;timents, en acier" alias="43.42G"/>
+          <Choice value="43.42H // 4342H - Travaux de montage d&#8217;&#233;l&#233;ments de construction pr&#233;fabriqu&#233;s pour b&#226;timents, en bois" alias="43.42H"/>
+          <Choice value="43.42J // 4342J - Autres travaux de construction sp&#233;cialis&#233;s dans la construction de b&#226;timents" alias="43.42J"/>
+          <Choice value="43.50Y // 4350Y - Travaux de construction sp&#233;cialis&#233;s en g&#233;nie civil" alias="43.50Y"/>
+          <Choice value="43.60Y // 4360Y - Activit&#233;s de service d&#8217;interm&#233;diation pour des travaux de construction sp&#233;cialis&#233;s" alias="43.60Y"/>
+          <Choice value="43.91Y // 4391Y - Travaux de ma&#231;onnerie et de pose de briques" alias="43.91Y"/>
+          <Choice value="43.99G // 4399G - Location avec op&#233;rateur d&#8217;&#233;quipement de construction" alias="43.99G"/>
+          <Choice value="43.99H // 4399H - Autres travaux sp&#233;cialis&#233;s de construction n.c.a." alias="43.99H"/>
+        </Choice>
+      </Choice>
+      <Choice value="G - COMMERCE " alias="G">
+        <Choice value="46 - Commerce de gros" alias="46">
+          <Choice value="46.11Y // 4611Y - Activit&#233;s d&#8217;interm&#233;diaire du commerce de gros en mati&#232;res premi&#232;res agricoles, animaux vivants, mati&#232;res premi&#232;res textiles et produits semi-finis" alias="46.11Y"/>
+          <Choice value="46.12Y // 4612Y - Activit&#233;s d&#8217;interm&#233;diaire du commerce de gros en combustibles, m&#233;taux, min&#233;raux et produits chimiques" alias="46.12Y"/>
+          <Choice value="46.13Y // 4613Y - Activit&#233;s d&#8217;interm&#233;diaire du commerce de gros en bois et mat&#233;riaux de construction" alias="46.13Y"/>
+          <Choice value="46.14Y // 4614Y - Activit&#233;s d&#8217;interm&#233;diaire du commerce de gros en machines, &#233;quipements industriels, navires et avions" alias="46.14Y"/>
+          <Choice value="46.15Y // 4615Y - Activit&#233;s d&#8217;interm&#233;diaire du commerce de gros en meubles, articles de m&#233;nage et quincaillerie" alias="46.15Y"/>
+          <Choice value="46.16Y // 4616Y - Activit&#233;s d&#8217;interm&#233;diaire du commerce de gros en textiles, habillement, fourrures, chaussures et articles en cuir" alias="46.16Y"/>
+          <Choice value="46.17G // 4617G - Centrales d'achat alimentaires" alias="46.17G"/>
+          <Choice value="46.17H // 4617H - Autres activit&#233;s d'interm&#233;diaire du commerce de gros en denr&#233;es, boissons et tabac" alias="46.17H"/>
+          <Choice value="46.18Y // 4618Y - Activit&#233;s d&#8217;interm&#233;diaire sp&#233;cialis&#233; dans le commerce de gros d&#8217;autres produits sp&#233;cifiques" alias="46.18Y"/>
+          <Choice value="46.19G // 4619G - Centrales d'achat non sp&#233;cialis&#233;es" alias="46.19G"/>
+          <Choice value="46.19H // 4619H - Autres activit&#233;s d'interm&#233;diaire non sp&#233;cialis&#233; du commerce de gros" alias="46.19H"/>
+          <Choice value="46.21Y // 4621Y - Commerce de gros de c&#233;r&#233;ales, de tabac non manufactur&#233;, de semences et d&#8217;aliments pour animaux" alias="46.21Y"/>
+          <Choice value="46.22Y // 4622Y - Commerce de gros de fleurs et de plantes" alias="46.22Y"/>
+          <Choice value="46.23Y // 4623Y - Commerce de gros d&#8217;animaux vivants" alias="46.23Y"/>
+          <Choice value="46.24Y // 4624Y - Commerce de gros de cuirs et de peaux" alias="46.24Y"/>
+          <Choice value="46.31Y // 4631Y - Commerce de gros de fruits et l&#233;gumes" alias="46.31Y"/>
+          <Choice value="46.32G // 4632G - Commerce de gros de viandes et de produits &#224; base de viande" alias="46.32G"/>
+          <Choice value="46.32H // 4632H - Commerce de gros de poissons, crustac&#233;s et mollusques et de produits &#224; base de poisson" alias="46.32H"/>
+          <Choice value="46.33Y // 4633Y - Commerce de gros de produits laitiers, oeufs, huiles et mati&#232;res grasses comestibles" alias="46.33Y"/>
+          <Choice value="46.34Y // 4634Y - Commerce de gros de boissons" alias="46.34Y"/>
+          <Choice value="46.35Y // 4635Y - Commerce de gros de produits &#224; base de tabac" alias="46.35Y"/>
+          <Choice value="46.36Y // 4636Y - Commerce de gros de sucre, chocolat et confiserie" alias="46.36Y"/>
+          <Choice value="46.37Y // 4637Y - Commerce de gros de caf&#233;, th&#233;, cacao et &#233;pices" alias="46.37Y"/>
+          <Choice value="46.38Y // 4638Y - Commerce de gros d&#8217;autres denr&#233;es alimentaires" alias="46.38Y"/>
+          <Choice value="46.39Y // 4639Y - Commerce de gros non sp&#233;cialis&#233; de denr&#233;es, boissons et tabac" alias="46.39Y"/>
+          <Choice value="46.41Y // 4641Y - Commerce de gros de textiles" alias="46.41Y"/>
+          <Choice value="46.42Y // 4642Y - Commerce de gros d&#8217;habillement et de chaussures" alias="46.42Y"/>
+          <Choice value="46.43G // 4643G - Commerce de gros d&#8217;appareils de g&#233;nie climatique (radiateurs, climatiseurs, ventilateurs et pompes &#224; chaleur)" alias="46.43G"/>
+          <Choice value="46.43H // 4643H - Commerce de gros d&#8217;autres appareils &#233;lectrom&#233;nagers" alias="46.43H"/>
+          <Choice value="46.44Y // 4644Y - Commerce de gros de vaisselle, verrerie et produits d&#8217;entretien" alias="46.44Y"/>
+          <Choice value="46.45Y // 4645Y - Commerce de gros de parfumerie et de produits de beaut&#233;" alias="46.45Y"/>
+          <Choice value="46.46Y // 4646Y - Commerce de gros de produits pharmaceutiques et m&#233;dicaux" alias="46.46Y"/>
+          <Choice value="46.47Y // 4647Y - Commerce de gros de meubles &#224; usage domestique, de bureau et de magasin, de tapis et d&#8217;appareils d&#8217;&#233;clairage" alias="46.47Y"/>
+          <Choice value="46.48Y // 4648Y - Commerce de gros d&#8217;articles d&#8217;horlogerie et de bijouterie" alias="46.48Y"/>
+          <Choice value="46.49Y // 4649Y - Commerce de gros d&#8217;autres biens domestiques" alias="46.49Y"/>
+          <Choice value="46.50Y // 4650Y - Commerce de gros d&#8217;&#233;quipements de l&#8217;information et de la communication" alias="46.50Y"/>
+          <Choice value="46.61Y // 4661Y - Commerce de gros de mat&#233;riel agricole" alias="46.61Y"/>
+          <Choice value="46.62Y // 4662Y - Commerce de gros de machines-outils" alias="46.62Y"/>
+          <Choice value="46.63Y // 4663Y - Commerce de gros de machines pour l&#8217;extraction, la construction et le g&#233;nie civil" alias="46.63Y"/>
+          <Choice value="46.64G // 4664G - Commerce de gros d&#8217;autre mat&#233;riel &#233;lectrique" alias="46.64G"/>
+          <Choice value="46.64H // 4664H - Commerce de gros de mat&#233;riels de manutention et de levage" alias="46.64H"/>
+          <Choice value="46.64J // 4664J - Commerce de gros d&#8217;autres machines et &#233;quipements pour l&#8217;industrie et le transport" alias="46.64J"/>
+          <Choice value="46.64K // 4664K - Commerce de gros d&#8217;autres machines et &#233;quipements pour le commerce et les services" alias="46.64K"/>
+          <Choice value="46.71G // 4671G - Commerce de gros de v&#233;hicules automobiles l&#233;gers (moins de 3,5 tonnes)" alias="46.71G"/>
+          <Choice value="46.71H // 4671H - Commerce de gros d&#8217;autres v&#233;hicules automobiles" alias="46.71H"/>
+          <Choice value="46.72Y // 4672Y - Commerce de gros de pi&#232;ces et accessoires de v&#233;hicules automobiles" alias="46.72Y"/>
+          <Choice value="46.73Y // 4673Y - Commerce de gros de motocycles et de pi&#232;ces et accessoires pour motocycles" alias="46.73Y"/>
+          <Choice value="46.81Y // 4681Y - Commerce de gros de combustibles solides, liquides et gazeux et de produits annexes" alias="46.81Y"/>
+          <Choice value="46.82Y // 4682Y - Commerce de gros de minerais et de m&#233;taux" alias="46.82Y"/>
+          <Choice value="46.83G // 4683G - Commerce de gros de bois et mat&#233;riaux de construction" alias="46.83G"/>
+          <Choice value="46.83H // 4683H - Commerce de gros d&#8217;appareils sanitaires" alias="46.83H"/>
+          <Choice value="46.83J // 4683J - Commerce de gros de produits de d&#233;coration" alias="46.83J"/>
+          <Choice value="46.84G // 4684G - Commerce de gros de quincaillerie et de mat&#233;riel de bricolage" alias="46.84G"/>
+          <Choice value="46.84H // 4684H - Commerce de gros de fournitures pour plomberie et chauffage" alias="46.84H"/>
+          <Choice value="46.85Y // 4685Y - Commerce de gros de produits chimiques" alias="46.85Y"/>
+          <Choice value="46.86Y // 4686Y - Commerce de gros d&#8217;autres produits interm&#233;diaires" alias="46.86Y"/>
+          <Choice value="46.87Y // 4687Y - Commerce de gros de d&#233;chets et d&#233;bris" alias="46.87Y"/>
+          <Choice value="46.89Y // 4689Y - Autre commerce de gros sp&#233;cialis&#233; n.c.a." alias="46.89Y"/>
+          <Choice value="46.90Y // 4690Y - Commerce de gros non sp&#233;cialis&#233;" alias="46.90Y"/>
+        </Choice>
+        <Choice value="47 - Commerce de d&#233;tail" alias="47">
+          <Choice value="47.11G // 4711G - Commerce de d&#233;tail non sp&#233;cialis&#233; &#224; pr&#233;dominance alimentaire en magasin de moins de 120 m&#178;" alias="47.11G"/>
+          <Choice value="47.11H // 4711H - Commerce de d&#233;tail non sp&#233;cialis&#233; &#224; pr&#233;dominance alimentaire en magasin de 120 &#224; 400 m&#178; (sup&#233;rette)" alias="47.11H"/>
+          <Choice value="47.11J // 4711J - Commerce de d&#233;tail non sp&#233;cialis&#233; &#224; pr&#233;dominance alimentaire en magasin de 400 &#224; 2500 m&#178; (supermarch&#233;)" alias="47.11J"/>
+          <Choice value="47.11K // 4711K - Commerce de d&#233;tail non sp&#233;cialis&#233; &#224; pr&#233;dominance alimentaire en magasin de plus de 2500 m&#178; (hypermarch&#233;)" alias="47.11K"/>
+          <Choice value="47.11L // 4711L - Commerce de d&#233;tail non sp&#233;cialis&#233; &#224; pr&#233;dominance alimentaire hors magasin" alias="47.11L"/>
+          <Choice value="47.12G // 4712G - Autre commerce de d&#233;tail non sp&#233;cialis&#233; en magasin de plus de 2500 m&#178; (grand magasin)" alias="47.12G"/>
+          <Choice value="47.12H // 4712H - Autre commerce de d&#233;tail non sp&#233;cialis&#233; en magasin de moins de 2500 m&#178; ou hors magasin" alias="47.12H"/>
+          <Choice value="47.21Y // 4721Y - Commerce de d&#233;tail de fruits et l&#233;gumes" alias="47.21Y"/>
+          <Choice value="47.22Y // 4722Y - Commerce de d&#233;tail de viande et de produits &#224; base de viande" alias="47.22Y"/>
+          <Choice value="47.23Y // 4723Y - Commerce de d&#233;tail de poisson, de crustac&#233;s et de mollusques" alias="47.23Y"/>
+          <Choice value="47.24Y // 4724Y - Commerce de d&#233;tail de pain, de p&#226;tisserie et de confiserie" alias="47.24Y"/>
+          <Choice value="47.25Y // 4725Y - Commerce de d&#233;tail de boissons" alias="47.25Y"/>
+          <Choice value="47.26Y // 4726Y - Commerce de d&#233;tail de produits &#224; base de tabac" alias="47.26Y"/>
+          <Choice value="47.27G // 4727G - Commerce de d&#233;tail de produits laitiers et d'oeufs" alias="47.27G"/>
+          <Choice value="47.27H // 4727H - Commerce de d&#233;tail sp&#233;cialis&#233; d&#8217;autres produits d&#8217;&#233;picerie et d&#8217;autres produits alimentaires n.c.a." alias="47.27H"/>
+          <Choice value="47.30Y // 4730Y - Commerce de d&#233;tail de carburants" alias="47.30Y"/>
+          <Choice value="47.40Y // 4740Y - Commerce de d&#233;tail d&#8217;&#233;quipements de l&#8217;information et de la communication" alias="47.40Y"/>
+          <Choice value="47.51Y // 4751Y - Commerce de d&#233;tail de textiles" alias="47.51Y"/>
+          <Choice value="47.52G // 4752G - Commerce de d&#233;tail de quincaillerie, de mat&#233;riaux de construction et de bricolage, de peinture et de verre en magasinde moins de 400 m&#178;" alias="47.52G"/>
+          <Choice value="47.52H // 4752H - Commerce de d&#233;tail de quincaillerie, de mat&#233;riaux de construction et de bricolage, de peinture et de verre en magasinde plus de 400 m&#178; ou hors magasin" alias="47.52H"/>
+          <Choice value="47.53Y // 4753Y - Commerce de d&#233;tail de tapis, moquettes et rev&#234;tements de murs et de sols" alias="47.53Y"/>
+          <Choice value="47.54Y // 4754Y - Commerce de d&#233;tail d&#8217;appareils &#233;lectrom&#233;nagers" alias="47.54Y"/>
+          <Choice value="47.55G // 4755G - Commerce de d&#233;tail de meubles" alias="47.55G"/>
+          <Choice value="47.55H // 4755H - Commerce de d&#233;tail d'appareils d&#8217;&#233;clairage, de vaisselle et d&#8217;autres &#233;quipements du foyer" alias="47.55H"/>
+          <Choice value="47.61Y // 4761Y - Commerce de d&#233;tail de livres" alias="47.61Y"/>
+          <Choice value="47.62Y // 4762Y - Commerce de d&#233;tail de journaux et autres publications p&#233;riodiques et de papeterie" alias="47.62Y"/>
+          <Choice value="47.63Y // 4763Y - Commerce de d&#233;tail d&#8217;articles de sport" alias="47.63Y"/>
+          <Choice value="47.64Y // 4764Y - Commerce de d&#233;tail de jeux et jouets" alias="47.64Y"/>
+          <Choice value="47.69Y // 4769Y - Commerce de d&#233;tail de biens culturels et de loisirs n.c.a." alias="47.69Y"/>
+          <Choice value="47.71Y // 4771Y - Commerce de d&#233;tail d&#8217;habillement" alias="47.71Y"/>
+          <Choice value="47.72G // 4772G - Commerce de d&#233;tail de chaussures" alias="47.72G"/>
+          <Choice value="47.72H // 4772H - Commerce de d&#233;tail de maroquinerie et d'articles de voyage" alias="47.72H"/>
+          <Choice value="47.73Y // 4773Y - Commerce de produits pharmaceutiques" alias="47.73Y"/>
+          <Choice value="47.74G // 4774G - Commerce de d&#233;tail d'optique" alias="47.74G"/>
+          <Choice value="47.74H // 4774H - Commerce de d&#233;tail d&#8217;autres articles m&#233;dicaux et orthop&#233;diques" alias="47.74H"/>
+          <Choice value="47.75Y // 4775Y - Commerce de d&#233;tail de parfumerie et de produits de beaut&#233;" alias="47.75Y"/>
+          <Choice value="47.76Y // 4776Y - Commerce de d&#233;tail de fleurs, plantes, engrais, animaux de compagnie et aliments pour ces animaux" alias="47.76Y"/>
+          <Choice value="47.77Y // 4777Y - Commerce de d&#233;tail d&#8217;articles d&#8217;horlogerie et de bijouterie" alias="47.77Y"/>
+          <Choice value="47.78G // 4778G - Commerce de d&#233;tail de charbons et combustibles" alias="47.78G"/>
+          <Choice value="47.78H // 4778H - Commerce de d&#233;tail sp&#233;cialis&#233; d&#8217;autres biens neufs n.c.a." alias="47.78H"/>
+          <Choice value="47.79G // 4779G - Commerce de d&#233;tail d&#8217;antiquit&#233;s et livres anciens" alias="47.79G"/>
+          <Choice value="47.79H // 4779H - Commerce de d&#233;tail d&#8217;autres biens d&#8217;occasion" alias="47.79H"/>
+          <Choice value="47.81Y // 4781Y - Commerce de d&#233;tail de v&#233;hicules automobiles" alias="47.81Y"/>
+          <Choice value="47.82Y // 4782Y - Commerce de d&#233;tail de pi&#232;ces et accessoires de v&#233;hicules automobiles" alias="47.82Y"/>
+          <Choice value="47.83Y // 4783Y - Commerce de d&#233;tail de motocycles et de pi&#232;ces et accessoires de motocycles" alias="47.83Y"/>
+          <Choice value="47.91Y // 4791Y - Activit&#233;s de service d&#8217;interm&#233;diation pour le commerce de d&#233;tail non sp&#233;cialis&#233;" alias="47.91Y"/>
+          <Choice value="47.92G // 4792G - Activit&#233;s de service d&#8217;interm&#233;diation pour le commerce de d&#233;tail de v&#233;hicules automobiles" alias="47.92G"/>
+          <Choice value="47.92H // 4792H - Activit&#233;s de service d&#8217;interm&#233;diation pour le commerce de d&#233;tail de produits &#224; base de tabac, de journaux et de jeux de hasard" alias="47.92H"/>
+          <Choice value="47.92J // 4792J - Activit&#233;s de service d'interm&#233;diation pour le commerce de d&#233;tail sp&#233;cialis&#233; d&#8217;autres biens" alias="47.92J"/>
+        </Choice>
+      </Choice>
+      <Choice value="H - TRANSPORTS ET ENTREPOSAGE" alias="H">
+        <Choice value="49 - Transports terrestres et transports par conduites" alias="49">
+          <Choice value="49.11Y // 4911Y - Transport ferroviaire lourd de voyageurs" alias="49.11Y"/>
+          <Choice value="49.12Y // 4912Y - Autre transport ferroviaire de voyageurs" alias="49.12Y"/>
+          <Choice value="49.20Y // 4920Y - Transport ferroviaire de fret" alias="49.20Y"/>
+          <Choice value="49.31G // 4931G - Transport r&#233;gulier urbain et suburbain de voyageurs par route" alias="49.31G"/>
+          <Choice value="49.31H // 4931H - Autre transport r&#233;gulier de voyageurs par route" alias="49.31H"/>
+          <Choice value="49.32Y // 4932Y - Transport non r&#233;gulier de voyageurs par route" alias="49.32Y"/>
+          <Choice value="49.33G // 4933G - Activit&#233;s de service de transport de personnes par taxi" alias="49.33G"/>
+          <Choice value="49.33H // 4933H - Autres activit&#233;s de service de transport de personnes sur demande par v&#233;hicule avec chauffeur" alias="49.33H"/>
+          <Choice value="49.34Y // 4934Y - Transport de voyageurs par t&#233;l&#233;ph&#233;riques et remont&#233;es m&#233;caniques" alias="49.34Y"/>
+          <Choice value="49.39Y // 4939Y - Autre transport terrestre de voyageurs n.c.a." alias="49.39Y"/>
+          <Choice value="49.41G // 4941G - Transport routier de fret longue distance" alias="49.41G"/>
+          <Choice value="49.41H // 4941H - Transport routier de fret r&#233;gional et de proximit&#233;" alias="49.41H"/>
+          <Choice value="49.41J // 4941J - Location de camions avec chauffeur" alias="49.41J"/>
+          <Choice value="49.42Y // 4942Y - Services de d&#233;m&#233;nagement" alias="49.42Y"/>
+          <Choice value="49.50Y // 4950Y - Transport par conduites" alias="49.50Y"/>
+        </Choice>
+        <Choice value="50 - Transport par eau" alias="50">
+          <Choice value="50.10Y // 5010Y - Transports maritimes et c&#244;tiers de passagers" alias="50.10Y"/>
+          <Choice value="50.20Y // 5020Y - Transports maritimes et c&#244;tiers de fret" alias="50.20Y"/>
+          <Choice value="50.30Y // 5030Y - Transports fluviaux de passagers" alias="50.30Y"/>
+          <Choice value="50.40Y // 5040Y - Transports fluviaux de fret" alias="50.40Y"/>
+        </Choice>
+        <Choice value="51 - Transports a&#233;riens" alias="51">
+          <Choice value="51.10Y // 5110Y - Transports a&#233;riens de passagers" alias="51.10Y"/>
+          <Choice value="51.21Y // 5121Y - Transports a&#233;riens de fret" alias="51.21Y"/>
+          <Choice value="51.22Y // 5122Y - Transports spatiaux" alias="51.22Y"/>
+        </Choice>
+        <Choice value="52 - Entreposage et services auxiliaires des transports" alias="52">
+          <Choice value="52.10G // 5210G - Entreposage et stockage frigorifique" alias="52.10G"/>
+          <Choice value="52.10H // 5210H - Entreposage et stockage non frigorifique" alias="52.10H"/>
+          <Choice value="52.21Y // 5221Y - Services auxiliaires des transports terrestres" alias="52.21Y"/>
+          <Choice value="52.22Y // 5222Y - Services auxiliaires des transports par eau" alias="52.22Y"/>
+          <Choice value="52.23Y // 5223Y - Services auxiliaires des transports a&#233;riens" alias="52.23Y"/>
+          <Choice value="52.24G // 5224G - Manutention portuaire" alias="52.24G"/>
+          <Choice value="52.24H // 5224H - Manutention non portuaire" alias="52.24H"/>
+          <Choice value="52.25Y // 5225Y - Activit&#233;s de service logistique" alias="52.25Y"/>
+          <Choice value="52.26Y // 5226Y - Autres activit&#233;s de soutien pour les transports" alias="52.26Y"/>
+          <Choice value="52.31Y // 5231Y - Activit&#233;s de service d&#8217;interm&#233;diation pour le transport de fret" alias="52.31Y"/>
+          <Choice value="52.32Y // 5232Y - Activit&#233;s de service d&#8217;interm&#233;diation pour le transport de passagers" alias="52.32Y"/>
+        </Choice>
+        <Choice value="53 - Activit&#233;s de poste et de courrier" alias="53">
+          <Choice value="53.10Y // 5310Y - Activit&#233;s de poste dans le cadre d&#8217;une obligation de service universel" alias="53.10Y"/>
+          <Choice value="53.20G // 5320G - Livraison de colis" alias="53.20G"/>
+          <Choice value="53.20H // 5320H - Livraison &#224; domicile de repas et autres activit&#233;s de poste et de courrier n.c.a" alias="53.20H"/>
+          <Choice value="53.30Y // 5330Y - Activit&#233;s de service d&#8217;interm&#233;diation pour des activit&#233;s de poste et de courrier" alias="53.30Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="I - H&#201;BERGEMENT ET RESTAURATION" alias="I">
+        <Choice value="55 - H&#233;bergement" alias="55">
+          <Choice value="55.10Y // 5510Y - H&#244;tels et h&#233;bergement similaire" alias="55.10Y"/>
+          <Choice value="55.20Y // 5520Y - H&#233;bergement touristique et autre h&#233;bergement de courte dur&#233;e" alias="55.20Y"/>
+          <Choice value="55.30Y // 5530Y - Terrains de camping et parcs pour caravanes ou v&#233;hicules de loisirs" alias="55.30Y"/>
+          <Choice value="55.40Y // 5540Y - Activit&#233;s de service d&#8217;interm&#233;diation pour l&#8217;h&#233;bergement" alias="55.40Y"/>
+          <Choice value="55.90Y // 5590Y - Autres h&#233;bergements" alias="55.90Y"/>
+        </Choice>
+        <Choice value="56 - Activit&#233;s de service de restauration" alias="56">
+          <Choice value="56.11G // 5611G - Restauration traditionnelle" alias="56.11G"/>
+          <Choice value="56.11H // 5611H - Caf&#233;t&#233;rias et autres libres services" alias="56.11H"/>
+          <Choice value="56.11J // 5611J - Restauration de type rapide" alias="56.11J"/>
+          <Choice value="56.12Y // 5612Y - Activit&#233;s de service de restauration mobile" alias="56.12Y"/>
+          <Choice value="56.21Y // 5621Y - Activit&#233;s de restauration pour des &#233;v&#233;nements" alias="56.21Y"/>
+          <Choice value="56.22Y // 5622Y - Activit&#233;s de service contractuel de restauration et autres activit&#233;s de service de restauration" alias="56.22Y"/>
+          <Choice value="56.30Y // 5630Y - Activit&#233;s de d&#233;bit de boissons" alias="56.30Y"/>
+          <Choice value="56.40Y // 5640Y - Activit&#233;s de service d&#8217;interm&#233;diation pour des activit&#233;s de service de restauration" alias="56.40Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="J - &#201;DITION, DIFFUSION ET ACTIVIT&#201;S DE PRODUCTION ET DE DISTRIBUTION DE CONTENU" alias="J">
+        <Choice value="58 - Activit&#233;s d&#8217;&#233;dition" alias="58">
+          <Choice value="58.11Y // 5811Y - &#201;dition de livres" alias="58.11Y"/>
+          <Choice value="58.12Y // 5812Y - &#201;dition de journaux" alias="58.12Y"/>
+          <Choice value="58.13Y // 5813Y - &#201;dition de revues et de p&#233;riodiques" alias="58.13Y"/>
+          <Choice value="58.19Y // 5819Y - Autres activit&#233;s d&#8217;&#233;dition, &#224; l&#8217;exception de l&#8217;&#233;dition de logiciels" alias="58.19Y"/>
+          <Choice value="58.21Y // 5821Y - &#201;dition de jeux vid&#233;o" alias="58.21Y"/>
+          <Choice value="58.29Y // 5829Y - &#201;dition d&#8217;autres logiciels" alias="58.29Y"/>
+        </Choice>
+        <Choice value="59 - Production de films cin&#233;matographiques, de vid&#233;os et de programmes de t&#233;l&#233;vision ; enregistrement sonore et &#233;dition musicale" alias="59">
+          <Choice value="59.11G // 5911G - Production de films et programmes audiovisuels" alias="59.11G"/>
+          <Choice value="59.11H // 5911H - Production de films institutionnels et publicitaires" alias="59.11H"/>
+          <Choice value="59.11J // 5911J - Production de films pour le cin&#233;ma" alias="59.11J"/>
+          <Choice value="59.11K // 5911K - Production de films et programmes d'animation" alias="59.11K"/>
+          <Choice value="59.12Y // 5912Y - Post-production de films cin&#233;matographiques, de vid&#233;os et de programmes de t&#233;l&#233;vision" alias="59.12Y"/>
+          <Choice value="59.13Y // 5913Y - Distribution de films cin&#233;matographiques et de vid&#233;os" alias="59.13Y"/>
+          <Choice value="59.14Y // 5914Y - Projection de films cin&#233;matographiques" alias="59.14Y"/>
+          <Choice value="59.20Y // 5920Y - Enregistrement sonore et &#233;dition musicale" alias="59.20Y"/>
+        </Choice>
+        <Choice value="60 - Activit&#233;s de programmation, de diffusion, d&#8217;agence de presse et autres activit&#233;s de distribution de contenu" alias="60">
+          <Choice value="60.10Y // 6010Y - Radiodiffusion et activit&#233;s de distribution de contenu audio" alias="60.10Y"/>
+          <Choice value="60.20G // 6020G - Programmation de t&#233;l&#233;vision et t&#233;l&#233;diffusion" alias="60.20G"/>
+          <Choice value="60.20H // 6020H - &#201;dition de services de m&#233;dias &#224; la demande" alias="60.20H"/>
+          <Choice value="60.31Y // 6031Y - Activit&#233;s d&#8217;agence de presse" alias="60.31Y"/>
+          <Choice value="60.39Y // 6039Y - Autres activit&#233;s de distribution de contenu" alias="60.39Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="K - T&#201;L&#201;COMMUNICATIONS, PROGRAMMATION INFORMATIQUE, CONSEIL, INFRASTRUCTURE INFORMATIQUE ET AUTRES ACTIVIT&#201;S DE SERVICE INFORMATIQUE " alias="K">
+        <Choice value="61 - T&#233;l&#233;communications" alias="61">
+          <Choice value="61.10Y // 6110Y - Activit&#233;s de t&#233;l&#233;communications filaires, sans fil et satellitaires" alias="61.10Y"/>
+          <Choice value="61.20Y // 6120Y - Activit&#233;s de revente de t&#233;l&#233;communications et activit&#233;s de service d&#8217;interm&#233;diation pour les t&#233;l&#233;communications" alias="61.20Y"/>
+          <Choice value="61.90Y // 6190Y - Autres activit&#233;s de t&#233;l&#233;communications" alias="61.90Y"/>
+        </Choice>
+        <Choice value="62 - Programmation, conseil et autres activit&#233;s informatiques" alias="62">
+          <Choice value="62.10Y // 6210Y - Activit&#233;s de programmation informatique" alias="62.10Y"/>
+          <Choice value="62.20G // 6220G - Conseil en syst&#232;mes et logiciels informatiques" alias="62.20G"/>
+          <Choice value="62.20H // 6220H - Gestion d'installations informatiques et maintenance de syst&#232;mes et d&#8217;applications informatiques" alias="62.20H"/>
+          <Choice value="62.90Y // 6290Y - Autres activit&#233;s de service informatique" alias="62.90Y"/>
+        </Choice>
+        <Choice value="63 - Infrastructure informatique, traitement de donn&#233;es et autres activit&#233;s de service informatique" alias="63">
+          <Choice value="63.10Y // 6310Y - Infrastructure informatique, traitement de donn&#233;es, h&#233;bergement et activit&#233;s connexes" alias="63.10Y"/>
+          <Choice value="63.91Y // 6391Y - Activit&#233;s de portail de recherche sur le web" alias="63.91Y"/>
+          <Choice value="63.92Y // 6392Y - Autres activit&#233;s de service informatique" alias="63.92Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="L - ACTIVIT&#201;S FINANCI&#200;RES ET D&#8217;ASSURANCE" alias="L">
+        <Choice value="64 - Activit&#233;s de services financiers, hors assurance et fonds de pension" alias="64">
+          <Choice value="64.11Y // 6411Y - Activit&#233;s de banque centrale" alias="64.11Y"/>
+          <Choice value="64.19Y // 6419Y - Autre interm&#233;diation mon&#233;taire" alias="64.19Y"/>
+          <Choice value="64.21Y // 6421Y - Activit&#233;s de soci&#233;t&#233; holding" alias="64.21Y"/>
+          <Choice value="64.22Y // 6422Y - Activit&#233;s de conduit de financement" alias="64.22Y"/>
+          <Choice value="64.31Y // 6431Y - Activit&#233;s de fonds d&#8217;investissement sur le march&#233; mon&#233;taire ou non mon&#233;taire" alias="64.31Y"/>
+          <Choice value="64.32Y // 6432Y - Activit&#233;s de fiducie, comptes de patrimoine et d&#8217;agence" alias="64.32Y"/>
+          <Choice value="64.91Y // 6491Y - Cr&#233;dit-bail" alias="64.91Y"/>
+          <Choice value="64.92Y // 6492Y - Autre distribution de cr&#233;dit" alias="64.92Y"/>
+          <Choice value="64.99Y // 6499Y - Autres activit&#233;s des services financiers, hors assurance et fonds de pension, n.c.a." alias="64.99Y"/>
+        </Choice>
+        <Choice value="65 - Assurance, r&#233;assurance et fond de pension, &#224; l&#8217;exclusion de la s&#233;curit&#233; sociale obligatoire" alias="65">
+          <Choice value="65.11Y // 6511Y - Assurance vie" alias="65.11Y"/>
+          <Choice value="65.12Y // 6512Y - Assurances non-vie" alias="65.12Y"/>
+          <Choice value="65.20Y // 6520Y - R&#233;assurance" alias="65.20Y"/>
+          <Choice value="65.30Y // 6530Y - Fonds de pension" alias="65.30Y"/>
+        </Choice>
+        <Choice value="66 - Activit&#233;s auxiliaires d&#8217;activit&#233;s de services financiers et d&#8217;assurance" alias="66">
+          <Choice value="66.11Y // 6611Y - Administration de march&#233;s financiers" alias="66.11Y"/>
+          <Choice value="66.12Y // 6612Y - Courtage de valeurs mobili&#232;res et de mati&#232;res premi&#232;res" alias="66.12Y"/>
+          <Choice value="66.19G // 6619G - Supports juridiques de gestion de patrimoine mobilier" alias="66.19G"/>
+          <Choice value="66.19H // 6619H - Autres activit&#233;s auxiliaires de services financiers, hors assurance et caisses de retraite, n.c.a." alias="66.19H"/>
+          <Choice value="66.21Y // 6621Y - &#201;valuation des risques et dommages" alias="66.21Y"/>
+          <Choice value="66.22Y // 6622Y - Activit&#233;s des agents et courtiers d&#8217;assurances" alias="66.22Y"/>
+          <Choice value="66.29Y // 6629Y - Activit&#233;s auxiliaires d&#8217;assurance et de fonds de pension n.c.a." alias="66.29Y"/>
+          <Choice value="66.30Y // 6630Y - Activit&#233;s de gestion de fonds" alias="66.30Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="M - Activit&#233;s immobili&#232;res" alias="M">
+        <Choice value="68 - Activit&#233;s immobili&#232;res" alias="68">
+          <Choice value="68.11Y // 6811Y - Achat et vente de biens propres" alias="68.11Y"/>
+          <Choice value="68.12Y // 6812Y - Promotion immobili&#232;re" alias="68.12Y"/>
+          <Choice value="68.20G // 6820G - Location de logements" alias="68.20G"/>
+          <Choice value="68.20H // 6820H - Location et gestion d'autres biens immobiliers, propres ou lou&#233;s" alias="68.20H"/>
+          <Choice value="68.31Y // 6831Y - Activit&#233;s de service d&#8217;interm&#233;diation pour les activit&#233;s immobili&#232;res" alias="68.31Y"/>
+          <Choice value="68.32G // 6832G - Administration d'immeubles et d'autres biens immobiliers" alias="68.32G"/>
+          <Choice value="68.32H // 6832H - Supports juridiques de gestion de patrimoine immobilier" alias="68.32H"/>
+        </Choice>
+      </Choice>
+      <Choice value="N - ACTIVIT&#201;S SP&#201;CIALIS&#201;ES, SCIENTIFIQUES ET TECHNIQUES" alias="N">
+        <Choice value="69 - Activit&#233;s juridiques et comptables" alias="69">
+          <Choice value="69.10Y // 6910Y - Activit&#233;s juridiques" alias="69.10Y"/>
+          <Choice value="69.20Y // 6920Y - Activit&#233;s de comptabilit&#233;, de tenue de comptes et d&#8217;audit ; conseil fiscal" alias="69.20Y"/>
+        </Choice>
+        <Choice value="70 - Activit&#233;s des si&#232;ges sociaux et conseil de gestion" alias="70">
+          <Choice value="70.10Y // 7010Y - Activit&#233;s des si&#232;ges sociaux" alias="70.10Y"/>
+          <Choice value="70.20Y // 7020Y - Activit&#233;s de conseil pour les affaires et autre conseil de gestion" alias="70.20Y"/>
+        </Choice>
+        <Choice value="71 - Activit&#233;s d&#8217;architecture et d&#8217;ing&#233;nierie ; activit&#233;s de contr&#244;le et analyses techniques" alias="71">
+          <Choice value="71.11Y // 7111Y - Activit&#233;s d&#8217;architecture" alias="71.11Y"/>
+          <Choice value="71.12Y // 7112Y - Activit&#233;s d&#8217;ing&#233;nierie et de conseil technique connexe" alias="71.12Y"/>
+          <Choice value="71.20G // 7120G - Contr&#244;le technique des v&#233;hicules" alias="71.20G"/>
+          <Choice value="71.20H // 7120H - Analyses, essais et inspections techniques" alias="71.20H"/>
+        </Choice>
+        <Choice value="72 - Recherche et d&#233;veloppement scientifique" alias="72">
+          <Choice value="72.10G // 7210G - Recherche et d&#233;veloppement en biotechnologies" alias="72.10G"/>
+          <Choice value="72.10H // 7210H - Recherche et d&#233;veloppement en autres sciences physiques et naturelles" alias="72.10H"/>
+          <Choice value="72.20Y // 7220Y - Recherche et d&#233;veloppement en sciences humaines et sociales" alias="72.20Y"/>
+        </Choice>
+        <Choice value="73 - Activit&#233;s de publicit&#233;, d&#8217;&#233;tudes de march&#233; et de relations publiques" alias="73">
+          <Choice value="73.11Y // 7311Y - Activit&#233;s d&#8217;agence de publicit&#233;" alias="73.11Y"/>
+          <Choice value="73.12Y // 7312Y - R&#233;gie publicitaire de m&#233;dias" alias="73.12Y"/>
+          <Choice value="73.20Y // 7320Y - &#201;tudes de march&#233; et sondages" alias="73.20Y"/>
+          <Choice value="73.30Y // 7330Y - Activit&#233;s de relations publiques et de communication" alias="73.30Y"/>
+        </Choice>
+        <Choice value="74 - Autres activit&#233;s sp&#233;cialis&#233;es, scientifiques et techniques" alias="74">
+          <Choice value="74.11Y // 7411Y - Activit&#233;s de design pour la cr&#233;ation de mode ou les produits industriels" alias="74.11Y"/>
+          <Choice value="74.12Y // 7412Y - Activit&#233;s de design graphique et de communication visuelle" alias="74.12Y"/>
+          <Choice value="74.13Y // 7413Y - Activit&#233;s de design d&#8217;int&#233;rieur" alias="74.13Y"/>
+          <Choice value="74.14Y // 7414Y - Autres activit&#233;s sp&#233;cialis&#233;es de design" alias="74.14Y"/>
+          <Choice value="74.20Y // 7420Y - Activit&#233;s photographiques" alias="74.20Y"/>
+          <Choice value="74.30Y // 7430Y - Activit&#233;s de traduction et d&#8217;interpr&#233;tation" alias="74.30Y"/>
+          <Choice value="74.91Y // 7491Y - Activit&#233;s de courtier en brevets et de service de marketing" alias="74.91Y"/>
+          <Choice value="74.99Y // 7499Y - Toutes les autres activit&#233;s sp&#233;cialis&#233;es, scientifiques et techniques n.c.a." alias="74.99Y"/>
+        </Choice>
+        <Choice value="75 - Activit&#233;s v&#233;t&#233;rinaires" alias="75">
+          <Choice value="75.00Y // 7500Y - Activit&#233;s v&#233;t&#233;rinaires" alias="75.00Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="O - ACTIVIT&#201;S DE SERVICE ADMINISTRATIF ET DE SOUTIEN" alias="O">
+        <Choice value="77 - Activit&#233;s de location et location-bail" alias="77">
+          <Choice value="77.11Y // 7711Y - Location et location-bail de voitures et v&#233;hicules automobiles l&#233;gers" alias="77.11Y"/>
+          <Choice value="77.12Y // 7712Y - Location et location-bail de camions" alias="77.12Y"/>
+          <Choice value="77.21Y // 7721Y - Location et location-bail d&#8217;articles de loisirs et de sport" alias="77.21Y"/>
+          <Choice value="77.22Y // 7722Y - Location et location-bail d&#8217;autres biens personnels et domestiques" alias="77.22Y"/>
+          <Choice value="77.31Y // 7731Y - Location et location-bail de mat&#233;riel agricole" alias="77.31Y"/>
+          <Choice value="77.32Y // 7732Y - Location et location-bail de machines et &#233;quipements pour la construction et le g&#233;nie civil" alias="77.32Y"/>
+          <Choice value="77.33Y // 7733Y - Location et location-bail de machines et &#233;quipements de bureau et d&#8217;ordinateurs" alias="77.33Y"/>
+          <Choice value="77.34Y // 7734Y - Location et location-bail de mat&#233;riels de transport par eau" alias="77.34Y"/>
+          <Choice value="77.35Y // 7735Y - Location et location-bail de mat&#233;riels de transport a&#233;rien" alias="77.35Y"/>
+          <Choice value="77.39Y // 7739Y - Location et location-bail d&#8217;autres machines, &#233;quipements et biens n.c.a." alias="77.39Y"/>
+          <Choice value="77.40G // 7740G - Services de franchise ou de licence de marques" alias="77.40G"/>
+          <Choice value="77.40H // 7740H - Autre location-bail de propri&#233;t&#233; intellectuelle et de produits similaires, &#224; l'exception des oeuvres soumises &#224; copyright" alias="77.40H"/>
+          <Choice value="77.51Y // 7751Y - Activit&#233;s de service d&#8217;interm&#233;diation pour la location et la location-bail de voitures, camping-cars et caravanes" alias="77.51Y"/>
+          <Choice value="77.52Y // 7752Y - Activit&#233;s de service d&#8217;interm&#233;diation pour la location et la location-bail d&#8217;autres biens incorporels et d&#8217;immobilisations incorporelles non financi&#232;res" alias="77.52Y"/>
+        </Choice>
+        <Choice value="78 - Activit&#233;s li&#233;es &#224; l&#8217;emploi" alias="78">
+          <Choice value="78.10Y // 7810Y - Activit&#233;s des agences de placement de main-d&#8217;oeuvre" alias="78.10Y"/>
+          <Choice value="78.20G // 7820G - Activit&#233;s d&#8217;agence de travail temporaire" alias="78.20G"/>
+          <Choice value="78.20H // 7820H - Autre mise &#224; disposition de ressources humaines" alias="78.20H"/>
+        </Choice>
+        <Choice value="79 - Activit&#233;s d&#8217;agence de voyage, de voyagiste, de service de r&#233;servation et de services connexes" alias="79">
+          <Choice value="79.11Y // 7911Y - Activit&#233;s d&#8217;agence de voyage" alias="79.11Y"/>
+          <Choice value="79.12Y // 7912Y - Activit&#233;s de voyagiste" alias="79.12Y"/>
+          <Choice value="79.90Y // 7990Y - Autres activit&#233;s de service de r&#233;servation et activit&#233;s connexes" alias="79.90Y"/>
+        </Choice>
+        <Choice value="80 - Activit&#233;s d&#8217;investigation et de s&#233;curit&#233;" alias="80">
+          <Choice value="80.01Y // 8001Y - Activit&#233; d&#8217;investigation et de s&#233;curit&#233; priv&#233;e" alias="80.01Y"/>
+          <Choice value="80.09Y // 8009Y - Activit&#233;s de s&#233;curit&#233; n.c.a." alias="80.09Y"/>
+        </Choice>
+        <Choice value="81 - Activit&#233;s de services pour les b&#226;timents et l&#8217;am&#233;nagement paysager" alias="81">
+          <Choice value="81.10Y // 8110Y - Activit&#233;s de soutien combin&#233;es pour les installations" alias="81.10Y"/>
+          <Choice value="81.21Y // 8121Y - Nettoyage courant des b&#226;timents" alias="81.21Y"/>
+          <Choice value="81.22Y // 8122Y - Autres activit&#233;s de nettoyage des b&#226;timents et nettoyage industriel" alias="81.22Y"/>
+          <Choice value="81.23G // 8123G - D&#233;sinfection, d&#233;sinsectisation, d&#233;ratisation" alias="81.23G"/>
+          <Choice value="81.23H // 8123H - Autres activit&#233;s de nettoyage n.c.a." alias="81.23H"/>
+          <Choice value="81.30Y // 8130Y - Activit&#233;s de service d&#8217;am&#233;nagement paysager" alias="81.30Y"/>
+        </Choice>
+        <Choice value="82 - Activit&#233;s de service de bureau, de soutien administratif et d&#8217;autre soutien aux entreprises" alias="82">
+          <Choice value="82.10Y // 8210Y - Activit&#233;s de service de bureau et de soutien administratif" alias="82.10Y"/>
+          <Choice value="82.20Y // 8220Y - Activit&#233;s de centre d&#8217;appels" alias="82.20Y"/>
+          <Choice value="82.30Y // 8230Y - Organisation de salons professionnels et congr&#232;s" alias="82.30Y"/>
+          <Choice value="82.40Y // 8240Y - Activit&#233;s de service d&#8217;interm&#233;diation pour des services de soutien aux entreprises n.c.a." alias="82.40Y"/>
+          <Choice value="82.91Y // 8291Y - Activit&#233;s d&#8217;agence de recouvrement et de bureau de cr&#233;dit" alias="82.91Y"/>
+          <Choice value="82.92Y // 8292Y - Activit&#233;s de conditionnement" alias="82.92Y"/>
+          <Choice value="82.99Y // 8299Y - Autres activit&#233;s de service de soutien aux entreprises n.c.a." alias="82.99Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="P - ADMINISTRATION PUBLIQUE ET D&#201;FENSE ; S&#201;CURIT&#201; SOCIALE OBLIGATOIRE " alias="P">
+        <Choice value="84 - Administration publique et d&#233;fense ; s&#233;curit&#233; sociale obligatoire" alias="84">
+          <Choice value="84.11Y // 8411Y - Activit&#233;s d&#8217;administration publique g&#233;n&#233;rale" alias="84.11Y"/>
+          <Choice value="84.12Y // 8412Y - R&#233;glementation des soins de sant&#233;, de l&#8217;enseignement, des services culturels et des autres services sociaux" alias="84.12Y"/>
+          <Choice value="84.13Y // 8413Y - R&#233;glementation et contribution &#224; l&#8217;am&#233;lioration de l&#8217;efficacit&#233; des activit&#233;s &#233;conomiques" alias="84.13Y"/>
+          <Choice value="84.21Y // 8421Y - Affaires &#233;trang&#232;res" alias="84.21Y"/>
+          <Choice value="84.22Y // 8422Y - D&#233;fense" alias="84.22Y"/>
+          <Choice value="84.23Y // 8423Y - Justice" alias="84.23Y"/>
+          <Choice value="84.24Y // 8424Y - Activit&#233;s d&#8217;ordre public et de s&#233;curit&#233; civile" alias="84.24Y"/>
+          <Choice value="84.25Y // 8425Y - Activit&#233;s de service d&#8217;incendie et de secours" alias="84.25Y"/>
+          <Choice value="84.30G // 8430G - Activit&#233;s g&#233;n&#233;rales de s&#233;curit&#233; sociale" alias="84.30G"/>
+          <Choice value="84.30H // 8430H - Gestion des retraites compl&#233;mentaires" alias="84.30H"/>
+          <Choice value="84.30J // 8430J - Distribution sociale de revenus" alias="84.30J"/>
+        </Choice>
+      </Choice>
+      <Choice value="Q - Enseignement" alias="Q">
+        <Choice value="85 - Enseignement" alias="85">
+          <Choice value="85.10Y // 8510Y - Enseignement pr&#233;-primaire" alias="85.10Y"/>
+          <Choice value="85.20Y // 8520Y - Enseignement primaire" alias="85.20Y"/>
+          <Choice value="85.31Y // 8531Y - Enseignement secondaire g&#233;n&#233;ral" alias="85.31Y"/>
+          <Choice value="85.32Y // 8532Y - Enseignement secondaire professionnel" alias="85.32Y"/>
+          <Choice value="85.33Y // 8533Y - Enseignement post-secondaire non sup&#233;rieur" alias="85.33Y"/>
+          <Choice value="85.40Y // 8540Y - Enseignement sup&#233;rieur" alias="85.40Y"/>
+          <Choice value="85.51Y // 8551Y - Enseignement de disciplines sportives et d&#8217;activit&#233;s de loisirs" alias="85.51Y"/>
+          <Choice value="85.52Y // 8552Y - Enseignement culturel" alias="85.52Y"/>
+          <Choice value="85.53Y // 8553Y - Enseignement de la conduite" alias="85.53Y"/>
+          <Choice value="85.59G // 8559G - Formation continue d'adultes" alias="85.59G"/>
+          <Choice value="85.59H // 8559H - Autre enseignement n.c.a." alias="85.59H"/>
+          <Choice value="85.61Y // 8561Y - Activit&#233;s de service d&#8217;interm&#233;diation dans le domaine de l&#8217;appui scolaire et du tutorat" alias="85.61Y"/>
+          <Choice value="85.69Y // 8569Y - Activit&#233;s de soutien &#224; l&#8217;enseignement n.c.a." alias="85.69Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="R - SANT&#201; HUMAINE ET ACTIVIT&#201;S D&#8217;ACTION SOCIALE" alias="R">
+        <Choice value="86 - Activit&#233;s pour la sant&#233; humaine" alias="86">
+          <Choice value="86.10Y // 8610Y - Activit&#233;s hospitali&#232;res" alias="86.10Y"/>
+          <Choice value="86.21Y // 8621Y - Activit&#233;s de m&#233;decine g&#233;n&#233;rale" alias="86.21Y"/>
+          <Choice value="86.22Y // 8622Y - Activit&#233;s de m&#233;decine sp&#233;cialis&#233;e" alias="86.22Y"/>
+          <Choice value="86.23Y // 8623Y - Activit&#233;s de soins dentaires" alias="86.23Y"/>
+          <Choice value="86.91Y // 8691Y - Activit&#233;s d&#8217;imagerie m&#233;dicale et de laboratoire d&#8217;analyse m&#233;dicale" alias="86.91Y"/>
+          <Choice value="86.92Y // 8692Y - Transport de patients par ambulance" alias="86.92Y"/>
+          <Choice value="86.93Y // 8693Y - Activit&#233;s des psychologues et psychoth&#233;rapeutes, &#224; l&#8217;exception des m&#233;decins" alias="86.93Y"/>
+          <Choice value="86.94G // 8694G - Activit&#233;s de soins infirmiers" alias="86.94G"/>
+          <Choice value="86.94H // 8694H - Activit&#233;s de ma&#239;eutique" alias="86.94H"/>
+          <Choice value="86.95Y // 8695Y - Activit&#233;s de physioth&#233;rapie" alias="86.95Y"/>
+          <Choice value="86.96Y // 8696Y - Activit&#233;s de m&#233;decine traditionnelle, compl&#233;mentaire et alternative" alias="86.96Y"/>
+          <Choice value="86.97Y // 8697Y - Activit&#233;s de service d&#8217;interm&#233;diation pour les services m&#233;dicaux, dentaires et autres services pour la sant&#233; humaine" alias="86.97Y"/>
+          <Choice value="86.99Y // 8699Y - Autres activit&#233;s pour la sant&#233; humaine n.c.a." alias="86.99Y"/>
+        </Choice>
+        <Choice value="87 - Activit&#233;s de soins en &#233;tablissement r&#233;sidentiel" alias="87">
+          <Choice value="87.10G // 8710G - Activit&#233;s d&#8217;h&#233;bergement m&#233;dicalis&#233; pour personnes &#226;g&#233;es" alias="87.10G"/>
+          <Choice value="87.10H // 8710H - Activit&#233;s d&#8217;h&#233;bergement m&#233;dicalis&#233; pour enfants handicap&#233;s" alias="87.10H"/>
+          <Choice value="87.10J // 8710J - Activit&#233;s d&#8217;h&#233;bergement m&#233;dicalis&#233; pour adultes handicap&#233;s et autres activit&#233;s d&#8217;h&#233;bergement m&#233;dicalis&#233;" alias="87.10J"/>
+          <Choice value="87.20G // 8720G - Activit&#233;s d&#8217;h&#233;bergement social pour personnes souffrant de maladie mentale" alias="87.20G"/>
+          <Choice value="87.20H // 8720H - Activit&#233;s d&#8217;h&#233;bergement social pour personnes souffrant de toxicomanie" alias="87.20H"/>
+          <Choice value="87.30G // 8730G - Activit&#233;s d&#8217;h&#233;bergement social pour personnes &#226;g&#233;es" alias="87.30G"/>
+          <Choice value="87.30H // 8730H - Activit&#233;s d&#8217;h&#233;bergement social pour personnes souffrant de handicap physique" alias="87.30H"/>
+          <Choice value="87.91Y // 8791Y - Activit&#233;s de service d&#8217;interm&#233;diation pour des activit&#233;s de soins en &#233;tablissement r&#233;sidentiel" alias="87.91Y"/>
+          <Choice value="87.99G // 8799G - Activit&#233;s d&#8217;h&#233;bergement social pour enfants en difficult&#233;" alias="87.99G"/>
+          <Choice value="87.99H // 8799H - Activit&#233;s d&#8217;h&#233;bergement social pour adultes et familles en difficult&#233; et autres activit&#233;s d&#8217;h&#233;bergement social" alias="87.99H"/>
+        </Choice>
+        <Choice value="88 - Activit&#233;s d&#8217;action sociale sans h&#233;bergement" alias="88">
+          <Choice value="88.10G // 8810G - Activit&#233;s d&#8217;action sociale &#224; domicile" alias="88.10G"/>
+          <Choice value="88.10H // 8810H - Activit&#233;s d&#8217;accueil ou d&#8217;accompagnement sans h&#233;bergement d&#8217;adultes handicap&#233;s ou de personnes &#226;g&#233;es" alias="88.10H"/>
+          <Choice value="88.10J // 8810J - Activit&#233;s de r&#233;adaptation professionnelle et r&#233;insertion, aide par le travail" alias="88.10J"/>
+          <Choice value="88.91G // 8891G - Accueil de jeunes enfants en structure collective" alias="88.91G"/>
+          <Choice value="88.91H // 8891H - Accueil de jeunes enfants &#224; domicile" alias="88.91H"/>
+          <Choice value="88.91J // 8891J - Accueil ou accompagnement sans h&#233;bergement d&#8217;enfants handicap&#233;s" alias="88.91J"/>
+          <Choice value="88.99G // 8899G - Autre accueil ou accompagnement sans h&#233;bergement d&#8217;enfants et d&#8217;adolescents" alias="88.99G"/>
+          <Choice value="88.99H // 8899H - Autres activit&#233;s d&#8217;action sociale sans h&#233;bergement n.c.a." alias="88.99H"/>
+        </Choice>
+      </Choice>
+      <Choice value="S - ARTS, SPORTS ET ACTIVIT&#201;S R&#201;CR&#201;ATIVES" alias="S">
+        <Choice value="90 - Activit&#233;s de cr&#233;ation artistique et de spectacle" alias="90">
+          <Choice value="90.11Y // 9011Y - Activit&#233;s de cr&#233;ation litt&#233;raire et de composition musicale" alias="90.11Y"/>
+          <Choice value="90.12Y // 9012Y - Activit&#233;s de cr&#233;ation en arts visuels" alias="90.12Y"/>
+          <Choice value="90.13Y // 9013Y - Autres activit&#233;s de cr&#233;ation artistique" alias="90.13Y"/>
+          <Choice value="90.20Y // 9020Y - Activit&#233;s de spectacle" alias="90.20Y"/>
+          <Choice value="90.31G // 9031G - Gestion d&#8217;installations et de lieux de production et de diffusion des arts visuels" alias="90.31G"/>
+          <Choice value="90.31H // 9031H - Gestion de salles de spectacle vivant" alias="90.31H"/>
+          <Choice value="90.39G // 9039G - Activit&#233;s de diffusion des spectacles et d'organisation de festivals" alias="90.39G"/>
+          <Choice value="90.39H // 9039H - Activit&#233;s de soutien technique aux spectacles et aux &#233;v&#232;nements" alias="90.39H"/>
+        </Choice>
+        <Choice value="91 - Biblioth&#232;ques, archives, mus&#233;es et autres activit&#233;s culturelles" alias="91">
+          <Choice value="91.11Y // 9111Y - Activit&#233;s des biblioth&#232;ques" alias="91.11Y"/>
+          <Choice value="91.12Y // 9112Y - Activit&#233;s des centres d&#8217;archives" alias="91.12Y"/>
+          <Choice value="91.21Y // 9121Y - Activit&#233;s des mus&#233;es et collections" alias="91.21Y"/>
+          <Choice value="91.22Y // 9122Y - Activit&#233; des sites et b&#226;timents historiques" alias="91.22Y"/>
+          <Choice value="91.30Y // 9130Y - Conservation, restauration et autres activit&#233;s de soutien pour la pr&#233;servation du patrimoine culturel" alias="91.30Y"/>
+          <Choice value="91.41Y // 9141Y - Activit&#233;s de gestion de jardins botaniques et zoologiques" alias="91.41Y"/>
+          <Choice value="91.42Y // 9142Y - Activit&#233;s de gestion de r&#233;serves naturelles" alias="91.42Y"/>
+        </Choice>
+        <Choice value="92 - Activit&#233;s de jeux d&#8217;argent et de paris" alias="92">
+          <Choice value="92.00Y // 9200Y - Activit&#233;s de jeux d&#8217;argent et de paris" alias="92.00Y"/>
+        </Choice>
+        <Choice value="93 - Activit&#233;s sportives et activit&#233;s r&#233;cr&#233;atives et de loisirs" alias="93">
+          <Choice value="93.11Y // 9311Y - Gestion d&#8217;installations sportives" alias="93.11Y"/>
+          <Choice value="93.12Y // 9312Y - Activit&#233;s de club de sports" alias="93.12Y"/>
+          <Choice value="93.13Y // 9313Y - Activit&#233;s de centre de fitness" alias="93.13Y"/>
+          <Choice value="93.19Y // 9319Y - Autres activit&#233;s sportives n.c.a." alias="93.19Y"/>
+          <Choice value="93.21Y // 9321Y - Activit&#233;s de parcs d&#8217;attractions et parcs &#224; th&#232;mes" alias="93.21Y"/>
+          <Choice value="93.29Y // 9329Y - Activit&#233;s r&#233;cr&#233;atives et de loisirs n.c.a." alias="93.29Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="T - AUTRES ACTIVIT&#201;S DE SERVICES" alias="T">
+        <Choice value="94 - Activit&#233;s des organisations associatives" alias="94">
+          <Choice value="94.11Y // 9411Y - Activit&#233;s des organisations patronales et des chambres repr&#233;sentatives" alias="94.11Y"/>
+          <Choice value="94.12Y // 9412Y - Activit&#233;s des organisations professionnelles" alias="94.12Y"/>
+          <Choice value="94.20Y // 9420Y - Activit&#233;s des syndicats de salari&#233;s" alias="94.20Y"/>
+          <Choice value="94.91Y // 9491Y - Activit&#233;s des organisations religieuses" alias="94.91Y"/>
+          <Choice value="94.92Y // 9492Y - Activit&#233;s des organisations politiques" alias="94.92Y"/>
+          <Choice value="94.99Y // 9499Y - Activit&#233;s des organisations associatives n.c.a." alias="94.99Y"/>
+        </Choice>
+        <Choice value="95 - R&#233;paration et entretien d&#8217;ordinateurs, de biens personnels et domestiques et d&#8217;automobiles et motocycles" alias="95">
+          <Choice value="95.10Y // 9510Y - R&#233;paration et entretien d&#8217;ordinateurs et d&#8217;&#233;quipements de communication" alias="95.10Y"/>
+          <Choice value="95.21Y // 9521Y - R&#233;paration et entretien de produits &#233;lectroniques grand public" alias="95.21Y"/>
+          <Choice value="95.22Y // 9522Y - R&#233;paration et entretien d&#8217;appareils &#233;lectrom&#233;nagers et d&#8217;&#233;quipements pour la maison et le jardin" alias="95.22Y"/>
+          <Choice value="95.23Y // 9523Y - R&#233;paration et entretien de chaussures et d&#8217;articles en cuir" alias="95.23Y"/>
+          <Choice value="95.24Y // 9524Y - R&#233;paration et entretien de meubles et d&#8217;&#233;quipements du foyer" alias="95.24Y"/>
+          <Choice value="95.25Y // 9525Y - R&#233;paration et entretien d&#8217;articles d&#8217;horlogerie et de bijouterie" alias="95.25Y"/>
+          <Choice value="95.29G // 9529G - R&#233;paration et entretien de cycles et autres engins de la mobilit&#233; douce" alias="95.29G"/>
+          <Choice value="95.29H // 9529H - R&#233;paration et entretien d'autres biens personnels ou domestiques n.c.a." alias="95.29H"/>
+          <Choice value="95.31G // 9531G - R&#233;paration et entretien de v&#233;hicules automobiles l&#233;gers (moins de 3,5 tonnes)" alias="95.31G"/>
+          <Choice value="95.31H // 9531H - R&#233;paration et entretien d'autres v&#233;hicules automobiles" alias="95.31H"/>
+          <Choice value="95.32Y // 9532Y - R&#233;paration et entretien de motocycles" alias="95.32Y"/>
+          <Choice value="95.40Y // 9540Y - Activit&#233;s de service d&#8217;interm&#233;diation pour la r&#233;paration et l&#8217;entretien d&#8217;ordinateurs, de biens personnels et domestiques et d&#8217;automobiles et motocycles" alias="95.40Y"/>
+        </Choice>
+        <Choice value="96 - Activit&#233;s de services aux personnes" alias="96">
+          <Choice value="96.10G // 9610G - Blanchisserie-teinturerie de gros" alias="96.10G"/>
+          <Choice value="96.10H // 9610H - Blanchisserie-teinturerie de d&#233;tail" alias="96.10H"/>
+          <Choice value="96.21G // 9621G - Coiffure et activit&#233;s de barbier en salon" alias="96.21G"/>
+          <Choice value="96.21H // 9621H - Coiffure et activit&#233;s de barbier hors salon" alias="96.21H"/>
+          <Choice value="96.22Y // 9622Y - Soins de beaut&#233; et autres activit&#233;s de traitement esth&#233;tique" alias="96.22Y"/>
+          <Choice value="96.23Y // 9623Y - Activit&#233;s de spa, de sauna et de bain de vapeur" alias="96.23Y"/>
+          <Choice value="96.30Y // 9630Y - Services fun&#233;raires et activit&#233;s connexes" alias="96.30Y"/>
+          <Choice value="96.40Y // 9640Y - Activit&#233;s de service d&#8217;interm&#233;diation pour des services aux personnes" alias="96.40Y"/>
+          <Choice value="96.91Y // 9691Y - Activit&#233;s d&#8217;offre de services domestiques aux personnes" alias="96.91Y"/>
+          <Choice value="96.99G // 9699G - Services pour animaux de compagnie" alias="96.99G"/>
+          <Choice value="96.99H // 9699H - Autres activit&#233;s de service aux personnes n.c.a." alias="96.99H"/>
+        </Choice>
+      </Choice>
+      <Choice value="U - ACTIVIT&#201;S DES M&#201;NAGES EN TANT QU&#8217;EMPLOYEURS ; ACTIVIT&#201;S INDIFF&#201;RENCI&#201;ES DES M&#201;NAGES EN TANT QUE PRODUCTEURS DE BIENS ET SERVICES POUR USAGE PROPRE" alias="U">
+        <Choice value="97 - Activit&#233;s des m&#233;nages en tant qu&#8217;employeurs de personnel domestique" alias="97">
+          <Choice value="97.00Y // 9700Y - Activit&#233;s des m&#233;nages en tant qu&#8217;employeurs de personnel domestique" alias="97.00Y"/>
+        </Choice>
+        <Choice value="98 - Activit&#233;s indiff&#233;renci&#233;es des m&#233;nages en tant que producteurs de biens et services pour usage propre" alias="98">
+          <Choice value="98.10Y // 9810Y - Activit&#233;s indiff&#233;renci&#233;es des m&#233;nages en tant que producteurs de biens pour usage propre" alias="98.10Y"/>
+          <Choice value="98.20Y // 9820Y - Activit&#233;s indiff&#233;renci&#233;es des m&#233;nages en tant que producteurs de services pour usage propre" alias="98.20Y"/>
+        </Choice>
+      </Choice>
+      <Choice value="V - Activit&#233;s des organisations et organismes extraterritoriaux" alias="V">
+        <Choice value="99 - Activit&#233;s des organisations et organismes extraterritoriaux" alias="99">
+          <Choice value="99.00Y // 9900Y - Activit&#233;s des organisations et organismes extraterritoriaux" alias="99.00Y"/>
+        </Choice>
+      </Choice>
+    </Taxonomy>
+  </View>
+  <View>
+    <Header value="Commentaire"/>
+    <TextArea name="Remarques" toName="text" showSubmitButton="true" maxSubmissions="1" editable="true"/>
+  </View>
+</View>

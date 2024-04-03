@@ -5,8 +5,8 @@
 *.gzip
 *.ods
 *.csv
+*.xml
 
-*taxonomy_NAF2025.xml
 *Table de correspondances NAF rev.2 - NAF 2025.xls
 
 archive/batch-1/
@@ -15,3 +15,4 @@ archive/batch-2/
 !correspondance_intitule_nature_activite.json
 !correspondance_intitule_cj.json
 !table_correspondance_cj_libelle.csv
+!taxonomy_NAF2025.xml

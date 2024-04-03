@@ -36,6 +36,7 @@ correspondance_NAF['NAF2025'] = correspondance_NAF['NAF2025'].str.replace(".", "
 
 # Group by 'task_id', aggregate with custom functions
 NAF_mapping = correspondance_NAF.groupby('NAF2008').agg({'NAF2025': (lambda x: list(x)), 'NAF2025_intitule': (lambda x: list(x))}).reset_index()  # Include 'other_column' with 'first'
+NAF_mapping = NAF_mapping[['NAF2008', 'NAF2025', 'NAF2025_intitule']]
 NAF_mapping_one_to_many = NAF_mapping[NAF_mapping['NAF2025'].apply(len) > 1]
 NAF_mapping_one_to_one = NAF_mapping[NAF_mapping['NAF2025'].apply(len) == 1]
 

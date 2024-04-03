@@ -17,7 +17,7 @@
   <View>
     <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
       <Header value="Code NAF 2025 dans la liste ci-dessous ?"/>
-      <Text name="liste_multivoque" value="$NAF2025_1 - $NAF2025_intitule_1 || $NAF2025_2 - $NAF2025_intitule_2 || $NAF2025_3 - $NAF2025_intitule_3 ||" highlightColor="#ff0000"/>
+      <Text name="liste_multivoque" value="$NAF2025_1 - $NAF2025_intitule_1 || $NAF2025_2 - $NAF2025_intitule_2 || $NAF2025_3 - $NAF2025_intitule_3 ||\n" highlightColor="#ff0000"/>
       <Text name="liste_multivoque" value="$NAF2025_4 - $NAF2025_intitule_4 || $NAF2025_5 - $NAF2025_intitule_5 || $NAF2025_6 - $NAF2025_intitule_6 ||" highlightColor="#ff0000"/>
       <Text name="liste_multivoque" value="$NAF2025_7 - $NAF2025_intitule_7 || $NAF2025_8 - $NAF2025_intitule_8 || $NAF2025_9 - $NAF2025_intitule_9 ||" highlightColor="#ff0000"/>
       <Text name="liste_multivoque" value="$NAF2025_10 - $NAF2025_intitule_10 || $NAF2025_11 - $NAF2025_intitule_11 || $NAF2025_12 - $NAF2025_intitule_12 ||" highlightColor="#ff0000"/>

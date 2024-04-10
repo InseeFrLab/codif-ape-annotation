@@ -41,10 +41,13 @@ text_element = etree.SubElement(first_view, "Text", name="saisonnalite", value="
 second_view = etree.SubElement(root, "View") #, style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;")
 
 """ Choice subsection to display question """
+# Collapse as an accordion
+collapse = etree.SubElement(second_view, "Collapse", accordion="false", bordered="true")
+panel = etree.SubElement(collapse, "Panel", value="Voir Code NAF 2025 proposées")
 # Create the first nested level 1 View of the second View element
-second_first_view = etree.SubElement(second_view, "View", style="box-shadow: 2px 2px 2px #999; padding: 10px; margin-top: 0em; border-radius: 0px;")
+second_first_view = etree.SubElement(panel, "View", style="box-shadow: 2px 2px 2px #777;")
 # Create the Header element within the first nested level 1 View of the second View element
-header_element = etree.SubElement(second_first_view, "Header", value="Code NAF 2025 dans la liste ci-dessous ?")
+# header_element = etree.SubElement(second_first_view, "Header", value="Code NAF 2025 dans la liste ci-dessous ?")
 # Display text of list of suggestions
 second_first_first_view = etree.SubElement(second_first_view, "View")
 question_element = etree.SubElement(
@@ -151,7 +154,8 @@ question_element = etree.SubElement(
     highlightColor="#ff0000"
 )
 
-
+# Create the Header element within the first nested level 1 View of the second View element
+header_element = etree.SubElement(second_view, "Header", value="Code NAF 2025 dans la liste ci-dessus ?")
 question_choices = etree.SubElement(second_view, "Choices", name="NAF2008_OK", toName="text", choice="single", showInLine="true")
 question_choice_1 = etree.SubElement(question_choices, "Choice", value="Oui", selected="true")
 question_choice_2 = etree.SubElement(question_choices, "Choice", value="Non")

@@ -43,7 +43,7 @@ second_view = etree.SubElement(root, "View") #, style="box-shadow: 2px 2px 5px #
 """ Choice subsection to display question """
 # Collapse as an accordion
 collapse = etree.SubElement(second_view, "Collapse", accordion="false", bordered="true")
-panel = etree.SubElement(collapse, "Panel", value="Voir Code NAF 2025 proposées")
+panel = etree.SubElement(collapse, "Panel", value="Voir Codes NAF 2025 proposés")
 # Create the first nested level 1 View of the second View element
 second_first_view = etree.SubElement(panel, "View", style="box-shadow: 2px 2px 2px #777;")
 # Create the Header element within the first nested level 1 View of the second View element

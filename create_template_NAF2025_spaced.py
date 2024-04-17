@@ -27,6 +27,7 @@ text_element = etree.SubElement(first_view, "Text", name="text", value="Activit�
 text_element = etree.SubElement(first_view, "Text", name="act_exec", value="Activité(s) exercée(s) dans l'établissement --> $activ_ex_lib_et", highlightColor="#ff0000")
 text_element = etree.SubElement(first_view, "Text", name="act_ent", value="Activité(s) de l'entreprise --> $activ_pr_lib", highlightColor="#ff0000")
 text_element = etree.SubElement(first_view, "Text", name="c05", value="Pseudo type de liasse CERFA --> $liasse_type", highlightColor="#ff9900")
+text_element = etree.SubElement(first_view, "Text", name="emetteur", value="Emetteur --> $emetteur", highlightColor="#ff9900")
 text_element = etree.SubElement(first_view, "Text", name="evt", value="Type d'évènement --> $evenement_type", highlightColor="#00ff00")
 text_element = etree.SubElement(first_view, "Text", name="nat", value="Nature d'activité --> $activ_nat_et_intitule", highlightColor="#0000ff")
 text_element = etree.SubElement(first_view, "Text", name="nat_autre", value="Autre nature d'activité --> $activ_nat_lib_et", highlightColor="#0000ff")
@@ -238,14 +239,6 @@ question_element = etree.SubElement(
     "Text",
     name="liste_multivoque_24",
     value="$NAF2025_24 - $NAF2025_intitule_24 || \n",
-    highlightColor="#ff0000"
-)
-
-question_element = etree.SubElement(
-    second_first_view,
-    "Text",
-    name="liste_multivoque_25",
-    value="$NAF2025_25 - $NAF2025_intitule_25 || \n",
     highlightColor="#ff0000"
 )
 

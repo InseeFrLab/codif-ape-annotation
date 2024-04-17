@@ -4,7 +4,7 @@
     <Text name="text" value="Activit&#233; la plus importante dans l'&#233;tablissement --&gt; $activ_pr_lib_et" highlightColor="#ff0000"/>
     <Text name="act_exec" value="Activit&#233;(s) exerc&#233;e(s) dans l'&#233;tablissement --&gt; $activ_ex_lib_et" highlightColor="#ff0000"/>
     <Text name="act_ent" value="Activit&#233;(s) de l'entreprise --&gt; $activ_pr_lib" highlightColor="#ff0000"/>
-    <Text name="c05" value="Type de liasse --&gt; $liasse_type" highlightColor="#ff9900"/>
+    <Text name="c05" value="Pseudo type de liasse CERFA --&gt; $liasse_type" highlightColor="#ff9900"/>
     <Text name="evt" value="Type d'&#233;v&#232;nement --&gt; $evenement_type" highlightColor="#00ff00"/>
     <Text name="nat" value="Nature d'activit&#233; --&gt; $activ_nat_et_intitule" highlightColor="#0000ff"/>
     <Text name="nat_autre" value="Autre nature d'activit&#233; --&gt; $activ_nat_lib_et" highlightColor="#0000ff"/>
@@ -15,11 +15,15 @@
     <Text name="saisonnalite" value="Caract&#232;re permanent(P)/saisonnier(S) de l'activit&#233; g&#233;n&#233;rale --&gt; $activ_perm_et" highlightColor="#00ff00"/>
   </View>
   <View>
-    <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
-      <Header value="Code NAF 2025 dans la liste ci-dessous ?"/>
-      <Text name="liste_multivoque_6" value="$NAF2025_1 - $NAF2025_intitule_1 || $NAF2025_2 - $NAF2025_intitule_2 || $NAF2025_3 - $NAF2025_intitule_3 || $NAF2025_4 - $NAF2025_intitule_4 || $NAF2025_5 - $NAF2025_intitule_5 || $NAF2025_6 - $NAF2025_intitule_6 || $NAF2025_7 - $NAF2025_intitule_7 || $NAF2025_8 - $NAF2025_intitule_8 || $NAF2025_9 - $NAF2025_intitule_9 || $NAF2025_10 - $NAF2025_intitule_10 || $NAF2025_11 - $NAF2025_intitule_11 || $NAF2025_12 - $NAF2025_intitule_12 || $NAF2025_13 - $NAF2025_intitule_13 || $NAF2025_14 - $NAF2025_intitule_14 || $NAF2025_15 - $NAF2025_intitule_15 || $NAF2025_16 - $NAF2025_intitule_16 || $NAF2025_17 - $NAF2025_intitule_17 ||$NAF2025_18 - $NAF2025_intitule_18 || $NAF2025_19 - $NAF2025_intitule_19 || $NAF2025_20 - $NAF2025_intitule_20 || $NAF2025_21 - $NAF2025_intitule_21 || $NAF2025_22 - $NAF2025_intitule_22 || $NAF2025_23 - $NAF2025_intitule_23 || $NAF2025_24 - $NAF2025_intitule_24 || $NAF2025_25 - $NAF2025_intitule_25 || $NAF2025_26 - $NAF2025_intitule_26 || $NAF2025_27 - $NAF2025_intitule_27 || $NAF2025_28 - $NAF2025_intitule_28 || $NAF2025_29 - $NAF2025_intitule_29 || $NAF2025_30 - $NAF2025_intitule_30 || $NAF2025_31 - $NAF2025_intitule_31 || $NAF2025_32 - $NAF2025_intitule_32 || $NAF2025_33 - $NAF2025_intitule_33 || $NAF2025_34 - $NAF2025_intitule_34 || $NAF2025_35 - $NAF2025_intitule_35 || $NAF2025_36 - $NAF2025_intitule_36 || $NAF2025_37 - $NAF2025_intitule_37 || $NAF2025_38 - $NAF2025_intitule_38 || $NAF2025_39 - $NAF2025_intitule_39&#10;" highlightColor="#ff0000"/>
-      <View visibleWhen="choice-selected" whenTagName="NAF2008_OK"/>
-    </View>
+    <Collapse accordion="false" bordered="true">
+      <Panel value="Voir Codes NAF 2025 propos&#233;s">
+        <View style="box-shadow: 2px 2px 2px #777;">
+          <Text name="liste_multivoque_6" value="$NAF2025_1 - $NAF2025_intitule_1 || $NAF2025_2 - $NAF2025_intitule_2 || $NAF2025_3 - $NAF2025_intitule_3 || $NAF2025_4 - $NAF2025_intitule_4 || $NAF2025_5 - $NAF2025_intitule_5 || $NAF2025_6 - $NAF2025_intitule_6 || $NAF2025_7 - $NAF2025_intitule_7 || $NAF2025_8 - $NAF2025_intitule_8 || $NAF2025_9 - $NAF2025_intitule_9 || $NAF2025_10 - $NAF2025_intitule_10 || $NAF2025_11 - $NAF2025_intitule_11 || $NAF2025_12 - $NAF2025_intitule_12 || $NAF2025_13 - $NAF2025_intitule_13 || $NAF2025_14 - $NAF2025_intitule_14 || $NAF2025_15 - $NAF2025_intitule_15 || $NAF2025_16 - $NAF2025_intitule_16 || $NAF2025_17 - $NAF2025_intitule_17 ||$NAF2025_18 - $NAF2025_intitule_18 || $NAF2025_19 - $NAF2025_intitule_19 || $NAF2025_20 - $NAF2025_intitule_20 || $NAF2025_21 - $NAF2025_intitule_21 || $NAF2025_22 - $NAF2025_intitule_22 || $NAF2025_23 - $NAF2025_intitule_23 || $NAF2025_24 - $NAF2025_intitule_24 || $NAF2025_25 - $NAF2025_intitule_25 || $NAF2025_26 - $NAF2025_intitule_26 || $NAF2025_27 - $NAF2025_intitule_27 || $NAF2025_28 - $NAF2025_intitule_28 || $NAF2025_29 - $NAF2025_intitule_29 || $NAF2025_30 - $NAF2025_intitule_30 || $NAF2025_31 - $NAF2025_intitule_31 || $NAF2025_32 - $NAF2025_intitule_32 || $NAF2025_33 - $NAF2025_intitule_33 || $NAF2025_34 - $NAF2025_intitule_34 || $NAF2025_35 - $NAF2025_intitule_35 || $NAF2025_36 - $NAF2025_intitule_36 || $NAF2025_37 - $NAF2025_intitule_37 || $NAF2025_38 - $NAF2025_intitule_38 || $NAF2025_39 - $NAF2025_intitule_39&#10;" highlightColor="#ff0000"/>
+          <View visibleWhen="choice-selected" whenTagName="NAF2008_OK"/>
+        </View>
+      </Panel>
+    </Collapse>
+    <Header value="Code NAF 2025 dans la liste ci-dessus ?"/>
     <Choices name="NAF2008_OK" toName="text" choice="single" showInLine="true">
       <Choice value="Oui" selected="true"/>
       <Choice value="Non"/>

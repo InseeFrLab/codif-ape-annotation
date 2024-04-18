@@ -19,45 +19,45 @@
     <Collapse accordion="false" bordered="true">
       <Panel value="Voir Codes NAF 2025 propos&#233;s">
         <View style="box-shadow: 2px 2px 2px #777;">
-          <Text name="liste_multivoque_1" value="$NAF2025_code_intitule_1 &#10;"/>
-          <Text name="liste_multivoque_2" value="$NAF2025_code_intitule_2 &#10;"/>
-          <Text name="liste_multivoque_3" value="$NAF2025_code_intitule_3 &#10;"/>
-          <Text name="liste_multivoque_4" value="$NAF2025_code_intitule_4 &#10;"/>
-          <Text name="liste_multivoque_5" value="$NAF2025_code_intitule_5 &#10;"/>
-          <Text name="liste_multivoque_6" value="$NAF2025_code_intitule_6 &#10;"/>
-          <Text name="liste_multivoque_7" value="$NAF2025_code_intitule_7 &#10;"/>
-          <Text name="liste_multivoque_8" value="$NAF2025_code_intitule_8 &#10;"/>
-          <Text name="liste_multivoque_9" value="$NAF2025_code_intitule_9 &#10;"/>
-          <Text name="liste_multivoque_10" value="$NAF2025_code_intitule_10 &#10;"/>
-          <Text name="liste_multivoque_11" value="$NAF2025_code_intitule_11 &#10;"/>
-          <Text name="liste_multivoque_12" value="$NAF2025_code_intitule_12 &#10;"/>
-          <Text name="liste_multivoque_13" value="$NAF2025_code_intitule_13 &#10;"/>
-          <Text name="liste_multivoque_14" value="$NAF2025_code_intitule_14 &#10;"/>
-          <Text name="liste_multivoque_15" value="$NAF2025_code_intitule_15 &#10;"/>
-          <Text name="liste_multivoque_16" value="$NAF2025_code_intitule_16 &#10;"/>
-          <Text name="liste_multivoque_17" value="$NAF2025_code_intitule_17 &#10;"/>
-          <Text name="liste_multivoque_18" value="$NAF2025_code_intitule_18 &#10;"/>
-          <Text name="liste_multivoque_19" value="$NAF2025_code_intitule_19 &#10;"/>
-          <Text name="liste_multivoque_20" value="$NAF2025_code_intitule_20 &#10;"/>
-          <Text name="liste_multivoque_21" value="$NAF2025_code_intitule_21 &#10;"/>
-          <Text name="liste_multivoque_22" value="$NAF2025_code_intitule_22 &#10;"/>
-          <Text name="liste_multivoque_23" value="$NAF2025_code_intitule_23 &#10;"/>
-          <Text name="liste_multivoque_24" value="$NAF2025_code_intitule_24 &#10;"/>
-          <Text name="liste_multivoque_25" value="$NAF2025_code_intitule_25 &#10;"/>
-          <Text name="liste_multivoque_26" value="$NAF2025_code_intitule_26 &#10;"/>
-          <Text name="liste_multivoque_27" value="$NAF2025_code_intitule_27 &#10;"/>
-          <Text name="liste_multivoque_28" value="$NAF2025_code_intitule_28 &#10;"/>
-          <Text name="liste_multivoque_29" value="$NAF2025_code_intitule_29 &#10;"/>
-          <Text name="liste_multivoque_30" value="$NAF2025_code_intitule_30 &#10;"/>
-          <Text name="liste_multivoque_31" value="$NAF2025_code_intitule_31 &#10;"/>
-          <Text name="liste_multivoque_32" value="$NAF2025_code_intitule_32 &#10;"/>
-          <Text name="liste_multivoque_33" value="$NAF2025_code_intitule_33 &#10;"/>
-          <Text name="liste_multivoque_34" value="$NAF2025_code_intitule_34 &#10;"/>
-          <Text name="liste_multivoque_35" value="$NAF2025_code_intitule_35 &#10;"/>
-          <Text name="liste_multivoque_36" value="$NAF2025_code_intitule_36 &#10;"/>
-          <Text name="liste_multivoque_37" value="$NAF2025_code_intitule_37 &#10;"/>
-          <Text name="liste_multivoque_38" value="$NAF2025_code_intitule_38 &#10;"/>
-          <Text name="liste_multivoque_39" value="$NAF2025_code_intitule_39 &#10;"/>
+          <Text name="liste_multivoque_1" value="$NAF2025_code_intitule_1"/>
+          <Text name="liste_multivoque_2" value="$NAF2025_code_intitule_2"/>
+          <Text name="liste_multivoque_3" value="$NAF2025_code_intitule_3 "/>
+          <Text name="liste_multivoque_4" value="$NAF2025_code_intitule_4"/>
+          <Text name="liste_multivoque_5" value="$NAF2025_code_intitule_5"/>
+          <Text name="liste_multivoque_6" value="$NAF2025_code_intitule_6"/>
+          <Text name="liste_multivoque_7" value="$NAF2025_code_intitule_7"/>
+          <Text name="liste_multivoque_8" value="$NAF2025_code_intitule_8"/>
+          <Text name="liste_multivoque_9" value="$NAF2025_code_intitule_9"/>
+          <Text name="liste_multivoque_10" value="$NAF2025_code_intitule_10"/>
+          <Text name="liste_multivoque_11" value="$NAF2025_code_intitule_11"/>
+          <Text name="liste_multivoque_12" value="$NAF2025_code_intitule_12"/>
+          <Text name="liste_multivoque_13" value="$NAF2025_code_intitule_13"/>
+          <Text name="liste_multivoque_14" value="$NAF2025_code_intitule_14"/>
+          <Text name="liste_multivoque_15" value="$NAF2025_code_intitule_15"/>
+          <Text name="liste_multivoque_16" value="$NAF2025_code_intitule_16"/>
+          <Text name="liste_multivoque_17" value="$NAF2025_code_intitule_17"/>
+          <Text name="liste_multivoque_18" value="$NAF2025_code_intitule_18"/>
+          <Text name="liste_multivoque_19" value="$NAF2025_code_intitule_19"/>
+          <Text name="liste_multivoque_20" value="$NAF2025_code_intitule_20"/>
+          <Text name="liste_multivoque_21" value="$NAF2025_code_intitule_21"/>
+          <Text name="liste_multivoque_22" value="$NAF2025_code_intitule_22"/>
+          <Text name="liste_multivoque_23" value="$NAF2025_code_intitule_23"/>
+          <Text name="liste_multivoque_24" value="$NAF2025_code_intitule_24"/>
+          <Text name="liste_multivoque_25" value="$NAF2025_code_intitule_25"/>
+          <Text name="liste_multivoque_26" value="$NAF2025_code_intitule_26"/>
+          <Text name="liste_multivoque_27" value="$NAF2025_code_intitule_27"/>
+          <Text name="liste_multivoque_28" value="$NAF2025_code_intitule_28"/>
+          <Text name="liste_multivoque_29" value="$NAF2025_code_intitule_29"/>
+          <Text name="liste_multivoque_30" value="$NAF2025_code_intitule_30"/>
+          <Text name="liste_multivoque_31" value="$NAF2025_code_intitule_31"/>
+          <Text name="liste_multivoque_32" value="$NAF2025_code_intitule_32"/>
+          <Text name="liste_multivoque_33" value="$NAF2025_code_intitule_33"/>
+          <Text name="liste_multivoque_34" value="$NAF2025_code_intitule_34"/>
+          <Text name="liste_multivoque_35" value="$NAF2025_code_intitule_35"/>
+          <Text name="liste_multivoque_36" value="$NAF2025_code_intitule_36"/>
+          <Text name="liste_multivoque_37" value="$NAF2025_code_intitule_37"/>
+          <Text name="liste_multivoque_38" value="$NAF2025_code_intitule_38"/>
+          <Text name="liste_multivoque_39" value="$NAF2025_code_intitule_39"/>
           <View visibleWhen="choice-selected" whenTagName="NAF2008_OK"/>
         </View>
       </Panel>

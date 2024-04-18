@@ -54,272 +54,272 @@ question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_1",
-    value="$NAF2025_code_intitule_1 \n"
+    value="$NAF2025_code_intitule_1"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_2",
-    value="$NAF2025_code_intitule_2 \n"
+    value="$NAF2025_code_intitule_2"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_3",
-    value="$NAF2025_code_intitule_3 \n"
+    value="$NAF2025_code_intitule_3 "
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_4",
-    value="$NAF2025_code_intitule_4 \n"
+    value="$NAF2025_code_intitule_4"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_5",
-    value="$NAF2025_code_intitule_5 \n"
+    value="$NAF2025_code_intitule_5"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_6",
-    value="$NAF2025_code_intitule_6 \n"
+    value="$NAF2025_code_intitule_6"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_7",
-    value="$NAF2025_code_intitule_7 \n"
+    value="$NAF2025_code_intitule_7"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_8",
-    value="$NAF2025_code_intitule_8 \n"
+    value="$NAF2025_code_intitule_8"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_9",
-    value="$NAF2025_code_intitule_9 \n"
+    value="$NAF2025_code_intitule_9"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_10",
-    value="$NAF2025_code_intitule_10 \n"
+    value="$NAF2025_code_intitule_10"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_11",
-    value="$NAF2025_code_intitule_11 \n"
+    value="$NAF2025_code_intitule_11"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_12",
-    value="$NAF2025_code_intitule_12 \n"
+    value="$NAF2025_code_intitule_12"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_13",
-    value="$NAF2025_code_intitule_13 \n"
+    value="$NAF2025_code_intitule_13"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_14",
-    value="$NAF2025_code_intitule_14 \n"
+    value="$NAF2025_code_intitule_14"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_15",
-    value="$NAF2025_code_intitule_15 \n"
+    value="$NAF2025_code_intitule_15"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_16",
-    value="$NAF2025_code_intitule_16 \n"
+    value="$NAF2025_code_intitule_16"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_17",
-    value="$NAF2025_code_intitule_17 \n"
+    value="$NAF2025_code_intitule_17"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_18",
-    value="$NAF2025_code_intitule_18 \n"
+    value="$NAF2025_code_intitule_18"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_19",
-    value="$NAF2025_code_intitule_19 \n"
+    value="$NAF2025_code_intitule_19"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_20",
-    value="$NAF2025_code_intitule_20 \n"
+    value="$NAF2025_code_intitule_20"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_21",
-    value="$NAF2025_code_intitule_21 \n"
+    value="$NAF2025_code_intitule_21"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_22",
-    value="$NAF2025_code_intitule_22 \n"
+    value="$NAF2025_code_intitule_22"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_23",
-    value="$NAF2025_code_intitule_23 \n"
+    value="$NAF2025_code_intitule_23"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_24",
-    value="$NAF2025_code_intitule_24 \n"
+    value="$NAF2025_code_intitule_24"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_25",
-    value="$NAF2025_code_intitule_25 \n"
+    value="$NAF2025_code_intitule_25"
 )
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_26",
-    value="$NAF2025_code_intitule_26 \n"
+    value="$NAF2025_code_intitule_26"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_27",
-    value="$NAF2025_code_intitule_27 \n"
+    value="$NAF2025_code_intitule_27"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_28",
-    value="$NAF2025_code_intitule_28 \n"
+    value="$NAF2025_code_intitule_28"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_29",
-    value="$NAF2025_code_intitule_29 \n"
+    value="$NAF2025_code_intitule_29"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_30",
-    value="$NAF2025_code_intitule_30 \n"
+    value="$NAF2025_code_intitule_30"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_31",
-    value="$NAF2025_code_intitule_31 \n"
+    value="$NAF2025_code_intitule_31"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_32",
-    value="$NAF2025_code_intitule_32 \n"
+    value="$NAF2025_code_intitule_32"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_33",
-    value="$NAF2025_code_intitule_33 \n"
+    value="$NAF2025_code_intitule_33"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_34",
-    value="$NAF2025_code_intitule_34 \n"
+    value="$NAF2025_code_intitule_34"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_35",
-    value="$NAF2025_code_intitule_35 \n"
+    value="$NAF2025_code_intitule_35"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_36",
-    value="$NAF2025_code_intitule_36 \n"
+    value="$NAF2025_code_intitule_36"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_37",
-    value="$NAF2025_code_intitule_37 \n"
+    value="$NAF2025_code_intitule_37"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_38",
-    value="$NAF2025_code_intitule_38 \n"
+    value="$NAF2025_code_intitule_38"
 )
 
 question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_39",
-    value="$NAF2025_code_intitule_39 \n"
+    value="$NAF2025_code_intitule_39"
 )
 
 # Create the Header element within the first nested level 1 View of the second View element

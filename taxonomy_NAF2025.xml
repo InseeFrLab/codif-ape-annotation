@@ -21,7 +21,7 @@
         <View style="box-shadow: 2px 2px 2px #777;">
           <Text name="liste_multivoque_1" value="$NAF2025_code_intitule_1"/>
           <Text name="liste_multivoque_2" value="$NAF2025_code_intitule_2"/>
-          <Text name="liste_multivoque_3" value="$NAF2025_code_intitule_3 "/>
+          <Text name="liste_multivoque_3" value="$NAF2025_code_intitule_3"/>
           <Text name="liste_multivoque_4" value="$NAF2025_code_intitule_4"/>
           <Text name="liste_multivoque_5" value="$NAF2025_code_intitule_5"/>
           <Text name="liste_multivoque_6" value="$NAF2025_code_intitule_6"/>

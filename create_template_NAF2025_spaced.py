@@ -68,7 +68,7 @@ question_element = etree.SubElement(
     second_first_view,
     "Text",
     name="liste_multivoque_3",
-    value="$NAF2025_code_intitule_3 "
+    value="$NAF2025_code_intitule_3"
 )
 
 question_element = etree.SubElement(

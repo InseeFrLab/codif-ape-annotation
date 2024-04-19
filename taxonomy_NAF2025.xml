@@ -16,6 +16,10 @@
     <Text name="saisonnalite" value="Caract&#232;re permanent(P)/saisonnier(S) de l'activit&#233; g&#233;n&#233;rale --&gt; $activ_perm_et" highlightColor="#00ff00"/>
   </View>
   <View>
+    <Header value="Code NAF 2008"/>
+    <View style="color:blue">
+      <Text name="NAF2008" value="$apet_finale"/>
+    </View>
     <Collapse accordion="false" bordered="true">
       <Panel value="Voir Codes NAF 2025 propos&#233;s">
         <View style="box-shadow: 2px 2px 2px #777;">

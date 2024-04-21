@@ -1,21 +1,24 @@
 <View>
   <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
     <Header value="D&#233;claration"/>
-    <Text name="text" value="Activit&#233; la plus importante dans l'&#233;tablissement --&gt; $activ_pr_lib_et" highlightColor="#ff0000"/>
-    <Text name="act_exec" value="Activit&#233;(s) exerc&#233;e(s) dans l'&#233;tablissement --&gt; $activ_ex_lib_et" highlightColor="#ff0000"/>
-    <Text name="act_ent" value="Activit&#233;(s) de l'entreprise --&gt; $activ_pr_lib" highlightColor="#ff0000"/>
-    <Text name="c05" value="Pseudo type de liasse CERFA --&gt; $liasse_type" highlightColor="#ff9900"/>
-    <Text name="emetteur" value="Emetteur --&gt; $emetteur" highlightColor="#ff9900"/>
-    <Text name="evt" value="Type d'&#233;v&#232;nement --&gt; $evenement_type" highlightColor="#00ff00"/>
-    <Text name="nat" value="Nature d'activit&#233; --&gt; $activ_nat_et_intitule" highlightColor="#0000ff"/>
-    <Text name="nat_autre" value="Autre nature d'activit&#233; --&gt; $activ_nat_lib_et" highlightColor="#0000ff"/>
-    <Text name="surf" value="Surface --&gt; $activ_surf_et" highlightColor="#ffcc00"/>
-    <Text name="cj" value="Cat&#233;gorie juridique --&gt; $cj_intitule" highlightColor="#00ff00"/>
-    <Text name="nom_comm_et" value="Nom commercial de l'&#233;tablissement --&gt; $nom_comm_et" highlightColor="#00ff00"/>
-    <Text name="enseigne_et1" value="Enseigne n&#176;1 de l'&#233;tablissement --&gt; $enseigne_et1" highlightColor="#00ff00"/>
-    <Text name="saisonnalite" value="Caract&#232;re permanent(P)/saisonnier(S) de l'activit&#233; g&#233;n&#233;rale --&gt; $activ_perm_et" highlightColor="#00ff00"/>
+    <Text name="text" value="Libell&#233; --&gt; $text_description" highlightColor="#ff0000"/>
+    <Text name="c05" value="Pseudo type de liasse CERFA --&gt; $type_" highlightColor="#ff9900"/>
+    <Text name="evt" value="Type d'&#233;v&#232;nement --&gt; $event" highlightColor="#00ff00"/>
+    <Text name="nat" value="Nature d'activit&#233; --&gt; $nature" highlightColor="#0000ff"/>
+    <Text name="surf" value="Surface --&gt; $surface" highlightColor="#ffcc00"/>
   </View>
   <View>
+    <Header value="Code NAF 2008 donn&#233;"/>
+    <View style="color:blue">
+      <Text name="NAF2008" value="$apet_finale"/>
+    </View>
+    <Header value="Est-ce que le code NAF 2008  donn&#233; est correct ?"/>
+    <Choices name="NAF2008_OK" toName="text" choice="single" showInLine="true">
+      <Choice value="Oui" selected="true"/>
+      <Choice value="Non"/>
+    </Choices>
+  </View>
+  <View visibleWhen="choice-selected" whenTagName="NAF2008_OK" whenChoiceValue="Non">
     <Taxonomy name="taxonomy" toName="text" minWidth="1200px" placeholder="Cliquez et tapez le code APE retenu" leafsOnly="true" maxUsages="1">
       <Choice value="Inclassable" alias="XXXXX"/>
       <Choice value="A - AGRICULTURE, SYLVICULTURE ET P&#202;CHE" alias="A">

@@ -138,4 +138,4 @@ text_element = etree.SubElement(comment_view, "TextArea", name="Remarques", toNa
 """ Create XML """
 # Create ElementTree and write to file
 tree = etree.ElementTree(root)
-tree.write("taxonomy.xml", pretty_print=True)
+tree.write("taxonomy_NAF2008_validation.xml", pretty_print=True)

@@ -64,7 +64,7 @@ NAF2008_element = etree.SubElement(
 """ Validation section is annotation good or not """
 
 header_element = etree.SubElement(
-    second_view, "Header", value="Est-ce que le code NAF 2008  donné est correct ?"
+    second_view, "Header", value="Est-ce que le code NAF 2008 donné est correct ?"
 )
 question_choices = etree.SubElement(
     second_view,

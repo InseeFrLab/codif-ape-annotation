@@ -40,6 +40,7 @@ text_element = etree.SubElement(first_view, "Text", name="c05", value="Pseudo ty
 text_element = etree.SubElement(first_view, "Text", name="evt", value="Type d'évènement --> $event", highlightColor="#00ff00")
 text_element = etree.SubElement(first_view, "Text", name="nat", value="Nature d'activité --> $nature", highlightColor="#0000ff")
 text_element = etree.SubElement(first_view, "Text", name="surf", value="Surface --> $surface", highlightColor="#ffcc00")
+text_element = etree.SubElement(first_view, "Text", name="cj", value="Catégorie juridique --> $cj", highlightColor="#00ff00")
 
 
 """ Choice section to display NACE taxonomy """

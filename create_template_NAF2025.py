@@ -126,7 +126,7 @@ NAF2008_element = etree.SubElement(
 """ Choice subsection to display question """
 # Collapse as an accordion
 collapse = etree.SubElement(second_view, "Collapse", accordion="false", bordered="true")
-panel = etree.SubElement(collapse, "Panel", value="Voir Codes NAF 2025 proposés")
+panel = etree.SubElement(collapse, "Panel", value="Voir sous-classes NAF 2025 proposés et common content de la classe associée")
 # Create the first nested level 1 View of the second View element
 second_first_view = etree.SubElement(
     panel, "View", style="box-shadow: 2px 2px 2px #777;"
@@ -139,7 +139,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_1",
-    value="$NAF2025_code_intitule_1",
+    value="1) $NAF2025_code_intitule_1",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -153,7 +153,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_2",
-    value="$NAF2025_code_intitule_2",
+    value="2) $NAF2025_code_intitule_2",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -167,7 +167,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_3",
-    value="$NAF2025_code_intitule_3",
+    value="3) $NAF2025_code_intitule_3",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -181,7 +181,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_4",
-    value="$NAF2025_code_intitule_4",
+    value="4) $NAF2025_code_intitule_4",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -195,7 +195,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_5",
-    value="$NAF2025_code_intitule_5",
+    value="5) $NAF2025_code_intitule_5",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -209,7 +209,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_6",
-    value="$NAF2025_code_intitule_6",
+    value="6) $NAF2025_code_intitule_6",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -223,7 +223,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_7",
-    value="$NAF2025_code_intitule_7",
+    value="7) $NAF2025_code_intitule_7",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -237,7 +237,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_8",
-    value="$NAF2025_code_intitule_8",
+    value="8) $NAF2025_code_intitule_8",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -251,7 +251,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_9",
-    value="$NAF2025_code_intitule_9",
+    value="9) $NAF2025_code_intitule_9",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -265,7 +265,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_10",
-    value="$NAF2025_code_intitule_10",
+    value="10) $NAF2025_code_intitule_10",
 )
 
 question_element = etree.SubElement(
@@ -280,7 +280,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_11",
-    value="$NAF2025_code_intitule_11",
+    value="11) $NAF2025_code_intitule_11",
 )
 
 question_element = etree.SubElement(
@@ -295,7 +295,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_12",
-    value="$NAF2025_code_intitule_12",
+    value="12) $NAF2025_code_intitule_12",
 )
 
 question_element = etree.SubElement(
@@ -310,7 +310,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_13",
-    value="$NAF2025_code_intitule_13",
+    value="13) $NAF2025_code_intitule_13",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -324,7 +324,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_14",
-    value="$NAF2025_code_intitule_14",
+    value="14) $NAF2025_code_intitule_14",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -338,7 +338,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_15",
-    value="$NAF2025_code_intitule_15",
+    value="15) $NAF2025_code_intitule_15",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -352,7 +352,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_16",
-    value="$NAF2025_code_intitule_16",
+    value="16) $NAF2025_code_intitule_16",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -366,7 +366,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_17",
-    value="$NAF2025_code_intitule_17",
+    value="17) $NAF2025_code_intitule_17",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -380,7 +380,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_18",
-    value="$NAF2025_code_intitule_18",
+    value="18) $NAF2025_code_intitule_18",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -394,7 +394,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_19",
-    value="$NAF2025_code_intitule_19",
+    value="19) $NAF2025_code_intitule_19",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -408,7 +408,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_20",
-    value="$NAF2025_code_intitule_20",
+    value="20) $NAF2025_code_intitule_20",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -422,7 +422,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_21",
-    value="$NAF2025_code_intitule_21",
+    value="21) $NAF2025_code_intitule_21",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -436,7 +436,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_22",
-    value="$NAF2025_code_intitule_22",
+    value="22) $NAF2025_code_intitule_22",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -450,7 +450,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_23",
-    value="$NAF2025_code_intitule_23",
+    value="23) $NAF2025_code_intitule_23",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -464,7 +464,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_24",
-    value="$NAF2025_code_intitule_24",
+    value="24) $NAF2025_code_intitule_24",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -478,7 +478,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_25",
-    value="$NAF2025_code_intitule_25",
+    value="25) $NAF2025_code_intitule_25",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -492,7 +492,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_26",
-    value="$NAF2025_code_intitule_26",
+    value="26) $NAF2025_code_intitule_26",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -506,7 +506,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_27",
-    value="$NAF2025_code_intitule_27",
+    value="27) $NAF2025_code_intitule_27",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -520,7 +520,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_28",
-    value="$NAF2025_code_intitule_28",
+    value="28) $NAF2025_code_intitule_28",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -534,7 +534,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_29",
-    value="$NAF2025_code_intitule_29",
+    value="29) $NAF2025_code_intitule_29",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -548,7 +548,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_30",
-    value="$NAF2025_code_intitule_30",
+    value="30) $NAF2025_code_intitule_30",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -562,7 +562,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_31",
-    value="$NAF2025_code_intitule_31",
+    value="31) $NAF2025_code_intitule_31",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -576,7 +576,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_32",
-    value="$NAF2025_code_intitule_32",
+    value="32) $NAF2025_code_intitule_32",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -590,7 +590,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_33",
-    value="$NAF2025_code_intitule_33",
+    value="33) $NAF2025_code_intitule_33",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -604,7 +604,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_34",
-    value="$NAF2025_code_intitule_34",
+    value="34) $NAF2025_code_intitule_34",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -618,7 +618,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_35",
-    value="$NAF2025_code_intitule_35",
+    value="35) $NAF2025_code_intitule_35",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -632,7 +632,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_36",
-    value="$NAF2025_code_intitule_36",
+    value="36) $NAF2025_code_intitule_36",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -646,7 +646,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_37",
-    value="$NAF2025_code_intitule_37",
+    value="37) $NAF2025_code_intitule_37",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -660,7 +660,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_38",
-    value="$NAF2025_code_intitule_38",
+    value="38) $NAF2025_code_intitule_38",
 )
 question_element = etree.SubElement(
     second_first_view,
@@ -674,7 +674,7 @@ question_element = etree.SubElement(
     NAF2025_view,
     "Text",
     name="liste_multivoque_39",
-    value="$NAF2025_code_intitule_39",
+    value="39) $NAF2025_code_intitule_39",
 )
 question_element = etree.SubElement(
     second_first_view,

@@ -35,7 +35,7 @@ if [ -n "$files" ]; then
                 # Export as env variable
                 export LABEL_STUDIO_PROJECT_ID=$LABEL_STUDIO_PROJECT_ID
                 # Check current project id (according to label studio)
-                echo CURRENT LABEL STUDIO ID PROJET: $LABEL_STUDIO_PROJECT_ID
+                echo "CURRENT LABEL STUDIO ID PROJET: $LABEL_STUDIO_PROJECT_ID"
 
                 # Transform and save batch data to annotate
                 python transform_to_json.py "$filename"
@@ -70,7 +70,7 @@ LABEL_STUDIO_PROJECT_ID=$(python display_last_pk.py)
 # Export as env variable
 export LABEL_STUDIO_PROJECT_ID=$LABEL_STUDIO_PROJECT_ID
 # Check current project id (according to label studio)
-echo CURRENT LABEL STUDIO ID PROJET: $LABEL_STUDIO_PROJECT_ID
+echo "CURRENT LABEL STUDIO ID PROJET: $LABEL_STUDIO_PROJECT_ID"
 # Get export folder name for path syncing to S3
 NUMERO_LOT=$(python display_last_target_folder_id.py)
 # Export folder path

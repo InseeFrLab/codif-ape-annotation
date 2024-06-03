@@ -8,4 +8,3 @@
 ./batch_RSV.sh 
 ./batch_SOCET.sh 
 ./batch_SSP.sh 
-echo $S3_BUCKET_PREFIX_DEPOT_MANUEL

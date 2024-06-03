@@ -1202,5 +1202,10 @@
   <View>
     <Header value="Commentaire"/>
     <TextArea name="Remarques" toName="text" showSubmitButton="true" maxSubmissions="1" editable="true"/>
+    <Header value="Difficult&#233; ressentie"/>
+  </View>
+  <View>
+    <Text name="diff" value="Notez votre ressenti sur une &#233;chelle de 1 &#224; 5" highlightColor="#ff0000"/>
+    <Rating name="rating" toName="diff" defaultValue="5" maxRating="5" icon="heart" size="large"/>
   </View>
 </View>

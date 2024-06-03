@@ -844,6 +844,30 @@ text_element = etree.SubElement(
     editable="true",
 )
 
+""" Difficulty rating section  """
+# Create the command View element
+rating_view = etree.SubElement(root, "View")
+
+# Create the Header element within the first View
+header_element = etree.SubElement(comment_view, "Header", value="Difficulté ressentie")
+text_element = etree.SubElement(
+    rating_view,
+    "Text",
+    name="diff",
+    value="Notez votre ressenti sur une échelle de 1 à 5",
+    highlightColor="#ff0000",
+)
+rating_element = etree.SubElement(
+    rating_view,
+    "Rating",
+    name="rating",
+    toName="diff",
+    defaultValue="5",
+    maxRating="5",
+    icon="heart",
+    size="large" 
+)
+
 
 """ Create XML """
 # Create ElementTree and write to file

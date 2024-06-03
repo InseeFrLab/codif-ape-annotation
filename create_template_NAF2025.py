@@ -854,7 +854,7 @@ text_element = etree.SubElement(
     rating_view,
     "Text",
     name="diff",
-    value="Notez votre ressenti sur une échelle de 1 à 5",
+    value="Notez votre ressenti sur une échelle de 1 à 5 étoiles: plus facile (1 étoile) au plus difficile (5 étoiles)",
     highlightColor="#ff0000",
 )
 rating_element = etree.SubElement(
@@ -862,7 +862,7 @@ rating_element = etree.SubElement(
     "Rating",
     name="rating",
     toName="diff",
-    defaultValue="5",
+    defaultValue="3",
     maxRating="5",
     icon="heart",
     size="large" 

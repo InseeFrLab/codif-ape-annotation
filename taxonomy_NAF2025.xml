@@ -1205,7 +1205,7 @@
     <Header value="Difficult&#233; ressentie"/>
   </View>
   <View>
-    <Text name="diff" value="Notez votre ressenti sur une &#233;chelle de 1 &#224; 5" highlightColor="#ff0000"/>
+    <Text name="diff" value="Notez votre ressenti sur une &#233;chelle de 1 &#224; 5 &#233;toiles: plus facile (1 &#233;toile) au plus difficile (5 &#233;toiles)" highlightColor="#ff0000"/>
     <Rating name="rating" toName="diff" defaultValue="5" maxRating="5" icon="heart" size="large"/>
   </View>
 </View>

@@ -8,6 +8,3 @@
 . ./batch_RSV.sh 
 . ./batch_SOCET.sh 
 . ./batch_SSP.sh 
-
-# Move the treated batch data to the archive
-mc mv "$SOURCE_PATH$filename" "$ARCHIVE_PATH"

@@ -4,3 +4,5 @@ openpyxl
 transformers 
 torch
 sacremoses
+s3fs
+odfpy

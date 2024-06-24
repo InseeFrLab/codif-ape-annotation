@@ -5,6 +5,6 @@
 . ./batch_AGRI.sh 
 . ./batch_CG.sh 
 . ./batch_PSA.sh 
-. ./batch_RSV.sh 
+#. ./batch_RSV.sh 
 . ./batch_SOCET.sh 
 . ./batch_SSP.sh 

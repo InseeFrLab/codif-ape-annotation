@@ -38,7 +38,7 @@ text_element = etree.SubElement(
 text_element = etree.SubElement(
     first_view,
     "Text",
-    name="text",
+    name="sec_agri",
     value="Précision sur les activités secondaires agricoles --> $activ_sec_agri_et",
     highlightColor="#ff0000",
 )

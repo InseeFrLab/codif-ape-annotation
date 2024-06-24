@@ -34,20 +34,15 @@ text_element = etree.SubElement(
     value="Libellé de l'activité la plus importante --> $libelle",
     highlightColor="#ff0000",
 )
-# text_element = etree.SubElement(
-#     first_view,
-#     "Text",
-#     name="c05",
-#     value="Pseudo type de liasse CERFA --> $liasse_type",
-#     highlightColor="#ff9900",
-# )
-# text_element = etree.SubElement(
-#     first_view,
-#     "Text",
-#     name="emetteur",
-#     value="Emetteur --> $emetteur",
-#     highlightColor="#ff9900",
-# )
+
+text_element = etree.SubElement(
+    first_view,
+    "Text",
+    name="text",
+    value="Précision sur les activités secondaires agricoles --> $activ_sec_agri_et",
+    highlightColor="#ff0000",
+)
+
 text_element = etree.SubElement(
     first_view,
     "Text",
@@ -81,27 +76,6 @@ text_element = etree.SubElement(
     "Text",
     name="cj",
     value="Catégorie juridique --> $cj_intitule",
-    highlightColor="#00ff00",
-)
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="nom_comm_et",
-    value="Nom commercial de l'établissement --> $nom_comm_et",
-    highlightColor="#00ff00",
-)
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="enseigne_et1",
-    value="Enseigne n°1 de l'établissement --> $enseigne_et1",
-    highlightColor="#00ff00",
-)
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="saisonnalite",
-    value="Caractère permanent(P)/saisonnier(S) de l'activité générale --> $activ_perm_et",
     highlightColor="#00ff00",
 )
 

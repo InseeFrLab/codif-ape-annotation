@@ -39,7 +39,7 @@ text_element = etree.SubElement(
     first_view,
     "Text",
     name="text",
-    value="Libellé des activités secondaires agricoles --> $activ_sec_agri_et",
+    value="Précision sur les activités secondaires agricoles --> $activ_sec_agri_et",
     highlightColor="#ff0000",
 )
 
@@ -50,6 +50,7 @@ text_element = etree.SubElement(
     value="Nature d'activité --> $activ_nat_et_intitule",
     highlightColor="#0000ff",
 )
+
 text_element = etree.SubElement(
     first_view,
     "Text",
@@ -57,6 +58,7 @@ text_element = etree.SubElement(
     value="Autre nature d'activité --> $activ_nat_lib_et",
     highlightColor="#0000ff",
 )
+
 text_element = etree.SubElement(
     first_view,
     "Text",
@@ -71,20 +73,7 @@ text_element = etree.SubElement(
     value="Catégorie juridique --> $cj_intitule",
     highlightColor="#00ff00",
 )
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="nom_comm_et",
-    value="Nom commercial de l'établissement --> $nom_comm_et",
-    highlightColor="#00ff00",
-)
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="enseigne_et1",
-    value="Enseigne n°1 de l'établissement --> $enseigne_et1",
-    highlightColor="#00ff00",
-)
+
 
 
 """ Choice section to display labeling suggestions or NACE taxonomy """

@@ -62,13 +62,7 @@ text_element = etree.SubElement(
     value="Catégorie juridique --> $cj_intitule",
     highlightColor="#00ff00",
 )
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="enseigne_et1",
-    value="Enseigne n°1 de l'établissement --> $enseigne_et1",
-    highlightColor="#00ff00",
-)
+
 text_element = etree.SubElement(
     first_view,
     "Text",

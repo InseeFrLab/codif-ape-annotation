@@ -83,20 +83,7 @@ text_element = etree.SubElement(
     value="Catégorie juridique --> $cj_intitule",
     highlightColor="#00ff00",
 )
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="nom_comm_et",
-    value="Nom commercial de l'établissement --> $nom_comm_et",
-    highlightColor="#00ff00",
-)
-text_element = etree.SubElement(
-    first_view,
-    "Text",
-    name="enseigne_et1",
-    value="Enseigne n°1 de l'établissement --> $enseigne_et1",
-    highlightColor="#00ff00",
-)
+
 
 """ Choice section to display labeling suggestions or NACE taxonomy """
 # Create the second View element

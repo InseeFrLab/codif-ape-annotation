@@ -46,6 +46,14 @@ text_element = etree.SubElement(
 text_element = etree.SubElement(
     first_view,
     "Text",
+    name="c05",
+    value="Pseudo type de liasse CERFA --> $liasse_type",
+    highlightColor="#ff9900",
+)
+
+text_element = etree.SubElement(
+    first_view,
+    "Text",
     name="evt",
     value="Type d'évènement --> $evenement_type",
     highlightColor="#00ff00",

@@ -108,14 +108,13 @@ NAF_mapping_one_to_one = NAF_mapping[NAF_mapping['NAF2025'].apply(len) == 1]
 print(NAF_mapping_one_to_many)
 
 
-#NAF_mapping = pd.merge(NAF_mapping_one_to_many, NAF_mapping_one_to_many_old, on='NAF2008', how='inner')
+NAF_mapping = pd.merge(NAF_mapping_one_to_many, NAF_mapping_one_to_many_old, on='NAF2008', how='inner')
 print(NAF_mapping_one_to_many_old)
 print(NAF_mapping_one_to_many)
 print(len(NAF_mapping_one_to_many))
 
-# correspondance_NAF.to_parquet('s3://projet-ape/NAF-revision/NAF_correspondance_table_provisoire_belge.parquet', compression=None, filesystem=fs)
 # NAF_mapping_one_to_one.to_parquet('s3://projet-ape/NAF-revision/NAF_mapping_one_to_one_provisoire_belge.parquet', compression=None, filesystem=fs)
 NAF_mapping_one_to_many.to_parquet('NAF_mapping_one_to_many_provisoire_belge.parquet', compression=None)
 
-
+print(NAF_mapping_one_to_many)
 print(pd.read_parquet("NAF_mapping_one_to_many_provisoire_belge.parquet"))

@@ -28,7 +28,7 @@ correspondance_NAF = correspondance_NAF[['NAFold-code\n(code niveau sous-classe 
                                         'NAFnew-code\n(code niveau sous-classe de la nomenclature 2025, correspondance logique avec les NAFold-codes)', 
                                         'NAFnew-intitulé\n(niveau sous-classe)',
                                         'Common content identified for the NACEold and the NACEnew\n(niveau classe)',
-                                        'ligne à supprimer =1 pour correspondance de codes APE (travail Julie)']]
+                                        'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX)']]
 
 # Drop the first row (index 0)
 correspondance_NAF = correspondance_NAF.drop(0)
@@ -39,7 +39,7 @@ correspondance_NAF.rename(columns={'NAFold-code\n(code niveau sous-classe de la 
                                    'NAFnew-code\n(code niveau sous-classe de la nomenclature 2025, correspondance logique avec les NAFold-codes)': 'NAF2025',
                                    'NAFnew-intitulé\n(niveau sous-classe)' : 'NAF2025_intitule',
                                    'Common content identified for the NACEold and the NACEnew\n(niveau classe)': 'common_content',
-                                   'ligne à supprimer =1 pour correspondance de codes APE (travail Julie)' : 'filtre_a_supp'}, inplace=True)
+                                   'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX)' : 'filtre_a_supp'}, inplace=True)
 
 # Filter
 correspondance_NAF = correspondance_NAF[correspondance_NAF['filtre_a_supp'] != 1]

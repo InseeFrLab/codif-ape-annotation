@@ -86,6 +86,12 @@ text_element = etree.SubElement(
     value="Catégorie juridique --> $cj_intitule",
     highlightColor="#00ff00",
 )
+text_element = etree.SubElement(
+first_view, 
+"Text", 
+name="saisonnalite", 
+value="Caractère permanent(P)/saisonnier(S) de l'activité générale --> $activ_perm_et", 
+highlightColor="#00ff00")
 
 """ Choice section to display labeling suggestions or NACE taxonomy """
 # Create the second View element

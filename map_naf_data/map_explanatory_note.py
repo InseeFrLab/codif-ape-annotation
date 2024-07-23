@@ -91,15 +91,15 @@ correspondance_NAF = pd.merge(correspondance_NAF, explanatory_notes, on='NAF2025
 print(print(correspondance_NAF[correspondance_NAF.duplicated(subset=['NAF2025'], keep=False)]))
 
 # Group by 'task_id', aggregate with custom functions
-NAF_mapping = correspondance_NAF.groupby('NAF2008').agg({'NAF2008_intitule': (lambda x: list(x.dropna().unique())),
-                                                    'NAF2025': (lambda x: list(x.dropna().unique())),
-                                                    'NAF2025_intitule': (lambda x: list(x.dropna().unique())),
-                                                    'comprend_niv5_belge': lambda x: list(x.dropna().unique()),
-                                                    'comprend_aussi_niv5_belge': lambda x: list(x.dropna().unique()),
-                                                    'ne_comprend_pas_niv5_belge': lambda x: list(x.dropna().unique()),
-                                                    'comprend_niv4_belge': lambda x: list(x.dropna().unique()),
-                                                    'comprend_aussi_niv4_belge': lambda x: list(x.dropna().unique()),
-                                                    'ne_comprend_pas_niv4_belge': lambda x: list(x.dropna().unique())}).reset_index()
+NAF_mapping = correspondance_NAF.groupby('NAF2008').agg({'NAF2008_intitule': (lambda x: list(x.fillna('Indisponible pour le moment'))),
+                                                    'NAF2025': (lambda x: list(x.fillna('Indisponible pour le moment'))),
+                                                    'NAF2025_intitule': (lambda x: list(x.fillna('Indisponible pour le moment'))),
+                                                    'comprend_niv5_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
+                                                    'comprend_aussi_niv5_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
+                                                    'ne_comprend_pas_niv5_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
+                                                    'comprend_niv4_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
+                                                    'comprend_aussi_niv4_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
+                                                    'ne_comprend_pas_niv4_belge': lambda x: list(x.fillna('Indisponible pour le moment'))}).reset_index()
 NAF_mapping = NAF_mapping[['NAF2008', 'NAF2008_intitule', 'NAF2025', 'NAF2025_intitule','comprend_niv5_belge','comprend_aussi_niv5_belge','ne_comprend_pas_niv5_belge','comprend_niv4_belge','comprend_aussi_niv4_belge','ne_comprend_pas_niv4_belge']]
 NAF_mapping_one_to_many = NAF_mapping[NAF_mapping['NAF2025'].apply(len) > 1]
 NAF_mapping_one_to_one = NAF_mapping[NAF_mapping['NAF2025'].apply(len) == 1]

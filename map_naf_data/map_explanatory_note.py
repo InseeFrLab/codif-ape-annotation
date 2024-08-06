@@ -20,7 +20,7 @@ NAF_mapping_one_to_many_old = pd.read_parquet('s3://projet-ape/NAF-revision/NAF_
 excel_file_path = "Table de correspondances NAF rev.2 - NAF 2025.xls"
 
 # Import as dataframe
-correspondance_NAF = pd.read_excel(excel_file_path, sheet_name='0) correspondance APE ')
+correspondance_NAF = pd.read_excel(excel_file_path, sheet_name='1) correspondance NAFNAF')
 print(correspondance_NAF.columns.values)
 # Select columns
 correspondance_NAF = correspondance_NAF[['NAFold-code\n(code niveau sous-classe de la nomenclature actuelle)',
@@ -28,7 +28,8 @@ correspondance_NAF = correspondance_NAF[['NAFold-code\n(code niveau sous-classe 
                                         'NAFnew-code\n(code niveau sous-classe de la nomenclature 2025, correspondance logique avec les NAFold-codes)', 
                                         'NAFnew-intitulé\n(niveau sous-classe)',
                                         'Common content identified for the NACEold and the NACEnew\n(niveau classe)',
-                                        'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX)']]
+                                        'évaluation profil pratique NAFold pour Julie',
+                                        'ligne à supprimer =1 pour correspondance de codes APE (travail Julie)']]
 
 # Drop the first row (index 0)
 correspondance_NAF = correspondance_NAF.drop(0)
@@ -39,9 +40,11 @@ correspondance_NAF.rename(columns={'NAFold-code\n(code niveau sous-classe de la 
                                    'NAFnew-code\n(code niveau sous-classe de la nomenclature 2025, correspondance logique avec les NAFold-codes)': 'NAF2025',
                                    'NAFnew-intitulé\n(niveau sous-classe)' : 'NAF2025_intitule',
                                    'Common content identified for the NACEold and the NACEnew\n(niveau classe)': 'common_content',
-                                   'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX)' : 'filtre_a_supp'}, inplace=True)
+                                   'évaluation profil pratique NAFold pour Julie': 'is_multivoque',
+                                   'ligne à supprimer =1 pour correspondance de codes APE (travail Julie)' : 'filtre_a_supp'}, inplace=True)
 
 # Filter
+correspondance_NAF = correspondance_NAF[correspondance_NAF['is_multivoque'] == 'C']
 correspondance_NAF = correspondance_NAF[correspondance_NAF['filtre_a_supp'] != 1]
 print(correspondance_NAF)
 # Delete .
@@ -52,28 +55,28 @@ correspondance_NAF['NAF2025'] = correspondance_NAF['NAF2025'].str.replace(".", "
 """ Gestion sous-classes notes explicatives """
 
 # File path (.xls)
-excel_file_path = "Notes NACE et NAF.ods"
+excel_file_path = "Notes NACE et NAF.xlsx"
 
 # Import as dataframe
 data_explanatory_notes = pd.read_excel(excel_file_path, sheet_name='Notes NACE Rev21 et NAF2025')
 
 # Select columns
-data_explanatory_notes = data_explanatory_notes[["Code NAF2025", "Comprend", "Comprend.aussi", "Ne.comprend.pas"]]
+data_explanatory_notes = data_explanatory_notes[["Code.NACE.Rev.2.1", "Comprend", "Comprend.aussi", "Ne.comprend.pas"]]
 
 # Delete .
-data_explanatory_notes['Code NAF2025'] = data_explanatory_notes['Code NAF2025'].str.replace(".", "")
+data_explanatory_notes['Code.NACE.Rev.2.1'] = data_explanatory_notes['Code.NACE.Rev.2.1'].str.replace(".", "")
 
 # Filter to get subclasses and classes notes
-explanatory_notes_subclasses = data_explanatory_notes[data_explanatory_notes['Code NAF2025'].str.len() == 5]
-common_content = data_explanatory_notes[data_explanatory_notes['Code NAF2025'].str.len() == 4]
+explanatory_notes_subclasses = data_explanatory_notes[data_explanatory_notes['Code.NACE.Rev.2.1'].str.len() == 5]
+common_content = data_explanatory_notes[data_explanatory_notes['Code.NACE.Rev.2.1'].str.len() == 4]
 
 # Rename columns
-explanatory_notes_subclasses.rename(columns={'Code NAF2025': 'NAF2025',
+explanatory_notes_subclasses.rename(columns={'Code.NACE.Rev.2.1': 'NAF2025',
                                   'Comprend': 'comprend_niv5_belge',
                                   'Comprend.aussi': 'comprend_aussi_niv5_belge',
                                   'Ne.comprend.pas': 'ne_comprend_pas_niv5_belge'}, inplace=True)
 
-common_content.rename(columns={'Code NAF2025': 'normalized_key',
+common_content.rename(columns={'Code.NACE.Rev.2.1': 'normalized_key',
                                'Comprend': 'comprend_niv4_belge',
                                'Comprend.aussi': 'comprend_aussi_niv4_belge',
                                'Ne.comprend.pas': 'ne_comprend_pas_niv4_belge'}, inplace=True)
@@ -108,7 +111,7 @@ NAF_mapping_one_to_one = NAF_mapping[NAF_mapping['NAF2025'].apply(len) == 1]
 print(NAF_mapping_one_to_many)
 
 
-NAF_mapping = pd.merge(NAF_mapping_one_to_many, NAF_mapping_one_to_many_old, on='NAF2008', how='inner')
+NAF_mapping = pd.merge(NAF_mapping_one_to_many, NAF_mapping_one_to_many_old, on='NAF2008', how='left')
 print(NAF_mapping_one_to_many_old)
 print(NAF_mapping_one_to_many)
 print(len(NAF_mapping_one_to_many))

@@ -5,10 +5,10 @@ from translator import translate
 
 """ Download data """
 # File path (.xls)
-excel_file_path = "Table de correspondances NAF rev.2 - NAF 2025.xls"
+excel_file_path = "data/Table de correspondances NAF rev.2 - NAF 2025.xls"
 
 # Import as dataframe
-correspondance_NAF = pd.read_excel(excel_file_path, sheet_name='0) correspondance APE ')
+correspondance_NAF = pd.read_excel(excel_file_path, sheet_name='1) correspondance NAFNAF')
 print(correspondance_NAF.columns.values)
 # Select columns
 correspondance_NAF = correspondance_NAF[['NAFold-code\n(code niveau sous-classe de la nomenclature actuelle)',
@@ -16,7 +16,7 @@ correspondance_NAF = correspondance_NAF[['NAFold-code\n(code niveau sous-classe 
                                         'NAFnew-code\n(code niveau sous-classe de la nomenclature 2025, correspondance logique avec les NAFold-codes)', 
                                         'NAFnew-intitulé\n(niveau sous-classe)',
                                         'Common content identified for the NACEold and the NACEnew\n(niveau classe)',
-                                        'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX)']]
+                                        'ligne à supprimer =1 pour correspondance de codes APE (travail Julie)']]
 
 # Drop the first row (index 0)
 correspondance_NAF = correspondance_NAF.drop(0)
@@ -27,7 +27,7 @@ correspondance_NAF.rename(columns={'NAFold-code\n(code niveau sous-classe de la 
                                    'NAFnew-code\n(code niveau sous-classe de la nomenclature 2025, correspondance logique avec les NAFold-codes)': 'NAF2025',
                                    'NAFnew-intitulé\n(niveau sous-classe)' : 'NAF2025_intitule',
                                    'Common content identified for the NACEold and the NACEnew\n(niveau classe)': 'common_content',
-                                   'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXXX)' : 'filtre_a_supp'}, inplace=True)
+                                   'ligne à supprimer =1 pour correspondance de codes APE (travail Julie)' : 'filtre_a_supp'}, inplace=True)
 correspondance_NAF["common_content"] = correspondance_NAF["common_content"].astype(str)
 correspondance_NAF["common_content_fr"] = correspondance_NAF["common_content"].apply(translate)
 # print(correspondance_NAF["common_content"].iloc[348])

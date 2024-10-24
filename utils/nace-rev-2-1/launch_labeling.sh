@@ -11,4 +11,4 @@ pip install -r requirements.txt
 . ./batch_PSA.sh 
 #. ./batch_RSV.sh 
 . ./batch_SOCET.sh 
-. ./batch_SSP.sh 
+#. ./batch_SSP.sh 

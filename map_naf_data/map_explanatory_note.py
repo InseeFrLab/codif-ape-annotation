@@ -29,7 +29,7 @@ correspondance_NAF = correspondance_NAF[['NAF rév. 2 – code\n(niveau sous-cla
                                         'NAF 2025 - intitulé\n(niveau sous-classe)',
                                         'Contenu commun identifié pour la NACE actuelle et la NACE future\n(niveau classe)',
                                         'évaluation profil pratique NAF actuel pour Julie',
-                                        'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon']]
+                                        'ligne à supprimer =1 pour correspondance de codes APE (travail Julie) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon']]
 
 # Drop the first row (index 0)
 correspondance_NAF = correspondance_NAF.drop(0)
@@ -40,8 +40,8 @@ correspondance_NAF.rename(columns={'NAF rév. 2 – code\n(niveau sous-classe de
                                    'NAF 2025 – code\n(niveau sous-classe de la nomenclature 2025, correspondance logique avec les codes NAF rév. 2)': 'NAF2025',
                                    'NAF 2025 - intitulé\n(niveau sous-classe)' : 'NAF2025_intitule',
                                    'Contenu commun identifié pour la NACE actuelle et la NACE future\n(niveau classe)': 'common_content',
-                                   'évaluation profil pratique NAF actuel pour JXXXXX': 'is_multivoque',
-                                   'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon' : 'filtre_a_supp'}, inplace=True)
+                                   'évaluation profil pratique NAF actuel pour Julie': 'is_multivoque',
+                                   'ligne à supprimer =1 pour correspondance de codes APE (travail Julie) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon' : 'filtre_a_supp'}, inplace=True)
 
 # Filter
 correspondance_NAF = correspondance_NAF[correspondance_NAF['is_multivoque'] == 'C']
@@ -76,6 +76,7 @@ explanatory_notes_subclasses = explanatory_notes_subclasses[["Code NAF 2025", "N
 
 # Rename columns
 explanatory_notes_subclasses.rename(columns={'Code NAF 2025': 'NAF2025',
+                                  'Note.générale': 'Note_generale',
                                   'Comprend': 'comprend_niv5_belge',
                                   'Comprend.aussi': 'comprend_aussi_niv5_belge',
                                   'Ne.comprend.pas': 'ne_comprend_pas_niv5_belge'}, inplace=True)
@@ -86,7 +87,7 @@ explanatory_notes_classes.rename(columns={'Code NAF 2025': 'normalized_key',
                                'Ne.comprend.pas': 'ne_comprend_pas_niv4_belge'}, inplace=True)
 
 # Select columns
-explanatory_notes_subclasses = explanatory_notes_subclasses[["NAF2025", "Note.générale", "comprend_niv5_belge", "comprend_aussi_niv5_belge", "ne_comprend_pas_niv5_belge"]]
+explanatory_notes_subclasses = explanatory_notes_subclasses[["NAF2025", "Note_generale", "comprend_niv5_belge", "comprend_aussi_niv5_belge", "ne_comprend_pas_niv5_belge"]]
 explanatory_notes_classes = explanatory_notes_classes[["normalized_key", "comprend_niv4_belge", "comprend_aussi_niv4_belge", "ne_comprend_pas_niv4_belge"]]
 
 # Merge data
@@ -111,14 +112,14 @@ NAF_mapping = correspondance_NAF.groupby('NAF2008').agg({'NAF2008_intitule': (la
                                                     'NAF2025': (lambda x: list(x.fillna('Indisponible pour le moment'))),
                                                     'NAF2025_intitule': (lambda x: list(x.fillna('Indisponible pour le moment'))),
                                                     'common_content': (lambda x: list(x.fillna('Indisponible pour le moment'))),
-                                                    'Note.générale': lambda x: list(x.fillna('Description générale indisponible pour le moment')),
+                                                    'Note_generale': lambda x: list(x.fillna('Description générale indisponible pour le moment')),
                                                     'comprend_niv5_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
                                                     'comprend_aussi_niv5_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
                                                     'ne_comprend_pas_niv5_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
                                                     'comprend_niv4_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
                                                     'comprend_aussi_niv4_belge': lambda x: list(x.fillna('Indisponible pour le moment')),
                                                     'ne_comprend_pas_niv4_belge': lambda x: list(x.fillna('Indisponible pour le moment'))}).reset_index()
-NAF_mapping = NAF_mapping[['NAF2008', 'NAF2008_intitule', 'NAF2025', 'NAF2025_intitule','common_content', 'Note.générale', 'comprend_niv5_belge','comprend_aussi_niv5_belge','ne_comprend_pas_niv5_belge','comprend_niv4_belge','comprend_aussi_niv4_belge','ne_comprend_pas_niv4_belge']]
+NAF_mapping = NAF_mapping[['NAF2008', 'NAF2008_intitule', 'NAF2025', 'NAF2025_intitule','common_content', 'Note_generale', 'comprend_niv5_belge','comprend_aussi_niv5_belge','ne_comprend_pas_niv5_belge','comprend_niv4_belge','comprend_aussi_niv4_belge','ne_comprend_pas_niv4_belge']]
 NAF_mapping_one_to_many = NAF_mapping[NAF_mapping['NAF2025'].apply(len) > 1]
 NAF_mapping_one_to_one = NAF_mapping[NAF_mapping['NAF2025'].apply(len) == 1]
 

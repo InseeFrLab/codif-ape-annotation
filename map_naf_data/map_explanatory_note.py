@@ -77,18 +77,18 @@ explanatory_notes_subclasses = explanatory_notes_subclasses[["Code NAF 2025", "N
 # Rename columns
 explanatory_notes_subclasses.rename(columns={'Code NAF 2025': 'NAF2025',
                                   'Note.générale': 'Note_generale',
-                                  'Comprend': 'comprend_niv_5',
-                                  'Comprend.aussi': 'comprend_aussi_niv_5',
-                                  'Ne.comprend.pas': 'ne_comprend_pas_niv_5'}, inplace=True)
+                                  'Comprend': 'comprend_niv5',
+                                  'Comprend.aussi': 'comprend_aussi_niv5',
+                                  'Ne.comprend.pas': 'ne_comprend_pas_niv5'}, inplace=True)
 
 explanatory_notes_classes.rename(columns={'Code NAF 2025': 'normalized_key',
-                               'Comprend': 'comprend_niv_4',
-                               'Comprend.aussi': 'comprend_aussi_niv_4',
-                               'Ne.comprend.pas': 'ne_comprend_pas_niv_4'}, inplace=True)
+                               'Comprend': 'comprend_niv4',
+                               'Comprend.aussi': 'comprend_aussi_niv4',
+                               'Ne.comprend.pas': 'ne_comprend_pas_niv4'}, inplace=True)
 
 # Select columns
-explanatory_notes_subclasses = explanatory_notes_subclasses[["NAF2025", "Note_generale", "comprend_niv_5", "comprend_aussi_niv_5", "ne_comprend_pas_niv_5"]]
-explanatory_notes_classes = explanatory_notes_classes[["normalized_key", "comprend_niv_4", "comprend_aussi_niv_4", "ne_comprend_pas_niv_4"]]
+explanatory_notes_subclasses = explanatory_notes_subclasses[["NAF2025", "Note_generale", "comprend_niv5", "comprend_aussi_niv5", "ne_comprend_pas_niv5"]]
+explanatory_notes_classes = explanatory_notes_classes[["normalized_key", "comprend_niv4", "comprend_aussi_niv4", "ne_comprend_pas_niv4"]]
 
 # Merge data
 explanatory_notes_subclasses["normalized_key"] = explanatory_notes_subclasses["NAF2025"].str.slice(0,4)
@@ -113,13 +113,13 @@ NAF_mapping = correspondance_NAF.groupby('NAF2008').agg({'NAF2008_intitule': (la
                                                     'NAF2025_intitule': (lambda x: list(x.fillna(' '))),
                                                     'common_content_fr': (lambda x: list(x.fillna('Indisponible'))),
                                                     'Note_generale': lambda x: list(x.fillna(' ')),
-                                                    'comprend_niv_5': lambda x: list(x.fillna(' ')),
-                                                    'comprend_aussi_niv_5': lambda x: list(x.fillna(' ')),
-                                                    'ne_comprend_pas_niv_5': lambda x: list(x.fillna(' ')),
-                                                    'comprend_niv_4': lambda x: list(x.fillna(' ')),
-                                                    'comprend_aussi_niv_4': lambda x: list(x.fillna(' ')),
-                                                    'ne_comprend_pas_niv_4': lambda x: list(x.fillna(' '))}).reset_index()
-NAF_mapping = NAF_mapping[['NAF2008', 'NAF2008_intitule', 'NAF2025', 'NAF2025_intitule','common_content_fr', 'Note_generale', 'comprend_niv_5','comprend_aussi_niv_5','ne_comprend_pas_niv_5','comprend_niv_4','comprend_aussi_niv_4','ne_comprend_pas_niv_4']]
+                                                    'comprend_niv5': lambda x: list(x.fillna(' ')),
+                                                    'comprend_aussi_niv5': lambda x: list(x.fillna(' ')),
+                                                    'ne_comprend_pas_niv5': lambda x: list(x.fillna(' ')),
+                                                    'comprend_niv4': lambda x: list(x.fillna(' ')),
+                                                    'comprend_aussi_niv4': lambda x: list(x.fillna(' ')),
+                                                    'ne_comprend_pas_niv4': lambda x: list(x.fillna(' '))}).reset_index()
+NAF_mapping = NAF_mapping[['NAF2008', 'NAF2008_intitule', 'NAF2025', 'NAF2025_intitule','common_content_fr', 'Note_generale', 'comprend_niv5','comprend_aussi_niv5','ne_comprend_pas_niv5','comprend_niv4','comprend_aussi_niv4','ne_comprend_pas_niv4']]
 NAF_mapping_one_to_many = NAF_mapping[NAF_mapping['NAF2025'].apply(len) > 1]
 NAF_mapping_one_to_one = NAF_mapping[NAF_mapping['NAF2025'].apply(len) == 1]
 

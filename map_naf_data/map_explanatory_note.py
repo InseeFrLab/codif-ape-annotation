@@ -68,7 +68,7 @@ data_explanatory_notes['Code NAF 2025'] = data_explanatory_notes['Code NAF 2025'
 
 # Filter to get subclasses and classes notes
 explanatory_notes_subclasses = data_explanatory_notes[(data_explanatory_notes['Code NAF 2025'].str.len() == 5) & (data_explanatory_notes['Indic NAF'] == 1)]
-explanatory_notes_classes = data_explanatory_notes[(data_explanatory_notes['Code NAF 2025'].str.len() == 4) & (data_explanatory_notes['Indic NACE']== 1)]
+explanatory_notes_classes = data_explanatory_notes[(data_explanatory_notes['Code NAF 2025'].str.len() == 4) & (data_explanatory_notes['Indic NAF']== 1)]
 
 # Select columns
 explanatory_notes_classes = explanatory_notes_classes[["Code NAF 2025", "Comprend", "Comprend.aussi", "Ne.comprend.pas",'Indic NACE']]
@@ -111,7 +111,7 @@ correspondance_NAF = pd.merge(correspondance_NAF, explanatory_notes, on='NAF2025
 NAF_mapping = correspondance_NAF.groupby('NAF2008').agg({'NAF2008_intitule': (lambda x: list(x.fillna(' '))),
                                                     'NAF2025': (lambda x: list(x.fillna(' '))),
                                                     'NAF2025_intitule': (lambda x: list(x.fillna(' '))),
-                                                    'common_content': (lambda x: list(x.fillna(' '))),
+                                                    'common_content': (lambda x: list(x.fillna('Indisponible'))),
                                                     'Note_generale': lambda x: list(x.fillna(' ')),
                                                     'comprend_niv5_belge': lambda x: list(x.fillna(' ')),
                                                     'comprend_aussi_niv5_belge': lambda x: list(x.fillna(' ')),

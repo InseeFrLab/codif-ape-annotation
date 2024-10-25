@@ -17,17 +17,17 @@ fs = s3fs.S3FileSystem(
 """ Gestion table de correspondance """
 
 # File path (.xls)
-excel_file_path = "Correspondances NAFrev2-NAF 2025 version APE - Table quasi-definitive - octobre 2024 changements visibles.xlsx"
+excel_file_path = "Table de correspondances NAF rev.2 - NAF 2025 provisoire Maj 1er octobre 2024 table de référence DNE toutes infos avec traduction Common content par Deepl.xls"
 
 # Import as dataframe
-correspondance_NAF = pd.read_excel(excel_file_path, sheet_name='correspondance NAFNAF - APE')
+correspondance_NAF = pd.read_excel(excel_file_path, sheet_name='1) correspondance NAFNAF titres actualisés (sauf anglais 2025)_2')
 print(correspondance_NAF.columns.values)
 # Select columns
 correspondance_NAF = correspondance_NAF[['NAF rév. 2 – code\n(niveau sous-classe de la nomenclature actuelle)',
                                         'NAF rév. 2 – intitulé\n(niveau sous-classe)',
                                         'NAF 2025 – code\n(niveau sous-classe de la nomenclature 2025, correspondance logique avec les codes NAF rév. 2)', 
                                         'NAF 2025 - intitulé\n(niveau sous-classe)',
-                                        'Contenu commun identifié pour la NACE actuelle et la NACE future\n(niveau classe)',
+                                        'Contenu commun identifié pour la NACE actuelle et la NACE future(niveau classe)',
                                         'évaluation profil pratique NAF actuel pour JXXXX',
                                         'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon']]
 
@@ -39,7 +39,7 @@ correspondance_NAF.rename(columns={'NAF rév. 2 – code\n(niveau sous-classe de
                                    'NAF rév. 2 – intitulé\n(niveau sous-classe)' : 'NAF2008_intitule',
                                    'NAF 2025 – code\n(niveau sous-classe de la nomenclature 2025, correspondance logique avec les codes NAF rév. 2)': 'NAF2025',
                                    'NAF 2025 - intitulé\n(niveau sous-classe)' : 'NAF2025_intitule',
-                                   'Contenu commun identifié pour la NACE actuelle et la NACE future\n(niveau classe)': 'common_content',
+                                   'Contenu commun identifié pour la NACE actuelle et la NACE future(niveau classe)': 'common_content_fr',
                                    'évaluation profil pratique NAF actuel pour JXXXX': 'is_multivoque',
                                    'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon' : 'filtre_a_supp'}, inplace=True)
 
@@ -77,18 +77,18 @@ explanatory_notes_subclasses = explanatory_notes_subclasses[["Code NAF 2025", "N
 # Rename columns
 explanatory_notes_subclasses.rename(columns={'Code NAF 2025': 'NAF2025',
                                   'Note.générale': 'Note_generale',
-                                  'Comprend': 'comprend_niv5_belge',
-                                  'Comprend.aussi': 'comprend_aussi_niv5_belge',
-                                  'Ne.comprend.pas': 'ne_comprend_pas_niv5_belge'}, inplace=True)
+                                  'Comprend': 'comprend_niv_5',
+                                  'Comprend.aussi': 'comprend_aussi_niv_5',
+                                  'Ne.comprend.pas': 'ne_comprend_pas_niv_5'}, inplace=True)
 
 explanatory_notes_classes.rename(columns={'Code NAF 2025': 'normalized_key',
-                               'Comprend': 'comprend_niv4_belge',
-                               'Comprend.aussi': 'comprend_aussi_niv4_belge',
-                               'Ne.comprend.pas': 'ne_comprend_pas_niv4_belge'}, inplace=True)
+                               'Comprend': 'comprend_niv_4',
+                               'Comprend.aussi': 'comprend_aussi_niv_4',
+                               'Ne.comprend.pas': 'ne_comprend_pas_niv_4'}, inplace=True)
 
 # Select columns
-explanatory_notes_subclasses = explanatory_notes_subclasses[["NAF2025", "Note_generale", "comprend_niv5_belge", "comprend_aussi_niv5_belge", "ne_comprend_pas_niv5_belge"]]
-explanatory_notes_classes = explanatory_notes_classes[["normalized_key", "comprend_niv4_belge", "comprend_aussi_niv4_belge", "ne_comprend_pas_niv4_belge"]]
+explanatory_notes_subclasses = explanatory_notes_subclasses[["NAF2025", "Note_generale", "comprend_niv_5", "comprend_aussi_niv_5", "ne_comprend_pas_niv_5"]]
+explanatory_notes_classes = explanatory_notes_classes[["normalized_key", "comprend_niv_4", "comprend_aussi_niv_4", "ne_comprend_pas_niv_4"]]
 
 # Merge data
 explanatory_notes_subclasses["normalized_key"] = explanatory_notes_subclasses["NAF2025"].str.slice(0,4)
@@ -111,15 +111,15 @@ correspondance_NAF = pd.merge(correspondance_NAF, explanatory_notes, on='NAF2025
 NAF_mapping = correspondance_NAF.groupby('NAF2008').agg({'NAF2008_intitule': (lambda x: list(x.fillna(' '))),
                                                     'NAF2025': (lambda x: list(x.fillna(' '))),
                                                     'NAF2025_intitule': (lambda x: list(x.fillna(' '))),
-                                                    'common_content': (lambda x: list(x.fillna('Indisponible'))),
+                                                    'common_content_fr': (lambda x: list(x.fillna('Indisponible'))),
                                                     'Note_generale': lambda x: list(x.fillna(' ')),
-                                                    'comprend_niv5_belge': lambda x: list(x.fillna(' ')),
-                                                    'comprend_aussi_niv5_belge': lambda x: list(x.fillna(' ')),
-                                                    'ne_comprend_pas_niv5_belge': lambda x: list(x.fillna(' ')),
-                                                    'comprend_niv4_belge': lambda x: list(x.fillna(' ')),
-                                                    'comprend_aussi_niv4_belge': lambda x: list(x.fillna(' ')),
-                                                    'ne_comprend_pas_niv4_belge': lambda x: list(x.fillna(' '))}).reset_index()
-NAF_mapping = NAF_mapping[['NAF2008', 'NAF2008_intitule', 'NAF2025', 'NAF2025_intitule','common_content', 'Note_generale', 'comprend_niv5_belge','comprend_aussi_niv5_belge','ne_comprend_pas_niv5_belge','comprend_niv4_belge','comprend_aussi_niv4_belge','ne_comprend_pas_niv4_belge']]
+                                                    'comprend_niv_5': lambda x: list(x.fillna(' ')),
+                                                    'comprend_aussi_niv_5': lambda x: list(x.fillna(' ')),
+                                                    'ne_comprend_pas_niv_5': lambda x: list(x.fillna(' ')),
+                                                    'comprend_niv_4': lambda x: list(x.fillna(' ')),
+                                                    'comprend_aussi_niv_4': lambda x: list(x.fillna(' ')),
+                                                    'ne_comprend_pas_niv_4': lambda x: list(x.fillna(' '))}).reset_index()
+NAF_mapping = NAF_mapping[['NAF2008', 'NAF2008_intitule', 'NAF2025', 'NAF2025_intitule','common_content_fr', 'Note_generale', 'comprend_niv_5','comprend_aussi_niv_5','ne_comprend_pas_niv_5','comprend_niv_4','comprend_aussi_niv_4','ne_comprend_pas_niv_4']]
 NAF_mapping_one_to_many = NAF_mapping[NAF_mapping['NAF2025'].apply(len) > 1]
 NAF_mapping_one_to_one = NAF_mapping[NAF_mapping['NAF2025'].apply(len) == 1]
 
@@ -133,7 +133,7 @@ print(len(NAF_mapping_one_to_many))
 #print(len(NAF_mapping_one_to_many))
 
 # NAF_mapping_one_to_one.to_parquet('s3://projet-ape/NAF-revision/NAF_mapping_one_to_one_provisoire_belge.parquet', compression=None, filesystem=fs)
-NAF_mapping_one_to_many.to_parquet('NAF_mapping_one_to_many_french.parquet', compression=None)
+NAF_mapping_one_to_many.to_parquet('NAF_mapping_one_to_many_quasi_definitif.parquet', compression=None)
 
 #print(NAF_mapping_one_to_many)
 #print(pd.read_parquet("NAF_mapping_one_to_many_provisoire_belge.parquet"))

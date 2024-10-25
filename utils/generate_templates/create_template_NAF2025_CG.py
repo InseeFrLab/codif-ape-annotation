@@ -114,7 +114,7 @@ NAF2008_element = etree.SubElement(
 """ Choice subsection to display question """
 # Collapse as an accordion
 collapse = etree.SubElement(second_view, "Collapse", accordion="false", bordered="true")
-panel = etree.SubElement(collapse, "Panel", value="Voir sous-classes NAF 2025 proposés et common content de la classe associée")
+panel = etree.SubElement(collapse, "Panel", value="Contenu commun niveau classe")
 # Create the first nested level 1 View of the second View element
 second_first_view = etree.SubElement(
     panel, "View", style="box-shadow: 2px 2px 2px #777;"
@@ -675,7 +675,7 @@ question_element = etree.SubElement(
 """ Choice subsection to display explanatory notes """
 # Collapse as an accordion
 collapse = etree.SubElement(second_view, "Collapse", accordion="false", bordered="true")
-panel = etree.SubElement(collapse, "Panel", value="Consultation des notes explicatives provisoires")
+panel = etree.SubElement(collapse, "Panel", value="Notes explicatives")
 # Create the first nested level 1 View of the second View element
 second_first_view = etree.SubElement(
     panel, "View", style="box-shadow: 2px 2px 2px #777;"
@@ -686,2455 +686,2764 @@ second_first_view = etree.SubElement(
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_1",
-    value="1) $NAF2025_code_intitule_1",
+    "Header",
+    value="1) $NAF2025_code_intitule_1"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_1",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_1",
+    value="$comprend_niv_4_1",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_1",
+    value="$comprend_aussi_niv_4_1",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_1",
+    value="$ne_comprend_pas_niv_4_1",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,"Text",
+    
+    name="header_subclass_level_1",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_1",
     value="$Note_generale_1",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_1",
-    value="$comprend_niv4_belge_1",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_1",
-    value="$comprend_aussi_niv4_belge_1",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_1",
-    value="$ne_comprend_pas_niv4_belge_1",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_1",
-    value="$comprend_niv5_belge_1",
+    value="$comprend_niv_5_1",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_1",
-    value="$comprend_aussi_niv5_belge_1",
+    value="$comprend_aussi_niv_5_1",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_1",
-    value="$ne_comprend_pas_niv5_belge_1",
+    value="$ne_comprend_pas_niv_5_1",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_2",
-    value="2) $NAF2025_code_intitule_2",
+    "Header",
+    value="2) $NAF2025_code_intitule_2"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_2",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_2",
+    value="$comprend_niv_4_2",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_2",
+    value="$comprend_aussi_niv_4_2",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_2",
+    value="$ne_comprend_pas_niv_4_2",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_2",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_2",
     value="$Note_generale_2",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_2",
-    value="$comprend_niv4_belge_2",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_2",
-    value="$comprend_aussi_niv4_belge_2",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_2",
-    value="$ne_comprend_pas_niv4_belge_2",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_2",
-    value="$comprend_niv5_belge_2",
+    value="$comprend_niv_5_2",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_2",
-    value="$comprend_aussi_niv5_belge_2",
+    value="$comprend_aussi_niv_5_2",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_2",
-    value="$ne_comprend_pas_niv5_belge_2",
+    value="$ne_comprend_pas_niv_5_2",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_3",
-    value="3) $NAF2025_code_intitule_3",
+    "Header",
+    value="3) $NAF2025_code_intitule_3"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_3",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_3",
+    value="$comprend_niv_4_3",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_3",
+    value="$comprend_aussi_niv_4_3",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_3",
+    value="$ne_comprend_pas_niv_4_3",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_3",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_3",
     value="$Note_generale_3",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_3",
-    value="$comprend_niv4_belge_3",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_3",
-    value="$comprend_aussi_niv4_belge_3",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_3",
-    value="$ne_comprend_pas_niv4_belge_3",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_3",
-    value="$comprend_niv5_belge_3",
+    value="$comprend_niv_5_3",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_3",
-    value="$comprend_aussi_niv5_belge_3",
+    value="$comprend_aussi_niv_5_3",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_3",
-    value="$ne_comprend_pas_niv5_belge_3",
+    value="$ne_comprend_pas_niv_5_3",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_4",
-    value="4) $NAF2025_code_intitule_4",
+    "Header",
+    value="4) $NAF2025_code_intitule_4"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_4",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_4",
+    value="$comprend_niv_4_4",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_4",
+    value="$comprend_aussi_niv_4_4",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_4",
+    value="$ne_comprend_pas_niv_4_4",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_4",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_4",
     value="$Note_generale_4",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_4",
-    value="$comprend_niv4_belge_4",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_4",
-    value="$comprend_aussi_niv4_belge_4",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_4",
-    value="$ne_comprend_pas_niv4_belge_4",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_4",
-    value="$comprend_niv5_belge_4",
+    value="$comprend_niv_5_4",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_4",
-    value="$comprend_aussi_niv5_belge_4",
+    value="$comprend_aussi_niv_5_4",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_4",
-    value="$ne_comprend_pas_niv5_belge_4",
+    value="$ne_comprend_pas_niv_5_4",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_5",
-    value="5) $NAF2025_code_intitule_5",
+    "Header",
+    value="5) $NAF2025_code_intitule_5"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_5",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_5",
+    value="$comprend_niv_4_5",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_5",
+    value="$comprend_aussi_niv_4_5",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_5",
+    value="$ne_comprend_pas_niv_4_5",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_5",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_5",
     value="$Note_generale_5",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_5",
-    value="$comprend_niv4_belge_5",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_5",
-    value="$comprend_aussi_niv4_belge_5",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_5",
-    value="$ne_comprend_pas_niv4_belge_5",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_5",
-    value="$comprend_niv5_belge_5",
+    value="$comprend_niv_5_5",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_5",
-    value="$comprend_aussi_niv5_belge_5",
+    value="$comprend_aussi_niv_5_5",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_5",
-    value="$ne_comprend_pas_niv5_belge_5",
+    value="$ne_comprend_pas_niv_5_5",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_6",
-    value="6) $NAF2025_code_intitule_6",
+    "Header",
+    value="6) $NAF2025_code_intitule_6"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_6",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_6",
+    value="$comprend_niv_4_6",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_6",
+    value="$comprend_aussi_niv_4_6",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_6",
+    value="$ne_comprend_pas_niv_4_6",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_6",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_6",
     value="$Note_generale_6",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_6",
-    value="$comprend_niv4_belge_6",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_6",
-    value="$comprend_aussi_niv4_belge_6",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_6",
-    value="$ne_comprend_pas_niv4_belge_6",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_6",
-    value="$comprend_niv5_belge_6",
+    value="$comprend_niv_5_6",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_6",
-    value="$comprend_aussi_niv5_belge_6",
+    value="$comprend_aussi_niv_5_6",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_6",
-    value="$ne_comprend_pas_niv5_belge_6",
+    value="$ne_comprend_pas_niv_5_6",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_7",
-    value="7) $NAF2025_code_intitule_7",
+    "Header",
+    value="7) $NAF2025_code_intitule_7"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_7",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_7",
+    value="$comprend_niv_4_7",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_7",
+    value="$comprend_aussi_niv_4_7",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_7",
+    value="$ne_comprend_pas_niv_4_7",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_7",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_7",
     value="$Note_generale_7",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_7",
-    value="$comprend_niv4_belge_7",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_7",
-    value="$comprend_aussi_niv4_belge_7",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_7",
-    value="$ne_comprend_pas_niv4_belge_7",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_7",
-    value="$comprend_niv5_belge_7",
+    value="$comprend_niv_5_7",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_7",
-    value="$comprend_aussi_niv5_belge_7",
+    value="$comprend_aussi_niv_5_7",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_7",
-    value="$ne_comprend_pas_niv5_belge_7",
+    value="$ne_comprend_pas_niv_5_7",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_8",
-    value="8) $NAF2025_code_intitule_8",
+    "Header",
+    value="8) $NAF2025_code_intitule_8"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_8",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_8",
+    value="$comprend_niv_4_8",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_8",
+    value="$comprend_aussi_niv_4_8",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_8",
+    value="$ne_comprend_pas_niv_4_8",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_8",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_8",
     value="$Note_generale_8",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_8",
-    value="$comprend_niv4_belge_8",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_8",
-    value="$comprend_aussi_niv4_belge_8",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_8",
-    value="$ne_comprend_pas_niv4_belge_8",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_8",
-    value="$comprend_niv5_belge_8",
+    value="$comprend_niv_5_8",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_8",
-    value="$comprend_aussi_niv5_belge_8",
+    value="$comprend_aussi_niv_5_8",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_8",
-    value="$ne_comprend_pas_niv5_belge_8",
+    value="$ne_comprend_pas_niv_5_8",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_9",
-    value="9) $NAF2025_code_intitule_9",
+    "Header",
+    value="9) $NAF2025_code_intitule_9"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_9",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_9",
+    value="$comprend_niv_4_9",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_9",
+    value="$comprend_aussi_niv_4_9",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_9",
+    value="$ne_comprend_pas_niv_4_9",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_9",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_9",
     value="$Note_generale_9",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_9",
-    value="$comprend_niv4_belge_9",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_9",
-    value="$comprend_aussi_niv4_belge_9",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_9",
-    value="$ne_comprend_pas_niv4_belge_9",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_9",
-    value="$comprend_niv5_belge_9",
+    value="$comprend_niv_5_9",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_9",
-    value="$comprend_aussi_niv5_belge_9",
+    value="$comprend_aussi_niv_5_9",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_9",
-    value="$ne_comprend_pas_niv5_belge_9",
+    value="$ne_comprend_pas_niv_5_9",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_10",
+    "Header",
     value="10) $NAF2025_code_intitule_10",
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_10",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_10",
+    value="$comprend_niv_4_10",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_10",
+    value="$comprend_aussi_niv_4_10",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_10",
+    value="$ne_comprend_pas_niv_4_10",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_10",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_10",
     value="$Note_generale_10",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_10",
-    value="$comprend_niv4_belge_10",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_10",
-    value="$comprend_aussi_niv4_belge_10",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_10",
-    value="$ne_comprend_pas_niv4_belge_10",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_10",
-    value="$comprend_niv5_belge_10",
+    value="$comprend_niv_5_10",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_10",
-    value="$comprend_aussi_niv5_belge_10",
+    value="$comprend_aussi_niv_5_10",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_10",
-    value="$ne_comprend_pas_niv5_belge_10",
+    value="$ne_comprend_pas_niv_5_10",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_11",
-    value="11) $NAF2025_code_intitule_11",
+    "Header",
+    value="11) $NAF2025_code_intitule_11"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_11",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_11",
+    value="$comprend_niv_4_11",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_11",
+    value="$comprend_aussi_niv_4_11",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_11",
+    value="$ne_comprend_pas_niv_4_11",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_11",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_11",
     value="$Note_generale_11",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_11",
-    value="$comprend_niv4_belge_11",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_11",
-    value="$comprend_aussi_niv4_belge_11",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_11",
-    value="$ne_comprend_pas_niv4_belge_11",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_11",
-    value="$comprend_niv5_belge_11",
+    value="$comprend_niv_5_11",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_11",
-    value="$comprend_aussi_niv5_belge_11",
+    value="$comprend_aussi_niv_5_11",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_11",
-    value="$ne_comprend_pas_niv5_belge_11",
+    value="$ne_comprend_pas_niv_5_11",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_12",
-    value="12) $NAF2025_code_intitule_12",
+    "Header",
+    value="12) $NAF2025_code_intitule_12"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_12",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_12",
+    value="$comprend_niv_4_12",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_12",
+    value="$comprend_aussi_niv_4_12",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_12",
+    value="$ne_comprend_pas_niv_4_12",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_12",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_12",
     value="$Note_generale_12",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_12",
-    value="$comprend_niv4_belge_12",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_12",
-    value="$comprend_aussi_niv4_belge_12",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_12",
-    value="$ne_comprend_pas_niv4_belge_12",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_12",
-    value="$comprend_niv5_belge_12",
+    value="$comprend_niv_5_12",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_12",
-    value="$comprend_aussi_niv5_belge_12",
+    value="$comprend_aussi_niv_5_12",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_12",
-    value="$ne_comprend_pas_niv5_belge_12",
+    value="$ne_comprend_pas_niv_5_12",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_13",
-    value="13) $NAF2025_code_intitule_13",
+    "Header",
+    value="13) $NAF2025_code_intitule_13"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_13",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_13",
+    value="$comprend_niv_4_13",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_13",
+    value="$comprend_aussi_niv_4_13",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_13",
+    value="$ne_comprend_pas_niv_4_13",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_13",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_13",
     value="$Note_generale_13",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_13",
-    value="$comprend_niv4_belge_13",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_13",
-    value="$comprend_aussi_niv4_belge_13",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_13",
-    value="$ne_comprend_pas_niv4_belge_13",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_13",
-    value="$comprend_niv5_belge_13",
+    value="$comprend_niv_5_13",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_13",
-    value="$comprend_aussi_niv5_belge_13",
+    value="$comprend_aussi_niv_5_13",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_13",
-    value="$ne_comprend_pas_niv5_belge_13",
+    value="$ne_comprend_pas_niv_5_13",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_14",
-    value="14) $NAF2025_code_intitule_14",
+    "Header",
+    value="14) $NAF2025_code_intitule_14"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_14",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_14",
+    value="$comprend_niv_4_14",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_14",
+    value="$comprend_aussi_niv_4_14",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_14",
+    value="$ne_comprend_pas_niv_4_14",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_14",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_14",
     value="$Note_generale_14",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_14",
-    value="$comprend_niv4_belge_14",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_14",
-    value="$comprend_aussi_niv4_belge_14",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_14",
-    value="$ne_comprend_pas_niv4_belge_14",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_14",
-    value="$comprend_niv5_belge_14",
+    value="$comprend_niv_5_14",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_14",
-    value="$comprend_aussi_niv5_belge_14",
+    value="$comprend_aussi_niv_5_14",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_14",
-    value="$ne_comprend_pas_niv5_belge_14",
+    value="$ne_comprend_pas_niv_5_14",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_15",
-    value="15) $NAF2025_code_intitule_15",
+    "Header",
+    value="15) $NAF2025_code_intitule_15"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_15",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_15",
+    value="$comprend_niv_4_15",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_15",
+    value="$comprend_aussi_niv_4_15",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_15",
+    value="$ne_comprend_pas_niv_4_15",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_15",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_15",
     value="$Note_generale_15",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_15",
-    value="$comprend_niv4_belge_15",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_15",
-    value="$comprend_aussi_niv4_belge_15",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_15",
-    value="$ne_comprend_pas_niv4_belge_15",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_15",
-    value="$comprend_niv5_belge_15",
+    value="$comprend_niv_5_15",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_15",
-    value="$comprend_aussi_niv5_belge_15",
+    value="$comprend_aussi_niv_5_15",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_15",
-    value="$ne_comprend_pas_niv5_belge_15",
+    value="$ne_comprend_pas_niv_5_15",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_16",
-    value="16) $NAF2025_code_intitule_16",
+    "Header",
+    value="16) $NAF2025_code_intitule_16"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_16",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_16",
+    value="$comprend_niv_4_16",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_16",
+    value="$comprend_aussi_niv_4_16",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_16",
+    value="$ne_comprend_pas_niv_4_16",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_16",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_16",
     value="$Note_generale_16",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_16",
-    value="$comprend_niv4_belge_16",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_16",
-    value="$comprend_aussi_niv4_belge_16",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_16",
-    value="$ne_comprend_pas_niv4_belge_16",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_16",
-    value="$comprend_niv5_belge_16",
+    value="$comprend_niv_5_16",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_16",
-    value="$comprend_aussi_niv5_belge_16",
+    value="$comprend_aussi_niv_5_16",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_16",
-    value="$ne_comprend_pas_niv5_belge_16",
+    value="$ne_comprend_pas_niv_5_16",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_17",
-    value="17) $NAF2025_code_intitule_17",
+    "Header",
+    value="17) $NAF2025_code_intitule_17"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_17",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_17",
+    value="$comprend_niv_4_17",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_17",
+    value="$comprend_aussi_niv_4_17",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_17",
+    value="$ne_comprend_pas_niv_4_17",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_17",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_17",
     value="$Note_generale_17",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_17",
-    value="$comprend_niv4_belge_17",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_17",
-    value="$comprend_aussi_niv4_belge_17",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_17",
-    value="$ne_comprend_pas_niv4_belge_17",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_17",
-    value="$comprend_niv5_belge_17",
+    value="$comprend_niv_5_17",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_17",
-    value="$comprend_aussi_niv5_belge_17",
+    value="$comprend_aussi_niv_5_17",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_17",
-    value="$ne_comprend_pas_niv5_belge_17",
+    value="$ne_comprend_pas_niv_5_17",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_18",
-    value="18) $NAF2025_code_intitule_18",
+    "Header",
+    value="18) $NAF2025_code_intitule_18"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_18",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_18",
+    value="$comprend_niv_4_18",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_18",
+    value="$comprend_aussi_niv_4_18",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_18",
+    value="$ne_comprend_pas_niv_4_18",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_18",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_18",
     value="$Note_generale_18",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_18",
-    value="$comprend_niv4_belge_18",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_18",
-    value="$comprend_aussi_niv4_belge_18",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_18",
-    value="$ne_comprend_pas_niv4_belge_18",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_18",
-    value="$comprend_niv5_belge_18",
+    value="$comprend_niv_5_18",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_18",
-    value="$comprend_aussi_niv5_belge_18",
+    value="$comprend_aussi_niv_5_18",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_18",
-    value="$ne_comprend_pas_niv5_belge_18",
+    value="$ne_comprend_pas_niv_5_18",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_19",
-    value="19) $NAF2025_code_intitule_19",
+    "Header",
+    value="19) $NAF2025_code_intitule_19"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_19",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_19",
+    value="$comprend_niv_4_19",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_19",
+    value="$comprend_aussi_niv_4_19",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_19",
+    value="$ne_comprend_pas_niv_4_19",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_19",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_19",
     value="$Note_generale_19",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_19",
-    value="$comprend_niv4_belge_19",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_19",
-    value="$comprend_aussi_niv4_belge_19",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_19",
-    value="$ne_comprend_pas_niv4_belge_19",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_19",
-    value="$comprend_niv5_belge_19",
+    value="$comprend_niv_5_19",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_19",
-    value="$comprend_aussi_niv5_belge_19",
+    value="$comprend_aussi_niv_5_19",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_19",
-    value="$ne_comprend_pas_niv5_belge_19",
+    value="$ne_comprend_pas_niv_5_19",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_20",
-    value="20) $NAF2025_code_intitule_20",
+    "Header",
+    value="20) $NAF2025_code_intitule_20"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_20",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_20",
+    value="$comprend_niv_4_20",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_20",
+    value="$comprend_aussi_niv_4_20",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_20",
+    value="$ne_comprend_pas_niv_4_20",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_20",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_20",
     value="$Note_generale_20",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_20",
-    value="$comprend_niv4_belge_20",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_20",
-    value="$comprend_aussi_niv4_belge_20",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_20",
-    value="$ne_comprend_pas_niv4_belge_20",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_20",
-    value="$comprend_niv5_belge_20",
+    value="$comprend_niv_5_20",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_20",
-    value="$comprend_aussi_niv5_belge_20",
+    value="$comprend_aussi_niv_5_20",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_20",
-    value="$ne_comprend_pas_niv5_belge_20",
+    value="$ne_comprend_pas_niv_5_20",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_21",
-    value="21) $NAF2025_code_intitule_21",
+    "Header",
+    value="21) $NAF2025_code_intitule_21"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_21",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_21",
+    value="$comprend_niv_4_21",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_21",
+    value="$comprend_aussi_niv_4_21",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_21",
+    value="$ne_comprend_pas_niv_4_21",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_21",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_21",
     value="$Note_generale_21",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_21",
-    value="$comprend_niv4_belge_21",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_21",
-    value="$comprend_aussi_niv4_belge_21",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_21",
-    value="$ne_comprend_pas_niv4_belge_21",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_21",
-    value="$comprend_niv5_belge_21",
+    value="$comprend_niv_5_21",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_21",
-    value="$comprend_aussi_niv5_belge_21",
+    value="$comprend_aussi_niv_5_21",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_21",
-    value="$ne_comprend_pas_niv5_belge_21",
+    value="$ne_comprend_pas_niv_5_21",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_22",
-    value="22) $NAF2025_code_intitule_22",
+    "Header",
+    value="22) $NAF2025_code_intitule_22"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_22",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_22",
+    value="$comprend_niv_4_22",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_22",
+    value="$comprend_aussi_niv_4_22",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_22",
+    value="$ne_comprend_pas_niv_4_22",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_22",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_22",
     value="$Note_generale_22",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_22",
-    value="$comprend_niv4_belge_22",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_22",
-    value="$comprend_aussi_niv4_belge_22",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_22",
-    value="$ne_comprend_pas_niv4_belge_22",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_22",
-    value="$comprend_niv5_belge_22",
+    value="$comprend_niv_5_22",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_22",
-    value="$comprend_aussi_niv5_belge_22",
+    value="$comprend_aussi_niv_5_22",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_22",
-    value="$ne_comprend_pas_niv5_belge_22",
+    value="$ne_comprend_pas_niv_5_22",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_23",
-    value="23) $NAF2025_code_intitule_23",
+    "Header",
+    value="23) $NAF2025_code_intitule_23"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_23",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_23",
+    value="$comprend_niv_4_23",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_23",
+    value="$comprend_aussi_niv_4_23",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_23",
+    value="$ne_comprend_pas_niv_4_23",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_23",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_23",
     value="$Note_generale_23",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_23",
-    value="$comprend_niv4_belge_23",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_23",
-    value="$comprend_aussi_niv4_belge_23",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_23",
-    value="$ne_comprend_pas_niv4_belge_23",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_23",
-    value="$comprend_niv5_belge_23",
+    value="$comprend_niv_5_23",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_23",
-    value="$comprend_aussi_niv5_belge_23",
+    value="$comprend_aussi_niv_5_23",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_23",
-    value="$ne_comprend_pas_niv5_belge_23",
+    value="$ne_comprend_pas_niv_5_23",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_24",
-    value="24) $NAF2025_code_intitule_24",
+    "Header",
+    value="24) $NAF2025_code_intitule_24"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_24",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_24",
+    value="$comprend_niv_4_24",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_24",
+    value="$comprend_aussi_niv_4_24",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_24",
+    value="$ne_comprend_pas_niv_4_24",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_24",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_24",
     value="$Note_generale_24",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_24",
-    value="$comprend_niv4_belge_24",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_24",
-    value="$comprend_aussi_niv4_belge_24",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_24",
-    value="$ne_comprend_pas_niv4_belge_24",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_24",
-    value="$comprend_niv5_belge_24",
+    value="$comprend_niv_5_24",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_24",
-    value="$comprend_aussi_niv5_belge_24",
+    value="$comprend_aussi_niv_5_24",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_24",
-    value="$ne_comprend_pas_niv5_belge_24",
+    value="$ne_comprend_pas_niv_5_24",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_25",
-    value="25) $NAF2025_code_intitule_25",
+    "Header",
+    value="25) $NAF2025_code_intitule_25"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_25",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_25",
+    value="$comprend_niv_4_25",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_25",
+    value="$comprend_aussi_niv_4_25",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_25",
+    value="$ne_comprend_pas_niv_4_25",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_25",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_25",
     value="$Note_generale_25",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_25",
-    value="$comprend_niv4_belge_25",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_25",
-    value="$comprend_aussi_niv4_belge_25",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_25",
-    value="$ne_comprend_pas_niv4_belge_25",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_25",
-    value="$comprend_niv5_belge_25",
+    value="$comprend_niv_5_25",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_25",
-    value="$comprend_aussi_niv5_belge_25",
+    value="$comprend_aussi_niv_5_25",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_25",
-    value="$ne_comprend_pas_niv5_belge_25",
+    value="$ne_comprend_pas_niv_5_25",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_26",
-    value="26) $NAF2025_code_intitule_26",
+    "Header",
+    value="26) $NAF2025_code_intitule_26"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_26",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_26",
+    value="$comprend_niv_4_26",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_26",
+    value="$comprend_aussi_niv_4_26",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_26",
+    value="$ne_comprend_pas_niv_4_26",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_26",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_26",
     value="$Note_generale_26",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_26",
-    value="$comprend_niv4_belge_26",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_26",
-    value="$comprend_aussi_niv4_belge_26",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_26",
-    value="$ne_comprend_pas_niv4_belge_26",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_26",
-    value="$comprend_niv5_belge_26",
+    value="$comprend_niv_5_26",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_26",
-    value="$comprend_aussi_niv5_belge_26",
+    value="$comprend_aussi_niv_5_26",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_26",
-    value="$ne_comprend_pas_niv5_belge_26",
+    value="$ne_comprend_pas_niv_5_26",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_27",
-    value="27) $NAF2025_code_intitule_27",
+    "Header",
+    value="27) $NAF2025_code_intitule_27"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_27",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_27",
+    value="$comprend_niv_4_27",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_27",
+    value="$comprend_aussi_niv_4_27",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_27",
+    value="$ne_comprend_pas_niv_4_27",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_27",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_27",
     value="$Note_generale_27",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_27",
-    value="$comprend_niv4_belge_27",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_27",
-    value="$comprend_aussi_niv4_belge_27",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_27",
-    value="$ne_comprend_pas_niv4_belge_27",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_27",
-    value="$comprend_niv5_belge_27",
+    value="$comprend_niv_5_27",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_27",
-    value="$comprend_aussi_niv5_belge_27",
+    value="$comprend_aussi_niv_5_27",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_27",
-    value="$ne_comprend_pas_niv5_belge_27",
+    value="$ne_comprend_pas_niv_5_27",
 )
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_28",
-    value="28) $NAF2025_code_intitule_28",
+    "Header",
+    value="28) $NAF2025_code_intitule_28"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_28",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_28",
+    value="$comprend_niv_4_28",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_28",
+    value="$comprend_aussi_niv_4_28",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_28",
+    value="$ne_comprend_pas_niv_4_28",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_28",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_28",
     value="$Note_generale_28",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_28",
-    value="$comprend_niv4_belge_28",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_28",
-    value="$comprend_aussi_niv4_belge_28",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_28",
-    value="$ne_comprend_pas_niv4_belge_28",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_28",
-    value="$comprend_niv5_belge_28",
+    value="$comprend_niv_5_28",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_28",
-    value="$comprend_aussi_niv5_belge_28",
+    value="$comprend_aussi_niv_5_28",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_28",
-    value="$ne_comprend_pas_niv5_belge_28",
+    value="$ne_comprend_pas_niv_5_28",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_29",
-    value="29) $NAF2025_code_intitule_29",
+    "Header",
+    value="29) $NAF2025_code_intitule_29"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_29",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_29",
+    value="$comprend_niv_4_29",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_29",
+    value="$comprend_aussi_niv_4_29",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_29",
+    value="$ne_comprend_pas_niv_4_29",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_29",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_29",
     value="$Note_generale_29",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_29",
-    value="$comprend_niv4_belge_29",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_29",
-    value="$comprend_aussi_niv4_belge_29",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_29",
-    value="$ne_comprend_pas_niv4_belge_29",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_29",
-    value="$comprend_niv5_belge_29",
+    value="$comprend_niv_5_29",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_29",
-    value="$comprend_aussi_niv5_belge_29",
+    value="$comprend_aussi_niv_5_29",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_29",
-    value="$ne_comprend_pas_niv5_belge_29",
+    value="$ne_comprend_pas_niv_5_29",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_30",
-    value="30) $NAF2025_code_intitule_30",
+    "Header",
+    value="30) $NAF2025_code_intitule_30"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_30",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_30",
+    value="$comprend_niv_4_30",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_30",
+    value="$comprend_aussi_niv_4_30",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_30",
+    value="$ne_comprend_pas_niv_4_30",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_30",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_30",
     value="$Note_generale_30",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_30",
-    value="$comprend_niv4_belge_30",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_30",
-    value="$comprend_aussi_niv4_belge_30",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_30",
-    value="$ne_comprend_pas_niv4_belge_30",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_30",
-    value="$comprend_niv5_belge_30",
+    value="$comprend_niv_5_30",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_30",
-    value="$comprend_aussi_niv5_belge_30",
+    value="$comprend_aussi_niv_5_30",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_30",
-    value="$ne_comprend_pas_niv5_belge_30",
+    value="$ne_comprend_pas_niv_5_30",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_31",
-    value="31) $NAF2025_code_intitule_31",
+    "Header",
+    value="31) $NAF2025_code_intitule_31"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_31",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_31",
+    value="$comprend_niv_4_31",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_31",
+    value="$comprend_aussi_niv_4_31",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_31",
+    value="$ne_comprend_pas_niv_4_31",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_31",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_31",
     value="$Note_generale_31",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_31",
-    value="$comprend_niv4_belge_31",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_31",
-    value="$comprend_aussi_niv4_belge_31",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_31",
-    value="$ne_comprend_pas_niv4_belge_31",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_31",
-    value="$comprend_niv5_belge_31",
+    value="$comprend_niv_5_31",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_31",
-    value="$comprend_aussi_niv5_belge_31",
+    value="$comprend_aussi_niv_5_31",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_31",
-    value="$ne_comprend_pas_niv5_belge_31",
+    value="$ne_comprend_pas_niv_5_31",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_32",
-    value="32) $NAF2025_code_intitule_32",
+    "Header",
+    value="32) $NAF2025_code_intitule_32"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_32",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_32",
+    value="$comprend_niv_4_32",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_32",
+    value="$comprend_aussi_niv_4_32",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_32",
+    value="$ne_comprend_pas_niv_4_32",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_32",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_32",
     value="$Note_generale_32",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_32",
-    value="$comprend_niv4_belge_32",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_32",
-    value="$comprend_aussi_niv4_belge_32",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_32",
-    value="$ne_comprend_pas_niv4_belge_32",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_32",
-    value="$comprend_niv5_belge_32",
+    value="$comprend_niv_5_32",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_32",
-    value="$comprend_aussi_niv5_belge_32",
+    value="$comprend_aussi_niv_5_32",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_32",
-    value="$ne_comprend_pas_niv5_belge_32",
+    value="$ne_comprend_pas_niv_5_32",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_33",
-    value="33) $NAF2025_code_intitule_33",
+    "Header",
+    value="33) $NAF2025_code_intitule_33"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_33",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_33",
+    value="$comprend_niv_4_33",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_33",
+    value="$comprend_aussi_niv_4_33",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_33",
+    value="$ne_comprend_pas_niv_4_33",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_33",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_33",
     value="$Note_generale_33",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_33",
-    value="$comprend_niv4_belge_33",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_33",
-    value="$comprend_aussi_niv4_belge_33",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_33",
-    value="$ne_comprend_pas_niv4_belge_33",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_33",
-    value="$comprend_niv5_belge_33",
+    value="$comprend_niv_5_33",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_33",
-    value="$comprend_aussi_niv5_belge_33",
+    value="$comprend_aussi_niv_5_33",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_33",
-    value="$ne_comprend_pas_niv5_belge_33",
+    value="$ne_comprend_pas_niv_5_33",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_34",
+    "Header",
     value="34) $NAF2025_code_intitule_34",
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_34",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_34",
+    value="$comprend_niv_4_34",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_34",
+    value="$comprend_aussi_niv_4_34",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_34",
+    value="$ne_comprend_pas_niv_4_34",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_34",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_34",
     value="$Note_generale_34",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_34",
-    value="$comprend_niv4_belge_34",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_34",
-    value="$comprend_aussi_niv4_belge_34",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_34",
-    value="$ne_comprend_pas_niv4_belge_34",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_34",
-    value="$comprend_niv5_belge_34",
+    value="$comprend_niv_5_34",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_34",
-    value="$comprend_aussi_niv5_belge_34",
+    value="$comprend_aussi_niv_5_34",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_34",
-    value="$ne_comprend_pas_niv5_belge_34",
+    value="$ne_comprend_pas_niv_5_34",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_35",
+    "Header",
     value="35) $NAF2025_code_intitule_35",
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_35",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_35",
+    value="$comprend_niv_4_35",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_35",
+    value="$comprend_aussi_niv_4_35",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_35",
+    value="$ne_comprend_pas_niv_4_35",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_35",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_35",
     value="$Note_generale_35",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_35",
-    value="$comprend_niv4_belge_35",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_35",
-    value="$comprend_aussi_niv4_belge_35",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_35",
-    value="$ne_comprend_pas_niv4_belge_35",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_35",
-    value="$comprend_niv5_belge_35",
+    value="$comprend_niv_5_35",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_35",
-    value="$comprend_aussi_niv5_belge_35",
+    value="$comprend_aussi_niv_5_35",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_35",
-    value="$ne_comprend_pas_niv5_belge_35",
+    value="$ne_comprend_pas_niv_5_35",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_36",
-    value="36) $NAF2025_code_intitule_36",
+    "Header",
+    value="36) $NAF2025_code_intitule_36"
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_36",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_36",
+    value="$comprend_niv_4_36",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_36",
+    value="$comprend_aussi_niv_4_36",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_36",
+    value="$ne_comprend_pas_niv_4_36",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_36",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_36",
     value="$Note_generale_36",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_36",
-    value="$comprend_niv4_belge_36",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_36",
-    value="$comprend_aussi_niv4_belge_36",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_36",
-    value="$ne_comprend_pas_niv4_belge_36",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_36",
-    value="$comprend_niv5_belge_36",
+    value="$comprend_niv_5_36",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_36",
-    value="$comprend_aussi_niv5_belge_36",
+    value="$comprend_aussi_niv_5_36",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_36",
-    value="$ne_comprend_pas_niv5_belge_36",
+    value="$ne_comprend_pas_niv_5_36",
 )
 
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_37",
+    "Header",
     value="37) $NAF2025_code_intitule_37",
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_37",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_37",
+    value="$comprend_niv_4_37",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_37",
+    value="$comprend_aussi_niv_4_37",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_37",
+    value="$ne_comprend_pas_niv_4_37",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_37",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_37",
     value="$Note_generale_37",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_37",
-    value="$comprend_niv4_belge_37",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_37",
-    value="$comprend_aussi_niv4_belge_37",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_37",
-    value="$ne_comprend_pas_niv4_belge_37",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_37",
-    value="$comprend_niv5_belge_37",
+    value="$comprend_niv_5_37",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_37",
-    value="$comprend_aussi_niv5_belge_37",
+    value="$comprend_aussi_niv_5_37",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_37",
-    value="$ne_comprend_pas_niv5_belge_37",
+    value="$ne_comprend_pas_niv_5_37",
 )
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_38",
+    "Header",
     value="38) $NAF2025_code_intitule_38",
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_38",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_38",
+    value="$comprend_niv_4_38",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_38",
+    value="$comprend_aussi_niv_4_38",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_38",
+    value="$ne_comprend_pas_niv_4_38",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_38",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_38",
     value="$Note_generale_38",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_38",
-    value="$comprend_niv4_belge_38",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_38",
-    value="$comprend_aussi_niv4_belge_38",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_38",
-    value="$ne_comprend_pas_niv4_belge_38",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_38",
-    value="$comprend_niv5_belge_38",
+    value="$comprend_niv_5_38",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_38",
-    value="$comprend_aussi_niv5_belge_38",
+    value="$comprend_aussi_niv_5_38",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_38",
-    value="$ne_comprend_pas_niv5_belge_38",
+    value="$ne_comprend_pas_niv_5_38",
 )
 NAF2025_view = etree.SubElement(second_first_view, "View", style="color:green")
 question_element = etree.SubElement(
     NAF2025_view,
-    "Text",
-    name="liste_note_exp_code_39",
+    "Header",
     value="39) $NAF2025_code_intitule_39",
 )
-general_description_view = etree.SubElement(second_first_view, "View", style="color:grey")
+
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_class_level_39",
+    value="Niveau classe",
+)
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_view,
+    "Text",
+    name="liste_note_exp_contain_class_39",
+    value="$comprend_niv_4_39",
+)
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
+question_element = etree.SubElement(
+    class_contain_too_view,
+    "Text",
+    name="liste_note_exp_contain_too_class_39",
+    value="$comprend_aussi_niv_4_39",
+)
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
+question_element = etree.SubElement(
+    class_dont_contain_view,
+    "Text",
+    name="liste_note_exp_dont_contain_class_39",
+    value="$ne_comprend_pas_niv_4_39",
+)
+header_view = etree.SubElement(NAF2025_view, "View", style="color:blue")
+header_element = etree.SubElement(
+    header_view,
+    "Text",
+    name="header_subclass_level_39",
+    value="Niveau sous-classe",
+)
+general_description_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     general_description_view,
     "Text",
     name="liste_note_exp_general_description_39",
     value="$Note_generale_39",
 )
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
-question_element = etree.SubElement(
-    class_contain_view,
-    "Text",
-    name="liste_note_exp_contain_class_39",
-    value="$comprend_niv4_belge_39",
-)
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
-question_element = etree.SubElement(
-    class_contain_too_view,
-    "Text",
-    name="liste_note_exp_contain_too_class_39",
-    value="$comprend_aussi_niv4_belge_39",
-)
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
-question_element = etree.SubElement(
-    class_dont_contain_view,
-    "Text",
-    name="liste_note_exp_dont_contain_class_39",
-    value="$ne_comprend_pas_niv4_belge_39",
-)
-header_element = etree.SubElement(
-    second_first_view, "Header", value="Niveau sous-classe"
-)
-class_contain_view = etree.SubElement(second_first_view, "View", style="color:blue")
+class_contain_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_view,
     "Text",
     name="liste_note_exp_contain_subclass_39",
-    value="$comprend_niv5_belge_39",
+    value="$comprend_niv_5_39",
 )
-class_contain_too_view = etree.SubElement(second_first_view, "View", style="color:purple")
+class_contain_too_view = etree.SubElement(NAF2025_view, "View", style="color:green")
 question_element = etree.SubElement(
     class_contain_too_view,
     "Text",
     name="liste_note_exp_contain_too_subclass_39",
-    value="$comprend_aussi_niv5_belge_39",
+    value="$comprend_aussi_niv_5_39",
 )
-class_dont_contain_view = etree.SubElement(second_first_view, "View", style="color:red")
+class_dont_contain_view = etree.SubElement(NAF2025_view, "View", style="color:red")
 question_element = etree.SubElement(
     class_dont_contain_view,
     "Text",
     name="liste_note_exp_dont_contain_subclass_39",
-    value="$ne_comprend_pas_niv5_belge_39",
+    value="$ne_comprend_pas_niv_5_39",
 )
 
 # Create the Header element within the first nested level 1 View of the second View element

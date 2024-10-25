@@ -28,8 +28,8 @@ correspondance_NAF = correspondance_NAF[['NAF rév. 2 – code\n(niveau sous-cla
                                         'NAF 2025 – code\n(niveau sous-classe de la nomenclature 2025, correspondance logique avec les codes NAF rév. 2)', 
                                         'NAF 2025 - intitulé\n(niveau sous-classe)',
                                         'Contenu commun identifié pour la NACE actuelle et la NACE future\n(niveau classe)',
-                                        'évaluation profil pratique NAF actuel pour Julie',
-                                        'ligne à supprimer =1 pour correspondance de codes APE (travail Julie) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon']]
+                                        'évaluation profil pratique NAF actuel pour JXXXX',
+                                        'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon']]
 
 # Drop the first row (index 0)
 correspondance_NAF = correspondance_NAF.drop(0)
@@ -40,8 +40,8 @@ correspondance_NAF.rename(columns={'NAF rév. 2 – code\n(niveau sous-classe de
                                    'NAF 2025 – code\n(niveau sous-classe de la nomenclature 2025, correspondance logique avec les codes NAF rév. 2)': 'NAF2025',
                                    'NAF 2025 - intitulé\n(niveau sous-classe)' : 'NAF2025_intitule',
                                    'Contenu commun identifié pour la NACE actuelle et la NACE future\n(niveau classe)': 'common_content',
-                                   'évaluation profil pratique NAF actuel pour Julie': 'is_multivoque',
-                                   'ligne à supprimer =1 pour correspondance de codes APE (travail Julie) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon' : 'filtre_a_supp'}, inplace=True)
+                                   'évaluation profil pratique NAF actuel pour JXXXX': 'is_multivoque',
+                                   'ligne à supprimer =1 pour correspondance de codes APE (travail JXXXX) + attention 2 lignes au départ du 96.09Z uniquement pour diffusion Julie APE à éliminer sinon' : 'filtre_a_supp'}, inplace=True)
 
 # Filter
 correspondance_NAF = correspondance_NAF[correspondance_NAF['is_multivoque'] == 'C']

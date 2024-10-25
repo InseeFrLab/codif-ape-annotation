@@ -674,7 +674,9 @@ question_element = etree.SubElement(
     value="$Note_generale_1",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_1",
     value="Niveau classe",
@@ -702,6 +704,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_1",
     value="Niveau sous-classe",
@@ -742,7 +745,9 @@ question_element = etree.SubElement(
     value="$Note_generale_2",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_2",
     value="Niveau classe",
@@ -770,6 +775,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_2",
     value="Niveau sous-classe",
@@ -810,7 +816,9 @@ question_element = etree.SubElement(
     value="$Note_generale_3",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_3",
     value="Niveau classe",
@@ -838,6 +846,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_3",
     value="Niveau sous-classe",
@@ -878,7 +887,9 @@ question_element = etree.SubElement(
     value="$Note_generale_4",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_4",
     value="Niveau classe",
@@ -906,6 +917,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_4",
     value="Niveau sous-classe",
@@ -946,7 +958,9 @@ question_element = etree.SubElement(
     value="$Note_generale_5",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_5",
     value="Niveau classe",
@@ -974,6 +988,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_5",
     value="Niveau sous-classe",
@@ -1014,7 +1029,9 @@ question_element = etree.SubElement(
     value="$Note_generale_6",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_6",
     value="Niveau classe",
@@ -1042,6 +1059,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_6",
     value="Niveau sous-classe",
@@ -1082,7 +1100,9 @@ question_element = etree.SubElement(
     value="$Note_generale_7",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_7",
     value="Niveau classe",
@@ -1110,6 +1130,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_7",
     value="Niveau sous-classe",
@@ -1150,7 +1171,9 @@ question_element = etree.SubElement(
     value="$Note_generale_8",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_8",
     value="Niveau classe",
@@ -1178,6 +1201,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_8",
     value="Niveau sous-classe",
@@ -1218,7 +1242,9 @@ question_element = etree.SubElement(
     value="$Note_generale_9",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_9",
     value="Niveau classe",
@@ -1246,6 +1272,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_9",
     value="Niveau sous-classe",
@@ -1286,7 +1313,9 @@ question_element = etree.SubElement(
     value="$Note_generale_10",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_10",
     value="Niveau classe",
@@ -1314,6 +1343,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_10",
     value="Niveau sous-classe",
@@ -1354,7 +1384,9 @@ question_element = etree.SubElement(
     value="$Note_generale_11",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_11",
     value="Niveau classe",
@@ -1382,6 +1414,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_11",
     value="Niveau sous-classe",
@@ -1422,7 +1455,9 @@ question_element = etree.SubElement(
     value="$Note_generale_12",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_12",
     value="Niveau classe",
@@ -1450,6 +1485,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_12",
     value="Niveau sous-classe",
@@ -1490,7 +1526,9 @@ question_element = etree.SubElement(
     value="$Note_generale_13",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_13",
     value="Niveau classe",
@@ -1518,6 +1556,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_13",
     value="Niveau sous-classe",
@@ -1558,7 +1597,9 @@ question_element = etree.SubElement(
     value="$Note_generale_14",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_14",
     value="Niveau classe",
@@ -1586,6 +1627,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_14",
     value="Niveau sous-classe",
@@ -1626,7 +1668,9 @@ question_element = etree.SubElement(
     value="$Note_generale_15",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_15",
     value="Niveau classe",
@@ -1654,6 +1698,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_15",
     value="Niveau sous-classe",
@@ -1694,7 +1739,9 @@ question_element = etree.SubElement(
     value="$Note_generale_16",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_16",
     value="Niveau classe",
@@ -1722,6 +1769,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_16",
     value="Niveau sous-classe",
@@ -1762,7 +1810,9 @@ question_element = etree.SubElement(
     value="$Note_generale_17",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_17",
     value="Niveau classe",
@@ -1790,6 +1840,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_17",
     value="Niveau sous-classe",
@@ -1830,7 +1881,9 @@ question_element = etree.SubElement(
     value="$Note_generale_18",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_18",
     value="Niveau classe",
@@ -1858,6 +1911,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_18",
     value="Niveau sous-classe",
@@ -1898,7 +1952,9 @@ question_element = etree.SubElement(
     value="$Note_generale_19",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_19",
     value="Niveau classe",
@@ -1926,6 +1982,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_19",
     value="Niveau sous-classe",
@@ -1966,7 +2023,9 @@ question_element = etree.SubElement(
     value="$Note_generale_20",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_20",
     value="Niveau classe",
@@ -1994,6 +2053,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_20",
     value="Niveau sous-classe",
@@ -2034,7 +2094,9 @@ question_element = etree.SubElement(
     value="$Note_generale_21",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_21",
     value="Niveau classe",
@@ -2062,6 +2124,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_21",
     value="Niveau sous-classe",
@@ -2102,7 +2165,9 @@ question_element = etree.SubElement(
     value="$Note_generale_22",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_22",
     value="Niveau classe",
@@ -2130,6 +2195,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_22",
     value="Niveau sous-classe",
@@ -2171,6 +2237,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_23",
     value="Niveau classe",
@@ -2198,6 +2265,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_23",
     value="Niveau sous-classe",
@@ -2238,7 +2306,9 @@ question_element = etree.SubElement(
     value="$Note_generale_24",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_24",
     value="Niveau classe",
@@ -2266,6 +2336,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_24",
     value="Niveau sous-classe",
@@ -2306,7 +2377,9 @@ question_element = etree.SubElement(
     value="$Note_generale_25",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_25",
     value="Niveau classe",
@@ -2334,6 +2407,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_25",
     value="Niveau sous-classe",
@@ -2374,7 +2448,9 @@ question_element = etree.SubElement(
     value="$Note_generale_26",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_26",
     value="Niveau classe",
@@ -2402,6 +2478,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_26",
     value="Niveau sous-classe",
@@ -2442,7 +2519,9 @@ question_element = etree.SubElement(
     value="$Note_generale_27",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_27",
     value="Niveau classe",
@@ -2470,6 +2549,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_27",
     value="Niveau sous-classe",
@@ -2509,7 +2589,9 @@ question_element = etree.SubElement(
     value="$Note_generale_28",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_28",
     value="Niveau classe",
@@ -2537,6 +2619,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_28",
     value="Niveau sous-classe",
@@ -2577,7 +2660,9 @@ question_element = etree.SubElement(
     value="$Note_generale_29",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_29",
     value="Niveau classe",
@@ -2605,6 +2690,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_29",
     value="Niveau sous-classe",
@@ -2645,7 +2731,9 @@ question_element = etree.SubElement(
     value="$Note_generale_30",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_30",
     value="Niveau classe",
@@ -2673,6 +2761,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_30",
     value="Niveau sous-classe",
@@ -2713,7 +2802,9 @@ question_element = etree.SubElement(
     value="$Note_generale_31",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_31",
     value="Niveau classe",
@@ -2741,6 +2832,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_31",
     value="Niveau sous-classe",
@@ -2781,7 +2873,9 @@ question_element = etree.SubElement(
     value="$Note_generale_32",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_32",
     value="Niveau classe",
@@ -2809,6 +2903,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_32",
     value="Niveau sous-classe",
@@ -2849,7 +2944,9 @@ question_element = etree.SubElement(
     value="$Note_generale_33",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_33",
     value="Niveau classe",
@@ -2877,6 +2974,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_33",
     value="Niveau sous-classe",
@@ -2917,7 +3015,9 @@ question_element = etree.SubElement(
     value="$Note_generale_34",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_34",
     value="Niveau classe",
@@ -2945,6 +3045,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_34",
     value="Niveau sous-classe",
@@ -2985,7 +3086,9 @@ question_element = etree.SubElement(
     value="$Note_generale_35",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_35",
     value="Niveau classe",
@@ -3013,6 +3116,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_35",
     value="Niveau sous-classe",
@@ -3053,7 +3157,9 @@ question_element = etree.SubElement(
     value="$Note_generale_36",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_36",
     value="Niveau classe",
@@ -3081,6 +3187,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_36",
     value="Niveau sous-classe",
@@ -3121,7 +3228,9 @@ question_element = etree.SubElement(
     value="$Note_generale_37",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_37",
     value="Niveau classe",
@@ -3149,6 +3258,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_37",
     value="Niveau sous-classe",
@@ -3188,7 +3298,9 @@ question_element = etree.SubElement(
     value="$Note_generale_38",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_38",
     value="Niveau classe",
@@ -3216,6 +3328,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_38",
     value="Niveau sous-classe",
@@ -3255,7 +3368,9 @@ question_element = etree.SubElement(
     value="$Note_generale_39",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
+header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_class_level_39",
     value="Niveau classe",
@@ -3283,6 +3398,7 @@ question_element = etree.SubElement(
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
+    "Text",
     header_view,
     name="header_subclass_level_39",
     value="Niveau sous-classe",

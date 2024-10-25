@@ -674,7 +674,6 @@ question_element = etree.SubElement(
     value="$Note_generale_1",
 )
 header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
-header_view = etree.SubElement(NAF2025_view, "View", style="color:brown")
 header_element = etree.SubElement(
     "Text",
     header_view,

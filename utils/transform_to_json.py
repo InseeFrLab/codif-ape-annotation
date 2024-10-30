@@ -59,7 +59,9 @@ def format_data(data_df):
     # Map cj with its heading
     data_df['cj_intitule'] = data_df['cj'].map(correspondance_tableau_cj)
     # Replace NaN values with empty strings
-    data_df = data_df.fillna("")
+    data_df = data_df.fillna("") 
+    # A retirer plus tard
+    data = data.drop(columns=["NAF2025", "NAF2025_intitule"])
     return data_df
 
 

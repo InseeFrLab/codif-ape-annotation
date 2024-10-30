@@ -1,8 +1,8 @@
 xlrd
 lxml
 openpyxl
-transformers 
-torch
+#transformers 
+#torch
 sacremoses
 s3fs
 odfpy

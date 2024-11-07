@@ -61,7 +61,7 @@ def format_data(data_df):
     # Replace NaN values with empty strings
     data_df = data_df.fillna("") 
     # A retirer plus tard
-    data_df = data_df.drop(columns=["NAF2025", "NAF2025_intitule"])
+    data_df = data_df.drop(columns=["NAF2025", "NAF2025_intitule", "__index_level_0__"], errors="ignore")
     return data_df
 
 

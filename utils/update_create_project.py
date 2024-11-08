@@ -76,7 +76,7 @@ def create_project():
         "show_annotation_history": False,
         "organization": 1,
         "color": "green",
-        "maximum_annotations": 1,
+        "maximum_annotations": 3,
         "is_published": 1,
         # "model_version": "string",
         # "is_draft": true,

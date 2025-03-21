@@ -19,12 +19,12 @@ def transform_json_to_dataframe(json_dir: str):
     for filename in tqdm(files_only):
         with open(os.path.join(json_dir, filename), "r") as file:
             data = json.load(file)
-
+        task_id = data["task"]["id"]
         annotation_date = data["task"]["updated_at"]
+        annotator = data["completed_by"]["email"]
         # Get data variables
         liasse_numero = data["task"]["data"]["liasse_numero"]
         date_modification = data["task"]["data"]["date_modification"]
-        mode_calcul_ape = data["task"]["data"]["mode_calcul_ape"]
         evenement_type = data["task"]["data"]["evenement_type"]
         liasse_type = data["task"]["data"]["liasse_type"]
         activ_surf_et = str(data["task"]["data"]["activ_surf_et"])
@@ -42,7 +42,7 @@ def transform_json_to_dataframe(json_dir: str):
             libelle = activ_ex_lib_et
         else:
             libelle = activ_pr_lib
-
+        libelle = data["task"]["data"]["libelle"]
         # Number of skips
         skips = int(data["was_cancelled"])
         # Get annotated data without skips and adjust from UI's bugs
@@ -74,6 +74,7 @@ def transform_json_to_dataframe(json_dir: str):
                         rating = data["result"][2]["value"]["rating"]
         # Créer un dictionnaire pour les données transformées
         transformed_row = {
+            "task_id": task_id,
             "liasse_numero": liasse_numero,
             "libelle": libelle,
             "evenement_type": evenement_type,
@@ -83,7 +84,7 @@ def transform_json_to_dataframe(json_dir: str):
             "cj": cj,
             "date_modification": date_modification,
             "annotation_date": annotation_date,
-            "mode_calcul_ape": mode_calcul_ape,
+            "annotator": annotator,
             "apet_manual": apet_manual,
             "commentary": commentary,
             "rating": rating,
@@ -104,7 +105,7 @@ def transform_json_to_dataframe(json_dir: str):
 
     # Keep only unskipped and classifiable annotations
     results = results[results["skips"] == 0]
-    results = results[results["apet_manual"] != "XXXXX"]
+    #results = results[results["apet_manual"] != "XXXXX"]
     print("Number of lines: " + str(len(results)))
 
     return results
@@ -116,7 +117,7 @@ def save_to_s3(table: pa.Table, bucket: str, path: str):
         key=os.getenv("AWS_ACCESS_KEY_ID"),
         secret=os.getenv("AWS_SECRET_ACCESS_KEY"),
     )
-    pq.write_table(table, f"annotated_data_CG_NAF2025.parquet")#/{bucket}{path}/ , filesystem=fs)
+    pq.write_table(table, f"annotated_data_triple_annotation.parquet")#/{bucket}{path}/ , filesystem=fs)
 
 
 def main(annotation_results_path: str, annotation_preprocessed_path: str):
@@ -129,6 +130,7 @@ def main(annotation_results_path: str, annotation_preprocessed_path: str):
     data = (
         data[
             [
+                "task_id",
                 "liasse_numero",
                 "libelle",
                 "evenement_type",
@@ -137,9 +139,9 @@ def main(annotation_results_path: str, annotation_preprocessed_path: str):
                 "activ_nat_et",
                 "cj",
                 "date",
-                "mode_calcul_ape",
                 "apet_manual",
-                "rating"
+                "rating",
+                "annotator"
             ]
         ]
         .rename(
@@ -159,7 +161,7 @@ def main(annotation_results_path: str, annotation_preprocessed_path: str):
     arrow_table = pa.Table.from_pandas(data)
 
     # Save logs in a partionned parquet file in s3
-    save_to_s3(arrow_table, "nrandriamanana", f"/{annotation_preprocessed_path}/")
+    save_to_s3(arrow_table, "projet-ape", f"/{annotation_preprocessed_path}/")
 
 
 if __name__ == "__main__":

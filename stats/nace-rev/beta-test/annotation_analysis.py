@@ -42,7 +42,7 @@ discordance_majorite_df = aggregated_df[aggregated_df['apet_manual'].apply(lambd
 discordance_majorite_df = discordance_majorite_df[['task_id','text_description', 'apet_manual','rating']]
 discordance_majorite_df.to_csv('discordance_majorite.csv')
 
-#pq.write_table(pa.Table.from_pandas(aggregated_df), f"label-studio/annotation-campaign-2024/rev-NAF2025/eval-annotation/triple-annotation/preprocessed/annotated_data_triple_annotation.parquet", filesystem=fs)
+# pq.write_table(pa.Table.from_pandas(aggregated_df), f"label-studio/annotation-campaign-2024/rev-NAF2025/eval-annotation/triple-annotation/preprocessed/annotated_data_triple_annotation.parquet", filesystem=fs)
 
 # Calcul du nombre de lignes où la liste ne contient qu'un seul élément
 single_element_count = aggregated_df['apet_manual'].apply(lambda x: len(x) == 1).sum()

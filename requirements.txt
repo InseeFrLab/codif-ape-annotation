@@ -6,3 +6,4 @@ openpyxl
 sacremoses
 s3fs
 odfpy
+tabulate

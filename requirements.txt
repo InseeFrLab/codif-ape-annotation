@@ -7,3 +7,4 @@ sacremoses
 s3fs
 odfpy
 tabulate
+rapidfuzz
